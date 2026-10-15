@@ -1,0 +1,2484 @@
+{
+  "version": 1,
+  "aula": 2,
+  "titulo": "Aula 2",
+  "generado": "2026-10-15",
+  "fuente": {
+    "referencias": {
+      "moore2017": {
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer.",
+        "autores": [
+          "Keith L. Moore",
+          "Arthur F. Dalley II",
+          "Anne M. R. Agur"
+        ],
+        "titulo": "Anatomía con orientación clínica",
+        "edicion": "8.ª ed.",
+        "editorial": "Wolters Kluwer",
+        "ciudad": "Barcelona",
+        "anio": 2017,
+        "isbn": "978-84-17033-63-7"
+      }
+    },
+    "terminologia": "Se usa la terminología de Moore en español (p. ej. «bucofaringe», «rodete tubárico»)."
+  },
+  "temas": [
+    {
+      "id": "laringe-traquea-tiroides",
+      "nombre": "Laringe, tráquea y glándula tiroides"
+    },
+    {
+      "id": "vascularizacion-cuello",
+      "nombre": "Vascularización del cuello"
+    }
+  ],
+  "patrones": {
+    "P09": "Viñeta clínica corta: signo o síntoma → estructura lesionada",
+    "P02": "Disección o anfiteatro: descripción → identificación",
+    "P04": "Función o mecanismo",
+    "P10": "Límites, relaciones y contenidos de espacios",
+    "P13": "Estructura señalada en una imagen"
+  },
+  "preguntas": [
+    {
+      "id": "a2-t1-001",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un paciente con bocio por carencia de yodo tiene una tumefacción cervical que crece hacia delante, atrás, abajo y a los lados, pero nunca hacia arriba. ¿Qué impide el crecimiento superior de la glándula?",
+      "opciones": [
+        "La fijación de la cápsula tiroidea al hioides mediante el ligamento tirohioideo",
+        "Las inserciones superiores de los músculos esternotiroideo y esternohioideo",
+        "La membrana tirohioidea, que une la laringe con el borde del hioides",
+        "La lámina prevertebral, que adhiere la glándula a la columna cervical"
+      ],
+      "correcta": 1,
+      "explicacion": "El esternotiroideo se inserta en la línea oblicua del cartílago tiroides, inmediatamente superior a la glándula, y junto con el esternohioideo limita su expansión hacia arriba. Es habitual también la extensión subesternal del bocio.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1791, 1861",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», pp. 1791, 1861."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-002",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Durante una tiroidectomía la arteria tiroidea inferior se liga a cierta distancia lateral de la glándula. ¿Qué se evita con esta precaución?",
+      "opciones": [
+        "Lesionar el nervio laríngeo recurrente, relacionado con la arteria cerca del polo inferior",
+        "Seccionar el ramo externo del nervio laríngeo superior, que acompaña a la arteria",
+        "Lesionar el nervio frénico, que cruza el escaleno anterior junto a la arteria",
+        "Abrir la vaina carotídea, situada inmediatamente anterior a la arteria"
+      ],
+      "correcta": 0,
+      "explicacion": "Cerca del polo inferior de la glándula, el nervio laríngeo recurrente derecho se relaciona íntimamente con la arteria tiroidea inferior y sus ramas, y puede cruzar anterior, posterior o entre ellas. La voz ronca es el signo habitual de su lesión unilateral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1863–1864",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», pp. 1863–1864."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-003",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Tras una tiroidectomía total, un paciente presenta espasmos musculares y calambres con una concentración sérica de calcio baja. ¿Qué estructuras se extirparon involuntariamente?",
+      "opciones": [
+        "Los nódulos linfáticos paratraqueales",
+        "El tejido tiroideo accesorio",
+        "Las glándulas paratiroides",
+        "Los glomus carotídeos"
+      ],
+      "correcta": 2,
+      "explicacion": "La atrofia o extirpación de todas las glándulas paratiroides provoca tetania por la disminución del calcio sérico. Como se afectan los músculos laríngeos y respiratorios, sin tratamiento inmediato puede ser mortal.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1864–1865",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», pp. 1864–1865."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-004",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "En un paciente con hiperparatiroidismo no se encuentran las glándulas paratiroides inferiores en los polos inferiores de la tiroides. ¿Dónde puede hallarse una glándula inferior aberrante profunda?",
+      "opciones": [
+        "En el mediastino superior, tras el manubrio esternal",
+        "En la raíz de la lengua, detrás del foramen ciego",
+        "Sobre el músculo tirohioideo, lateral al cartílago tiroides",
+        "En el espacio retrofaríngeo, tras la faringe"
+      ],
+      "correcta": 0,
+      "explicacion": "Las paratiroides inferiores pueden llegar al mediastino superior; en el 1 % a 5 % de la población hay una glándula inferior profunda ahí. Las localizaciones aberrantes deben considerarse al buscar un adenoma paratiroideo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Glándulas paratiroides",
+        "pagina": "1823, 1864",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Glándulas paratiroides», pp. 1823, 1864."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-005",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Un niño presenta una tumefacción en la línea media del cuello, justo inferior al cuerpo del hioides. ¿Qué estructura embrionaria persistente origina este quiste?",
+      "opciones": [
+        "Conducto parotídeo",
+        "Conducto linfático derecho",
+        "Conducto torácico",
+        "Conducto tirogloso"
+      ],
+      "correcta": 3,
+      "explicacion": "La tiroides se origina en el suelo de la faringe embrionaria, en el foramen ciego, y desciende por delante del hioides y del cartílago tiroides unida a la lengua por el conducto tirogloso. Los restos de epitelio de este conducto forman el quiste.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1857",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», p. 1857."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-006",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Antes de extirpar un supuesto quiste del conducto tirogloso se solicita una gammagrafía. ¿Qué complicación se evita?",
+      "opciones": [
+        "La sección de la arteria tiroidea ima en el plano medio",
+        "La perforación de la membrana tirohioidea durante la disección",
+        "Una tiroidectomía total, si es el único tejido tiroideo presente",
+        "La lesión del nervio hipogloso en el suelo de la boca"
+      ],
+      "correcta": 2,
+      "explicacion": "Una glándula tiroides ectópica en el plano medio del cuello suele ser el único tejido tiroideo. Extirparla como si fuese un quiste deja al paciente dependiente de medicación tiroidea de forma permanente.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1858",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», p. 1858."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-007",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Durante una traqueostomía en la línea media, por debajo del istmo, aparece un sangrado inesperado de una arteria pequeña e impar que asciende por la cara anterior de la tráquea. ¿Cuál es?",
+      "opciones": [
+        "Arteria laríngea inferior",
+        "Arteria tiroidea ima",
+        "Arteria cricotiroidea",
+        "Arteria cervical ascendente"
+      ],
+      "correcta": 1,
+      "explicacion": "La arteria tiroidea ima, presente en un 10 % de la población, nace del tronco braquiocefálico, asciende por la tráquea y llega al istmo. Debe tenerse presente en intervenciones de la línea media por debajo del istmo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1820, 1857",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», pp. 1820, 1857."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-008",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "En la maniobra de Heimlich, los empujones abdominales subdiafragmáticos logran expulsar el objeto que obstruye la laringe. ¿Por qué?",
+      "opciones": [
+        "Elevan el diafragma y comprimen los pulmones, que expulsan aire hacia la laringe",
+        "Aumentan el diámetro de la tráquea cervical y facilitan la salida del aire",
+        "Abren la hendidura glótica al relajar los pliegues vocales y vestibulares",
+        "Desplazan la epiglotis hacia arriba y adelante para abrir la entrada laríngea"
+      ],
+      "correcta": 0,
+      "explicacion": "Como los pulmones aún contienen aire, la compresión súbita del abdomen eleva el diafragma y crea una tos artificial que suele desalojar el cuerpo extraño. Se hace entre el ombligo y el proceso xifoides.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1868",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», p. 1868."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-009",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "En una urgencia extrema con intubación imposible, se inserta una aguja de gran calibre para permitir la entrada rápida de aire (coniotomía). ¿A través de qué estructura se punciona?",
+      "opciones": [
+        "Ligamento [membrana] cricotiroideo",
+        "Ligamento cricotraqueal, bajo el cricoides",
+        "Membrana cuadrangular, bajo la epiglotis",
+        "Membrana tirohioidea, sobre el tiroides"
+      ],
+      "correcta": 0,
+      "explicacion": "El ligamento cricotiroideo medio se palpa como una zona blanda entre el cartílago tiroides y el arco del cricoides. Es el sitio de la cricotirotomía con aguja, que no requiere manipular la columna cervical.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1854, 1868",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», pp. 1854, 1868."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-010",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "En una laringoscopia indirecta se observan dos pares de pliegues, unos rosados y otros blanco perlado. ¿Cuáles son de color blanco perlado?",
+      "opciones": [
+        "Los pliegues aritenoepiglóticos",
+        "Los pliegues vestibulares",
+        "Los pliegues vocales",
+        "Los pliegues faringoepiglóticos"
+      ],
+      "correcta": 2,
+      "explicacion": "Los pliegues vestibulares son normalmente rosados y los vocales, blanco perlado. En la respiración normal la hendidura del vestíbulo es mayor que la glótica.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1865",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», p. 1865."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-011",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Tras una tiroidectomía un paciente no logra elevar el tono de su voz. ¿Qué nervio, que inerva el músculo tensor de los pliegues vocales, está lesionado?",
+      "opciones": [
+        "Nervio hipogloso [XII]",
+        "Nervio laríngeo recurrente",
+        "Ramo externo del nervio laríngeo superior",
+        "Ramo interno del nervio laríngeo superior"
+      ],
+      "correcta": 2,
+      "explicacion": "El ramo externo del laríngeo superior desciende junto a la arteria tiroidea superior e inerva el cricotiroideo, tensor principal de los pliegues vocales, que alarga los ligamentos y eleva el tono. Los demás músculos intrínsecos dependen del recurrente.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: vasos y nervios",
+        "pagina": "1837, 1839–1840",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: vasos y nervios», pp. 1837, 1839–1840."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-012",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Horas después de una cirugía de tiroides un paciente presenta disnea progresiva por compresión de la tráquea. ¿Dónde se acumula la sangre que la comprime?",
+      "opciones": [
+        "En el espacio retrofaríngeo, tras la faringe",
+        "En el espacio supraesternal, sobre el manubrio",
+        "Dentro de la vaina carotídea del lado operado",
+        "Dentro de la cápsula fibrosa de la glándula"
+      ],
+      "correcta": 3,
+      "explicacion": "Una hemorragia postoperatoria tras cirugía tiroidea puede comprimir la tráquea y dificultar la respiración; la sangre se acumula dentro de la cápsula fibrosa de la glándula.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1862",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», p. 1862."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-013",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Un traumatismo penetrante lesiona la tráquea cervical. ¿Qué otra estructura se lesiona con frecuencia por su estrecho contacto con ella?",
+      "opciones": [
+        "El tronco simpático",
+        "El timo",
+        "El esófago",
+        "El conducto torácico"
+      ],
+      "correcta": 2,
+      "explicacion": "La tráquea cervical está en estrecho contacto con el esófago, por lo que un traumatismo traqueal suele afectarlo. La desviación de la tráquea de la línea media a menudo señala un proceso patológico.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Tráquea",
+        "pagina": "1840",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Tráquea», p. 1840."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-014",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Al palpar la glándula tiroides se pide al paciente que degluta. ¿Qué se percibe en el istmo?",
+      "opciones": [
+        "Se desplaza hacia un lado",
+        "Solo desciende",
+        "Sube y luego baja",
+        "No se mueve"
+      ],
+      "correcta": 2,
+      "explicacion": "El istmo se palpa bajo el arco del cricoides; al deglutir se nota que sube y luego baja. La aproximación posterior suele facilitar la palpación.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Anatomía de superficie de las vísceras cervicales",
+        "pagina": "1854",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Anatomía de superficie de las vísceras cervicales», p. 1854."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-015",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un paciente realiza una maniobra de Valsalva, como al toser o levantar un peso. ¿Qué ocurre con los pliegues vestibulares y vocales?",
+      "opciones": [
+        "Se abducen ampliamente durante la espiración forzada",
+        "Se aducen con fuerza al final de la inspiración profunda",
+        "Solo se aducen los pliegues vocales",
+        "Permanecen relajados mientras se contrae el abdomen"
+      ],
+      "correcta": 1,
+      "explicacion": "En la maniobra de Valsalva los pliegues vestibulares y vocales se aducen fuertemente tras una inspiración profunda y luego los músculos abdominales elevan las presiones intratorácica e intraabdominal.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1865–1866",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», pp. 1865–1866."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-016",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un médico palpa, por debajo de la prominencia laríngea, un cartílago que marca el nivel de C6 y la unión de la laringe con la tráquea. ¿Cuál es?",
+      "opciones": [
+        "Cartílago epiglótico",
+        "Cartílago tiroides",
+        "Cartílago cricoides",
+        "Cartílago aritenoides"
+      ],
+      "correcta": 2,
+      "explicacion": "El cricoides es un hito clave del cuello: señala C6, la unión laringotraqueal y faringoesofágica, el sitio donde la carótida puede comprimirse y donde el recurrente entra en la laringe.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Anatomía de superficie de las vísceras cervicales",
+        "pagina": "1854",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Anatomía de superficie de las vísceras cervicales», p. 1854."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-017",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un bocio voluminoso produce disfagia, disnea y voz ronca. ¿Qué estructuras vecinas puede comprimir la glándula aumentada de tamaño?",
+      "opciones": [
+        "La tráquea, el esófago y los nervios laríngeos recurrentes",
+        "La laringe y la arteria carótida externa",
+        "La tráquea, el esófago y los nervios frénicos",
+        "La vena yugular interna y el esternocleidomastoideo"
+      ],
+      "correcta": 0,
+      "explicacion": "El aumento de tamaño de la tiroides origina una tumefacción que puede comprimir la tráquea, el esófago y los nervios laríngeos recurrentes.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1861",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», p. 1861."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-018",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En una cirugía se halla un lóbulo de tiroides que asciende desde el istmo, generalmente a la izquierda de la línea media, con una banda de tejido hacia el hioides. ¿De qué se origina?",
+      "opciones": [
+        "De la glándula paratiroides superior",
+        "Del timo cervical",
+        "De restos del conducto tirogloso",
+        "De un nódulo linfático prelaríngeo"
+      ],
+      "correcta": 2,
+      "explicacion": "El lóbulo piramidal, presente en un 50 % de las tiroides, y su banda se desarrollan a partir de restos de epitelio y tejido conectivo del conducto tirogloso.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: vísceras del cuello",
+        "pagina": "1861",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: vísceras del cuello», p. 1861."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-019",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "En la disección de la laringe se localiza el mayor de sus cartílagos, de láminas con forma de escudo, cuyo borde superior queda frente a C4. ¿Cuál es?",
+      "opciones": [
+        "Cartílago tiroides",
+        "Cartílago cricoides",
+        "Cartílago aritenoides",
+        "Cartílago epiglótico"
+      ],
+      "correcta": 0,
+      "explicacion": "Los dos tercios inferiores de las láminas del tiroides se fusionan en la línea media y forman la prominencia laríngea.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1827",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», p. 1827."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-020",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Entre los cartílagos laríngeos hay uno con forma de anillo de sello, más pequeño que el tiroides pero más grueso y fuerte, que es el único anillo completo que rodea la vía aérea. ¿Cuál es?",
+      "opciones": [
+        "Cartílago cricoides",
+        "Cartílago epiglótico",
+        "Cartílago tiroides",
+        "Primer cartílago traqueal"
+      ],
+      "correcta": 0,
+      "explicacion": "El cricoides tiene una lámina posterior (sello) y un arco anterior (aro). Se une al tiroides por el ligamento cricotiroideo medio y al primer anillo traqueal por el cricotraqueal.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1827",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», p. 1827."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-021",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "Un cartílago en forma de corazón, de cartílago elástico y recubierto de mucosa, queda posterior a la raíz de la lengua y al hioides. ¿Cuál es?",
+      "opciones": [
+        "Cartílago aritenoides, con su proceso vocal",
+        "Epiglotis [cartílago epiglótico]",
+        "Cartílago corniculado, sobre el aritenoides",
+        "Cartílago cuneiforme, en el pliegue aritenoepiglótico"
+      ],
+      "correcta": 1,
+      "explicacion": "La epiglotis forma la porción superior de la pared anterior de la entrada de la laringe y se une al hioides por el ligamento hioepiglótico.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1828, 1831",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», pp. 1828, 1831."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-022",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Cuáles son los tres cartílagos pares de la laringe?",
+      "opciones": [
+        "Corniculados, cricoides y cuneiformes",
+        "Aritenoides, corniculados y cuneiformes",
+        "Tiroides, cricoides y epiglótico",
+        "Aritenoides, tiroides y epiglótico"
+      ],
+      "correcta": 1,
+      "explicacion": "Los cartílagos impares son el tiroides, el cricoides y el epiglótico. Los corniculados y cuneiformes aparecen como pequeños nodulillos en los pliegues aritenoepiglóticos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1827–1828",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», pp. 1827–1828."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-023",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "Una delgada lámina submucosa de tejido conectivo se extiende entre las caras laterales de los cartílagos aritenoides y epiglótico; su borde inferior libre forma el ligamento vestibular. ¿Cómo se llama?",
+      "opciones": [
+        "Cono elástico",
+        "Ligamento cricotraqueal",
+        "Membrana tirohioidea",
+        "Membrana cuadrangular"
+      ],
+      "correcta": 3,
+      "explicacion": "El borde superior libre de la membrana cuadrangular forma el ligamento aritenoepiglótico, recubierto de mucosa en el pliegue aritenoepiglótico.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1828",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», p. 1828."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-024",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "Una membrana fibroelástica cierra la entrada a la tráquea salvo por la hendidura glótica; su borde superior libre engrosado forma los ligamentos vocales. ¿Cuál es?",
+      "opciones": [
+        "Cono elástico [membrana cricovocal]",
+        "Membrana cuadrangular, bajo la epiglotis",
+        "Ligamento hioepiglótico, bajo la epiglotis",
+        "Membrana tirohioidea, sobre el tiroides"
+      ],
+      "correcta": 0,
+      "explicacion": "El cono elástico se fusiona anteriormente con el ligamento cricotiroideo medio; los ligamentos vocales forman el esqueleto submucoso de los pliegues vocales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1828",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», p. 1828."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-025",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "En la cavidad laríngea se identifican los pliegues de mucosa que rodean los ligamentos vocales y los músculos tiroaritenoideos, y que son la fuente del sonido. ¿Cuáles son?",
+      "opciones": [
+        "Pliegues aritenoepiglóticos",
+        "Pliegues vestibulares",
+        "Pliegues interaritenoideos",
+        "Pliegues vocales"
+      ],
+      "correcta": 3,
+      "explicacion": "Los pliegues vocales producen vibraciones audibles cuando sus bordes libres se acercan sin juntarse durante la fonación. Los vestibulares tienen función protectora.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: cavidad y pliegues",
+        "pagina": "1831, 1834",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: cavidad y pliegues», pp. 1831, 1834."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-026",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Los recesos laterales de la cavidad laríngea entre los pliegues vestibulares y los vocales reciben un nombre propio. ¿Cuál?",
+      "opciones": [
+        "Cavidad infraglótica",
+        "Ventrículos laríngeos",
+        "Recesos piriformes",
+        "Vestíbulo laríngeo"
+      ],
+      "correcta": 1,
+      "explicacion": "Cada ventrículo laríngeo recibe el sáculo laríngeo, un saco ciego con glándulas mucosas. Los recesos piriformes pertenecen a la laringofaringe, no a la laringe.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: cavidad y pliegues",
+        "pagina": "1831, 1834",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: cavidad y pliegues», pp. 1831, 1834."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-027",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "De los músculos intrínsecos de la laringe, uno es el único abductor de los pliegues vocales y ensancha la hendidura glótica. ¿Cuál es?",
+      "opciones": [
+        "Cricotiroideo",
+        "Tiroaritenoideo",
+        "Cricoaritenoideo lateral",
+        "Cricoaritenoideo posterior"
+      ],
+      "correcta": 3,
+      "explicacion": "Los cricoaritenoideos posteriores tiran de los procesos musculares hacia atrás y rotan lateralmente los procesos vocales. Los laterales son los principales aductores.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: músculos",
+        "pagina": "1836–1837",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: músculos», pp. 1836–1837."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-028",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "En la disección se observa un músculo que inclina la prominencia del cartílago tiroides anterior e inferiormente hacia el arco del cricoides y alarga los ligamentos vocales. ¿Cuál es?",
+      "opciones": [
+        "Aritenoideo transverso",
+        "Tiroaritenoideo",
+        "Cricoaritenoideo posterior",
+        "Cricotiroideo"
+      ],
+      "correcta": 3,
+      "explicacion": "El cricotiroideo es el principal tensor: al alejar la prominencia de los aritenoides alarga los ligamentos vocales y eleva el tono de la voz.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: músculos",
+        "pagina": "1837",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: músculos», p. 1837."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-029",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "El nervio laríngeo superior se divide en dos ramos terminales dentro de la vaina carotídea. El mayor, sensitivo y autónomo, atraviesa la membrana tirohioidea con la arteria laríngea superior. ¿Cuál es?",
+      "opciones": [
+        "Ramo externo",
+        "Ramo faríngeo del vago",
+        "Nervio laríngeo inferior",
+        "Ramo interno"
+      ],
+      "correcta": 3,
+      "explicacion": "El ramo interno da sensibilidad a la mucosa del vestíbulo laríngeo y de la porción media de la cavidad, incluida la cara superior de los pliegues vocales. El externo es motor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: vasos y nervios",
+        "pagina": "1839",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: vasos y nervios», p. 1839."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-030",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "Los cartílagos traqueales son incompletos posteriormente. ¿Qué músculo cubre las aberturas posteriores de los anillos y hace plana la pared posterior de la tráquea?",
+      "opciones": [
+        "Cricoaritenoideo posterior",
+        "Esternotiroideo",
+        "Músculo traqueal (liso)",
+        "Aritenoideo transverso"
+      ],
+      "correcta": 2,
+      "explicacion": "El músculo traqueal es un músculo liso involuntario que conecta los extremos de los anillos; la pared posterior contacta con el esófago.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Tráquea",
+        "pagina": "1840",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Tráquea», p. 1840."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-031",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué hormona de la glándula tiroides controla el metabolismo del calcio?",
+      "opciones": [
+        "Hormona estimulante del tiroides (hipofisaria)",
+        "Calcitonina (hormona tiroidea)",
+        "Parathormona (hormona paratiroidea)",
+        "Hormonas tiroideas que regulan el metabolismo basal"
+      ],
+      "correcta": 1,
+      "explicacion": "La tiroides produce hormonas tiroideas, que controlan la tasa de metabolismo, y calcitonina, que controla el metabolismo del calcio. La PTH procede de las paratiroides.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Glándula tiroides",
+        "pagina": "1819",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Glándula tiroides», p. 1819."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-032",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Cómo se regula la secreción endocrina de la glándula tiroides?",
+      "opciones": [
+        "Por las paratiroides, mediante la parathormona",
+        "Por los ganglios simpáticos, que estimulan directamente la secreción",
+        "Por los nervios vagos, que son secretomotores",
+        "Hormonalmente, por la hipófisis; sus nervios simpáticos solo son vasomotores"
+      ],
+      "correcta": 3,
+      "explicacion": "Los nervios de la tiroides, que derivan de los ganglios simpáticos cervicales, causan constricción de los vasos sanguíneos; no son secretomotores.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Glándula tiroides",
+        "pagina": "1822–1823",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Glándula tiroides», pp. 1822–1823."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-033",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Cuál es la función más esencial de la laringe?",
+      "opciones": [
+        "Proteger la vía aérea, sobre todo durante la deglución",
+        "Impulsar el moco hacia la faringe con su epitelio",
+        "Producir la voz mediante la vibración de los pliegues",
+        "Humidificar y calentar el aire que va hacia la tráquea"
+      ],
+      "correcta": 0,
+      "explicacion": "Aunque se la conoce por la fonación, la laringe actúa como esfínter o válvula del tracto respiratorio inferior y mantiene una vía aérea permeable.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1827",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», p. 1827."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-034",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "Durante la deglución, ¿qué función cumple la epiglotis?",
+      "opciones": [
+        "Tensa los pliegues vocales y eleva el tono de la voz",
+        "Desvía el bolo sobre la entrada de la laringe, como una válvula",
+        "Eleva el hioides y la laringe durante la deglución",
+        "Sella herméticamente la hendidura glótica durante la deglución"
+      ],
+      "correcta": 1,
+      "explicacion": "La epiglotis actúa como válvula derivadora sobre la abertura superior de la laringe; el cierre de la entrada laríngea depende de la acción esfinteriana de los músculos laríngeos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: cavidad y pliegues",
+        "pagina": "1831, 1837",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: cavidad y pliegues», pp. 1831, 1837."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-035",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué forma tiene la hendidura glótica durante la respiración normal?",
+      "opciones": [
+        "Cerrada por completo",
+        "Estrecha y cuneiforme",
+        "Ancha y trapezoidal",
+        "Circular"
+      ],
+      "correcta": 1,
+      "explicacion": "En la inspiración profunda, la contracción de los cricoaritenoideos posteriores la abre ampliamente en forma de cometa invertida.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: cavidad y pliegues",
+        "pagina": "1834",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: cavidad y pliegues», p. 1834."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-036",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué ocurre en la laringe durante la fonación?",
+      "opciones": [
+        "Los aritenoideos y cricoaritenoideos laterales aducen los pliegues y el aire los hace vibrar",
+        "Los pliegues vestibulares se cierran y bloquean por completo el paso del aire",
+        "Los pliegues vocales se alejan entre sí y relajan los ligamentos vocales",
+        "Los cricoaritenoideos posteriores abducen los pliegues y el aire pasa libremente sin vibrar"
+      ],
+      "correcta": 0,
+      "explicacion": "Durante la fonación los músculos aritenoideos aducen los aritenoides y el aire forzado entre los ligamentos vocales produce el tono. En el susurro los aritenoideos están relajados.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: músculos",
+        "pagina": "1834, 1836",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: músculos», pp. 1834, 1836."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-037",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué efecto tiene la contracción de los músculos tiroaritenoideos sobre la voz?",
+      "opciones": [
+        "Tensan los ligamentos vocales y aumentan el tono",
+        "Elevan la laringe como un todo",
+        "Abren la hendidura glótica",
+        "Relajan los ligamentos vocales y disminuyen el tono"
+      ],
+      "correcta": 3,
+      "explicacion": "Los tiroaritenoideos tiran de los aritenoides hacia la prominencia tiroidea y relajan los ligamentos. Los cricotiroideos hacen lo contrario: tensan y elevan el tono.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: músculos",
+        "pagina": "1837",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: músculos», p. 1837."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-038",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿A qué se debe la escala de tonos más baja de la voz masculina pospuberal?",
+      "opciones": [
+        "A pliegues vestibulares más gruesos y cortos",
+        "A la mayor longitud de los pliegues vocales",
+        "A un cartílago cricoides de menor tamaño",
+        "A una hendidura glótica más ancha en reposo"
+      ],
+      "correcta": 1,
+      "explicacion": "La variación de tensión y longitud de los pliegues, la anchura de la hendidura y el esfuerzo espiratorio cambian el tono; la voz masculina es más grave por pliegues más largos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: cavidad y pliegues",
+        "pagina": "1834",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: cavidad y pliegues», p. 1834."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-039",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Cómo se eliminan los desechos atrapados en el moco de la tráquea?",
+      "opciones": [
+        "Los anillos traqueales lo comprimen y lo empujan hacia los bronquios",
+        "La epiglotis lo recoge durante la deglución y lo conduce al esófago",
+        "El epitelio propulsa el moco hacia la faringe para expulsarlo por la boca",
+        "El músculo traqueal lo empuja hacia el esófago para que sea deglutido"
+      ],
+      "correcta": 2,
+      "explicacion": "La tráquea transporta aire y su epitelio propulsa el moco cargado de desechos hacia la faringe.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Tráquea",
+        "pagina": "1840",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Tráquea», p. 1840."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-040",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Cuál es la función de los pliegues vestibulares?",
+      "opciones": [
+        "Abren la hendidura glótica en la inspiración",
+        "Protección; participan poco o nada en la fonación",
+        "Tensan los ligamentos vocales",
+        "Son la fuente principal del tono de la voz"
+      ],
+      "correcta": 1,
+      "explicacion": "Están formados por mucosa que envuelve los ligamentos vestibulares; el espacio entre ellos es la hendidura del vestíbulo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: cavidad y pliegues",
+        "pagina": "1834",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: cavidad y pliegues», p. 1834."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-041",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "¿A qué niveles vertebrales se encuentra la laringe?",
+      "opciones": [
+        "C3–C6",
+        "C1–C3",
+        "C5–T1",
+        "C4–C7"
+      ],
+      "correcta": 0,
+      "explicacion": "La laringe se sitúa en la parte anterior del cuello, a nivel de los cuerpos de C3–C6, y conecta la laringofaringe con la tráquea.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1827",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», p. 1827."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-042",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "¿A qué niveles vertebrales se localiza la glándula tiroides?",
+      "opciones": [
+        "C5–T1",
+        "C3–C6",
+        "T2–T4",
+        "C1–C3"
+      ],
+      "correcta": 0,
+      "explicacion": "La tiroides es anterior en el cuello, profunda a los músculos esternotiroideos y esternohioideos, con lóbulos anterolaterales a la laringe y la tráquea.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Glándula tiroides",
+        "pagina": "1819",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Glándula tiroides», p. 1819."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-043",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "El istmo de la glándula tiroides se sitúa normalmente anterior a los anillos traqueales:",
+      "opciones": [
+        "Primero y segundo",
+        "Segundo y tercero",
+        "Cuarto y quinto",
+        "Tercero y cuarto"
+      ],
+      "correcta": 1,
+      "explicacion": "El primer cartílago traqueal es más ancho y puede palparse; del segundo al cuarto los cubre el istmo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Glándula tiroides",
+        "pagina": "1819, 1854",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Glándula tiroides», pp. 1819, 1854."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-044",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿A qué nivel termina la tráquea al dividirse en los bronquios principales?",
+      "opciones": [
+        "Incisura yugular",
+        "Borde inferior del cricoides (C6)",
+        "Ángulo del esternón (disco T4–T5)",
+        "Apófisis xifoides"
+      ],
+      "correcta": 2,
+      "explicacion": "La tráquea comienza a nivel de C6, en el extremo inferior de la laringe, y mide unos 2,5 cm de diámetro en el adulto.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Tráquea",
+        "pagina": "1840",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Tráquea», p. 1840."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-045",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Qué estructura limita anteriormente la entrada de la laringe?",
+      "opciones": [
+        "Los pliegues interaritenoideos y los aritenoides",
+        "El borde curvado libre de la epiglotis",
+        "El arco del cricoides y el ligamento cricotiroideo",
+        "Los pliegues vestibulares y el vestíbulo laríngeo"
+      ],
+      "correcta": 1,
+      "explicacion": "Posteriormente la limitan los aritenoides, los corniculados y los pliegues interaritenoideos; a cada lado, el pliegue aritenoepiglótico.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: cavidad y pliegues",
+        "pagina": "1833",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: cavidad y pliegues», p. 1833."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-046",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P13",
+      "dificultad": 1,
+      "enunciado": "En el esquema anterior de la laringe, ¿qué cartílago señala la flecha?",
+      "opciones": [
+        "Cricoides",
+        "Aritenoides",
+        "Epiglótico",
+        "Tiroides"
+      ],
+      "correcta": 3,
+      "explicacion": "El tiroides es el mayor de los cartílagos laríngeos y su prominencia es palpable, más marcada en los hombres.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1827",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», p. 1827."
+      },
+      "imagen": {
+        "id": "a2-img-01",
+        "descripcion": "Vista anterior de la laringe con el hioides, los cartílagos tiroides y cricoides y los primeros anillos traqueales. Una flecha señala el cartílago en forma de escudo con una prominencia en la línea media.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-047",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema anterior del cuello, ¿qué estructura señala la flecha entre los cartílagos tiroides y cricoides?",
+      "opciones": [
+        "Ligamento cricotiroideo medio",
+        "Ligamento cricotraqueal, bajo el cricoides",
+        "Membrana tirohioidea, sobre el cartílago tiroides",
+        "Ligamento hioepiglótico, bajo la epiglotis"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el sitio de la cricotirotomía en una urgencia con vía aérea obstruida.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: esqueleto laríngeo",
+        "pagina": "1827, 1868",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: esqueleto laríngeo», pp. 1827, 1868."
+      },
+      "imagen": {
+        "id": "a2-img-02",
+        "descripcion": "Vista anterior de la laringe con el hioides, el cartílago tiroides y el arco del cricoides. Una flecha señala la zona blanda entre el borde inferior del cartílago tiroides y el arco del cricoides.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-048",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En la vista posterior de la glándula tiroides, ¿qué estructuras señala la flecha?",
+      "opciones": [
+        "Ganglios simpáticos cervicales",
+        "Glándulas tiroides accesorias",
+        "Nódulos linfáticos paratraqueales",
+        "Glándulas paratiroides"
+      ],
+      "correcta": 3,
+      "explicacion": "Las paratiroides, pequeñas, aplanadas y ovoides, están fuera de la cápsula tiroidea en la mitad medial de la cara posterior de cada lóbulo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Glándulas paratiroides",
+        "pagina": "1823",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Glándulas paratiroides», p. 1823."
+      },
+      "imagen": {
+        "id": "a2-img-03",
+        "descripcion": "Vista posterior de la glándula tiroides con los dos lóbulos, la tráquea y el esófago reclinados. Una flecha señala unas glándulas pequeñas, aplanadas y ovoides, en la cara posterior de un lóbulo.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-049",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el corte coronal de la laringe, ¿qué compartimento señala la flecha, situado entre la entrada de la laringe y los pliegues vestibulares?",
+      "opciones": [
+        "Porción media de la cavidad laríngea",
+        "Ventrículo laríngeo",
+        "Vestíbulo laríngeo",
+        "Cavidad infraglótica"
+      ],
+      "correcta": 2,
+      "explicacion": "El vestíbulo es el compartimento superior de la laringe; los cuerpos extraños aspirados pueden quedar atrapados ahí, por encima de los pliegues vocales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: cavidad y pliegues",
+        "pagina": "1829, 1831",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: cavidad y pliegues», pp. 1829, 1831."
+      },
+      "imagen": {
+        "id": "a2-img-04",
+        "descripcion": "Corte coronal de la laringe con la epiglotis, los pliegues vestibulares y vocales, los ventrículos y la tráquea. Una flecha señala el compartimento situado entre la entrada de la laringe y los pliegues vestibulares.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t1-050",
+      "tema": "laringe-traquea-tiroides",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En la vista posterior de la tiroides, ¿qué nervio señala la flecha, que asciende por el surco traqueoesofágico?",
+      "opciones": [
+        "Ramo externo del laríngeo superior",
+        "Ramo interno del laríngeo superior",
+        "Nervio frénico",
+        "Laríngeo recurrente"
+      ],
+      "correcta": 3,
+      "explicacion": "El laríngeo recurrente asciende hacia la cara posteromedial de la tiroides, por el surco traqueoesofágico, e inerva todos los músculos intrínsecos de la laringe salvo el cricotiroideo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Laringe: vasos y nervios",
+        "pagina": "1816, 1853",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Laringe: vasos y nervios», pp. 1816, 1853."
+      },
+      "imagen": {
+        "id": "a2-img-05",
+        "descripcion": "Vista posterior del lado derecho del cuello con la tiroides reclinada, la tráquea y el esófago. Una flecha señala el nervio que asciende en el ángulo entre la tráquea y el esófago.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-001",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una cuchillada seccionó la vena yugular externa en el borde posterior del esternocleidomastoideo; el paciente tiene estertor en el tórax, cianosis y disnea. ¿Por qué entra aire en la vena?",
+      "opciones": [
+        "Su luz permanece abierta y la presión intratorácica negativa succiona aire",
+        "La vena se colapsa y la presión venosa central desciende de golpe",
+        "La válvula de la vena impide la salida de la sangre y atrae aire",
+        "La vena yugular interna se comunica directamente con la tráquea"
+      ],
+      "correcta": 0,
+      "explicacion": "Donde la VYE perfora el techo de la región cervical lateral, la resistente lámina superficial mantiene su luz abierta. La embolia gaseosa llena de espuma el lado derecho del corazón; se controla presionando la vena hasta suturarla.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: regiones cervicales",
+        "pagina": "1803",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: regiones cervicales», p. 1803."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-002",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "En un paciente con insuficiencia cardíaca se observa una vena prominente en todo el trayecto lateral del cuello. ¿Cuál es?",
+      "opciones": [
+        "Vena subclavia",
+        "Vena yugular externa",
+        "Vena yugular interna",
+        "Vena yugular anterior"
+      ],
+      "correcta": 1,
+      "explicacion": "La VYE funciona como un «barómetro interno»: con presión venosa normal se ve solo un corto trecho sobre la clavícula; si la presión aumenta se hace prominente.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: regiones cervicales",
+        "pagina": "1802",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: regiones cervicales», p. 1802."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-003",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Para canular la vena yugular interna con aguja se accede por la depresión triangular entre las cabezas esternal y clavicular del esternocleidomastoideo. ¿Cómo se llama?",
+      "opciones": [
+        "Incisura yugular",
+        "Fosa supraclavicular menor",
+        "Fosa supraclavicular mayor",
+        "Espacio supraesternal"
+      ],
+      "correcta": 1,
+      "explicacion": "La fosa supraclavicular menor cubre el extremo inferior de la VYI. La mayor está sobre el triángulo omoclavicular, donde se palpa la arteria subclavia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Anatomía de superficie del cuello",
+        "pagina": "1773, 1797",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Anatomía de superficie del cuello», pp. 1773, 1797."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-004",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En el abordaje infraclavicular de la vena subclavia, una aguja introducida demasiado hacia atrás puede puncionar, además de la pleura, un vaso arterial. ¿Cuál?",
+      "opciones": [
+        "Arteria vertebral",
+        "Arteria carótida común",
+        "Arteria tiroidea inferior",
+        "Arteria subclavia"
+      ],
+      "correcta": 3,
+      "explicacion": "La aguja avanza hacia el ángulo venoso, posterior a la articulación esternoclavicular. Si no se introduce con cuidado puede causar neumotórax o entrar en la arteria subclavia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: regiones cervicales",
+        "pagina": "1802",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: regiones cervicales», p. 1802."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-005",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "¿Dónde se palpa con mayor facilidad el pulso carotídeo?",
+      "opciones": [
+        "Profundo al borde anterior del ECM, al nivel del borde superior del cartílago tiroides",
+        "Sobre el ángulo de la mandíbula, bajo el lóbulo de la glándula parótida",
+        "En la línea media del cuello, justo sobre el istmo de la glándula tiroides",
+        "En la fosa supraclavicular mayor, justo por encima de la clavícula"
+      ],
+      "correcta": 0,
+      "explicacion": "La carótida común se palpa en el surco entre la tráquea y los infrahioideos. Se palpa en un punto bajo para evitar comprimir el seno carotídeo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: regiones cervicales",
+        "pagina": "1806",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: regiones cervicales», p. 1806."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-006",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Al palpar el pulso carotídeo con presión excesiva en un punto alto del cuello, el paciente presenta bradicardia e hipotensión. ¿Qué estructura se estimuló?",
+      "opciones": [
+        "Bulbo superior de la VYI",
+        "Glomus carotídeo [quimiorreceptor]",
+        "Ganglio cervical superior",
+        "Seno carotídeo [barorreceptor]"
+      ],
+      "correcta": 3,
+      "explicacion": "El seno carotídeo es un barorreceptor; su compresión causa una caída refleja de la presión arterial y de la frecuencia cardíaca.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Anatomía de superficie del cuello",
+        "pagina": "1800, 1806",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Anatomía de superficie del cuello», pp. 1800, 1806."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-007",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un paciente con hipoxia presenta aumento de la frecuencia respiratoria y cardíaca. ¿Qué estructura, inervada por los nervios IX y X, desencadena este reflejo?",
+      "opciones": [
+        "Seno carotídeo [barorreceptor]",
+        "Ganglio inferior del vago",
+        "Bulbo superior de la VYI",
+        "Glomus carotídeo [quimiorreceptor]"
+      ],
+      "correcta": 3,
+      "explicacion": "El glomus carotídeo es un quimiorreceptor que controla la concentración de oxígeno; las concentraciones bajas lo estimulan e inician un reflejo respiratorio y cardiovascular.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1789",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1789."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-008",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Tras ligar la arteria carótida externa para controlar una hemorragia, ¿qué rama aporta la mayor parte de la circulación colateral?",
+      "opciones": [
+        "Arteria faríngea ascendente, rama de la carótida externa",
+        "Rama descendente de la arteria occipital",
+        "Arteria cervical ascendente, rama del tirocervical",
+        "Arteria laríngea superior, rama de la tiroidea superior"
+      ],
+      "correcta": 1,
+      "explicacion": "Al ligar la carótida externa o la subclavia, la rama descendente de la occipital se anastomosa con las arterias vertebral y cervical profunda.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: regiones cervicales",
+        "pagina": "1805",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: regiones cervicales», p. 1805."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-009",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un paciente sangra abundantemente por el brazo. ¿Dónde se comprime la arteria subclavia contra la 1.ª costilla?",
+      "opciones": [
+        "Por encima del cartílago cricoides, sobre la línea media",
+        "Sobre el ángulo de la mandíbula, bajo el lóbulo de la oreja",
+        "Detrás de la unión de los tercios medial y medio de la clavícula",
+        "En la incisura yugular del manubrio, entre las clavículas"
+      ],
+      "correcta": 2,
+      "explicacion": "Se presiona inferoposteriormente en la fosa supraclavicular mayor, donde la arteria descansa sobre la 1.ª costilla.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Anatomía de superficie del cuello",
+        "pagina": "1799–1800",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Anatomía de superficie del cuello», pp. 1799–1800."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-010",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Durante una endarterectomía carotídea hay riesgo de lesionar varios nervios craneales. ¿Cuáles?",
+      "opciones": [
+        "III, IV, VI y XI",
+        "V, VII, IX y X",
+        "VII, VIII, IX y XII",
+        "IX, X, XI y XII"
+      ],
+      "correcta": 3,
+      "explicacion": "Por las relaciones de la carótida interna con estos nervios se puede dañar el IX, el X (o su ramo recurrente), el XI o el XII.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: regiones cervicales",
+        "pagina": "1805",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: regiones cervicales», p. 1805."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-011",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un paciente presenta miosis, ptosis, enoftalmos y ausencia de sudoración en la cara tras una lesión cervical. ¿Qué estructura se lesionó?",
+      "opciones": [
+        "Tronco simpático cervical",
+        "Plexo braquial, entre los escalenos",
+        "Nervio vago, en la vaina carotídea",
+        "Nervio frénico, sobre el escaleno anterior"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el síndrome de Horner: miosis, ptosis, enoftalmos, vasodilatación y anhidrosis en la cara y el cuello por pérdida de la inervación simpática.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: nervios",
+        "pagina": "1818",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: nervios», p. 1818."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-012",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Para eliminar espasmos vasculares del encéfalo y los miembros superiores se infiltra anestésico alrededor del ganglio cervicotorácico [estrellado]. ¿Dónde se localiza?",
+      "opciones": [
+        "Anterior al escaleno anterior, junto al nervio frénico y la vena subclavia",
+        "Anterior al proceso transverso de C1, bajo la base del cráneo y la mastoides",
+        "Anterior al proceso transverso de C7, sobre el cuello de la 1.ª costilla",
+        "A nivel del cricoides, anterior a la arteria tiroidea inferior y la tráquea"
+      ],
+      "correcta": 2,
+      "explicacion": "El ganglio estrellado resulta de la fusión del cervical inferior con el primer torácico y queda posterior al origen de la arteria vertebral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: nervios",
+        "pagina": "1817–1818",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: nervios», pp. 1817–1818."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-013",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "En una fractura de una vértebra cervical se lesiona una arteria que atraviesa los forámenes transversos de C1–C6. ¿Cuál es?",
+      "opciones": [
+        "Arteria cervical profunda",
+        "Arteria carótida interna",
+        "Arteria vertebral",
+        "Arteria cervical ascendente"
+      ],
+      "correcta": 2,
+      "explicacion": "Las fracturas y luxaciones cervicales pueden lesionar la médula espinal y las arterias vertebrales. La vertebral nace de la subclavia y se une a la del otro lado para formar la arteria basilar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: arterias",
+        "pagina": "1763, 1813",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: arterias», pp. 1763, 1813."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-014",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En un paciente con un carcinoma de la cabeza, ¿dónde drena finalmente la linfa de toda la cabeza y el cuello?",
+      "opciones": [
+        "Nódulos linfáticos cervicales profundos inferiores",
+        "Nódulos linfáticos cervicales superficiales",
+        "Nódulos linfáticos submentonianos y submandibulares",
+        "Nódulos linfáticos retrofaríngeos y parotídeos"
+      ],
+      "correcta": 0,
+      "explicacion": "La linfa de los nódulos cervicales superficiales, y la de toda la cabeza y el cuello, drena en los cervicales profundos inferiores, que descienden junto al nervio accesorio.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Linfáticos del cuello",
+        "pagina": "1855",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Linfáticos del cuello», p. 1855."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-015",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una lesión quirúrgica en la raíz del cuello izquierdo secciona el conducto torácico. ¿Dónde desemboca normalmente?",
+      "opciones": [
+        "En la vena cava superior, justo detrás del manubrio",
+        "En la vena yugular externa izquierda, sobre la clavícula",
+        "En el ángulo venoso izquierdo (VYI y subclavia)",
+        "En la vena braquiocefálica derecha, tras cruzar la línea media"
+      ],
+      "correcta": 2,
+      "explicacion": "El conducto torácico asciende por el borde izquierdo del esófago, se arquea lateralmente posterior a la vaina carotídea y drena en el ángulo venoso izquierdo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Linfáticos del cuello",
+        "pagina": "1857",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Linfáticos del cuello», p. 1857."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-016",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Durante una tiroidectomía se liga la arteria tiroidea superior. ¿De qué arteria nace?",
+      "opciones": [
+        "Arteria subclavia",
+        "Arteria carótida externa",
+        "Tronco tirocervical",
+        "Arteria carótida interna"
+      ],
+      "correcta": 1,
+      "explicacion": "La tiroidea superior es la más inferior de las tres ramas anteriores de la carótida externa; irriga la tiroides y da origen a la arteria laríngea superior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1795, 1819",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», pp. 1795, 1819."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-017",
+      "tema": "vascularizacion-cuello",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Al abrir la vaina carotídea en el triángulo carotídeo, ¿qué disposición guardan sus principales contenidos?",
+      "opciones": [
+        "VYI medialmente, nervio vago lateralmente y arterias carótidas posteriormente",
+        "Arterias carótidas lateralmente, VYI medialmente y nervio vago posteriormente",
+        "Nervio vago medialmente, arterias carótidas lateralmente y VYI anteriormente",
+        "Arterias carótidas medialmente, VYI lateralmente y nervio vago posteriormente"
+      ],
+      "correcta": 3,
+      "explicacion": "La vaina rodea las arterias carótidas comunes e internas, la VYI y el nervio vago; el asa cervical suele situarse sobre su cara anterolateral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1790",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1790."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-018",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "En la disección de la carótida externa se identifica su única rama medial, que asciende sobre la faringe, profunda a la carótida interna. ¿Cuál es?",
+      "opciones": [
+        "Arteria lingual",
+        "Arteria tiroidea superior",
+        "Arteria occipital",
+        "Arteria faríngea ascendente"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la primera o segunda rama de la carótida externa y da ramas a la faringe, los músculos prevertebrales, el oído medio y las meninges.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1794",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1794."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-019",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Una rama posterior de la carótida externa pasa inmediatamente medial y paralela a la inserción del vientre posterior del digástrico y termina en la piel cabelluda. ¿Cuál es?",
+      "opciones": [
+        "Arteria lingual",
+        "Arteria occipital",
+        "Arteria auricular posterior",
+        "Arteria facial"
+      ],
+      "correcta": 1,
+      "explicacion": "La occipital pasa superficial a la carótida interna y a los nervios IX a XI. La auricular posterior es la última rama preterminal.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1794",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1794."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-020",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Una arteria nace de la cara anterior de la carótida externa sobre el constrictor medio y pasa profunda al nervio hipogloso y al estilohioideo. ¿Cuál es?",
+      "opciones": [
+        "Arteria tiroidea superior",
+        "Arteria faríngea ascendente",
+        "Arteria lingual",
+        "Arteria facial"
+      ],
+      "correcta": 2,
+      "explicacion": "La lingual desaparece profunda al hiogloso y se bifurca en las arterias lingual profunda y sublingual.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1795",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1795."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-021",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Una rama anterior de la carótida externa da la arteria palatina ascendente y la tonsilar, y luego entra en un surco profundo de la glándula submandibular. ¿Cuál es?",
+      "opciones": [
+        "Arteria lingual",
+        "Arteria facial",
+        "Arteria auricular posterior",
+        "Arteria occipital"
+      ],
+      "correcta": 1,
+      "explicacion": "La arteria facial da después la arteria submentoniana y se curva alrededor del borde inferior de la mandíbula para entrar en la cara.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1795",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1795."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-022",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "Según la regla 1-2-3 de las seis ramas de la carótida externa, ¿cuántas se originan anteriormente y cuáles son?",
+      "opciones": [
+        "Dos: occipital y auricular posterior, ramas posteriores",
+        "Tres: tiroidea superior, lingual y facial",
+        "Una: faríngea ascendente, la única rama medial",
+        "Cuatro: tiroidea superior, lingual, facial y occipital"
+      ],
+      "correcta": 1,
+      "explicacion": "Una rama es medial (faríngea ascendente), dos son posteriores (occipital y auricular posterior) y tres son anteriores.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1795",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1795."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-023",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Qué arteria del cuello no da ramas con nombre antes de entrar en el cráneo?",
+      "opciones": [
+        "Tronco braquiocefálico",
+        "Subclavia",
+        "Carótida interna",
+        "Carótida externa"
+      ],
+      "correcta": 2,
+      "explicacion": "La carótida interna asciende hasta el conducto carotídeo del temporal sin dar ramas con nombre en el cuello.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1791",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1791."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-024",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "En la bifurcación carotídea se identifica una masa pequeña de tejido ovoide, marrón rojizo, en el lado medial de la bifurcación. ¿Qué es?",
+      "opciones": [
+        "Seno carotídeo, dilatación de la arteria",
+        "Bulbo superior de la VYI, en el foramen yugular",
+        "Ganglio cervical medio, sobre la tiroidea inferior",
+        "Glomus carotídeo (cuerpo carotídeo)"
+      ],
+      "correcta": 3,
+      "explicacion": "El glomus carotídeo se localiza en la hendidura entre las carótidas interna y externa, en íntima relación con el seno carotídeo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1789, 1791",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», pp. 1789, 1791."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-025",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Una vena comienza cerca del ángulo de la mandíbula por la unión de la división posterior de la retromandibular con la auricular posterior, y cruza oblicuamente el ECM. ¿Cuál es?",
+      "opciones": [
+        "Vena yugular interna",
+        "Vena facial",
+        "Vena yugular externa",
+        "Vena yugular anterior"
+      ],
+      "correcta": 2,
+      "explicacion": "La VYE perfora el techo de la región cervical lateral y termina en la vena subclavia; drena la mayor parte de la piel cabelluda y el lado de la cara.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Venas de la región cervical lateral",
+        "pagina": "1780–1781",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Venas de la región cervical lateral», pp. 1780–1781."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-026",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "Una vena nace en el foramen yugular como continuación directa del seno sigmoideo y presenta una dilatación inicial, el bulbo superior. ¿Cuál es?",
+      "opciones": [
+        "Vena braquiocefálica",
+        "Vena subclavia",
+        "Vena yugular interna",
+        "Vena yugular externa"
+      ],
+      "correcta": 2,
+      "explicacion": "La VYI desciende en la vaina carotídea, lateral a las arterias y con el vago posterior, y se une a la subclavia para formar la braquiocefálica.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Venas de la región cervical anterior",
+        "pagina": "1794–1795",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Venas de la región cervical anterior», pp. 1794–1795."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-027",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Cuál de las siguientes venas es tributaria de la vena yugular interna?",
+      "opciones": [
+        "Vena facial",
+        "Vena vertebral",
+        "Vena yugular externa",
+        "Vena yugular anterior"
+      ],
+      "correcta": 0,
+      "explicacion": "Las tributarias de la VYI son el seno petroso inferior y las venas facial, lingual, faríngeas y tiroideas superior y media. La VYE termina en la subclavia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Venas de la región cervical anterior",
+        "pagina": "1796",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Venas de la región cervical anterior», p. 1796."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-028",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "En la raíz del cuello se identifica la rama más grande del tronco tirocervical, la principal arteria visceral del cuello. ¿Cuál es?",
+      "opciones": [
+        "Arteria cervical ascendente",
+        "Arteria cervical transversa",
+        "Arteria tiroidea inferior",
+        "Arteria supraescapular"
+      ],
+      "correcta": 2,
+      "explicacion": "La tiroidea inferior irriga la laringe, la tráquea, el esófago, la tiroides y las paratiroides. Las otras ramas del tronco irrigan músculos y la escápula.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: arterias",
+        "pagina": "1814",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: arterias», p. 1814."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-029",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "Un tronco nace de la cara posterior de la segunda porción de la arteria subclavia y se divide en las arterias intercostal superior y cervical profunda. ¿Cuál es?",
+      "opciones": [
+        "Tronco costocervical",
+        "Tronco tirocervical",
+        "Arteria torácica interna",
+        "Arteria vertebral"
+      ],
+      "correcta": 0,
+      "explicacion": "Las arterias intercostal superior y cervical profunda irrigan los dos primeros espacios intercostales y los músculos cervicales posteriores profundos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: arterias",
+        "pagina": "1814",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: arterias», p. 1814."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-030",
+      "tema": "vascularizacion-cuello",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Una vena pasa sobre la 1.ª costilla anterior al tubérculo del escaleno, separada de la arteria por el escaleno anterior, y solo tiene una tributaria con nombre. ¿Cuál es?",
+      "opciones": [
+        "Vena subclavia",
+        "Vena braquiocefálica",
+        "Vena yugular anterior",
+        "Vena yugular interna"
+      ],
+      "correcta": 0,
+      "explicacion": "La tributaria con nombre de la subclavia es la VYE. Se une a la VYI para formar la braquiocefálica.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: venas",
+        "pagina": "1814–1815",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: venas», pp. 1814–1815."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-031",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué función cumple el seno carotídeo?",
+      "opciones": [
+        "Termorreceptor que mide la temperatura de la sangre",
+        "Receptor de tensión que regula la secreción de calcitonina",
+        "Quimiorreceptor que controla la concentración de oxígeno",
+        "Barorreceptor: reacciona a los cambios de la presión arterial"
+      ],
+      "correcta": 3,
+      "explicacion": "El seno carotídeo es una dilatación de la porción proximal de la carótida interna, inervada sobre todo por el glosofaríngeo a través del nervio del seno carotídeo y también por el vago.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1789",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1789."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-032",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "Cuando desciende la concentración de oxígeno en la sangre, ¿qué respuesta inicia el glomus carotídeo?",
+      "opciones": [
+        "Se dilata el seno carotídeo y desciende la presión arterial",
+        "Aumenta la profundidad respiratoria pero baja la frecuencia cardíaca",
+        "Aumentan la respiración, la frecuencia cardíaca y la presión arterial",
+        "Disminuyen la frecuencia respiratoria y la presión arterial"
+      ],
+      "correcta": 2,
+      "explicacion": "El glomus carotídeo es un quimiorreceptor inervado por el nervio del seno carotídeo (IX) y por el X.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1789",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1789."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-033",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué importancia tiene la anastomosis entre las arterias tiroideas superior e inferior?",
+      "opciones": [
+        "Comunica las circulaciones de las arterias carótida externa y subclavia",
+        "Une el sistema carotídeo con el tronco braquiocefálico directamente",
+        "Une la arteria occipital con la cervical profunda en la nuca",
+        "Comunica las arterias vertebral y carótida interna a través del cráneo"
+      ],
+      "correcta": 0,
+      "explicacion": "Las arterias tiroideas superiores e inferiores se anastomosan ampliamente en la glándula, lo que asegura su irrigación y ofrece circulación colateral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Glándula tiroides",
+        "pagina": "1819–1820",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Glándula tiroides», pp. 1819–1820."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-034",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿Por qué la ligadura de una arteria carótida externa no elimina el flujo en sus ramas?",
+      "opciones": [
+        "La subclavia envía ramas directas a la cara y a la piel cabelluda",
+        "La carótida interna asume por completo la irrigación de la cara",
+        "La sangre llega en sentido retrógrado desde la carótida externa opuesta",
+        "Las ramas se vacían hacia la vena yugular interna del mismo lado"
+      ],
+      "correcta": 2,
+      "explicacion": "La ligadura disminuye el flujo pero no lo elimina: comunicaciones entre ramas de la cara y la piel cabelluda cruzan la línea media.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Cuadros clínicos: regiones cervicales",
+        "pagina": "1805",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Cuadros clínicos: regiones cervicales», p. 1805."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-035",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué estructura impide el reflujo de sangre hacia la vena yugular interna cuando aumenta la presión intratorácica?",
+      "opciones": [
+        "Una válvula situada cerca de su terminación",
+        "La arteria carótida común adosada a la vena",
+        "El bulbo superior en el foramen yugular",
+        "La lámina pretraqueal de la fascia cervical"
+      ],
+      "correcta": 0,
+      "explicacion": "La VYI termina a nivel de T1, uniéndose a la subclavia; una gran válvula cerca de su final evita el reflujo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Venas de la región cervical anterior",
+        "pagina": "1794, 1796",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Venas de la región cervical anterior», pp. 1794, 1796."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-036",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿En qué vena termina la vena yugular externa?",
+      "opciones": [
+        "Vena braquiocefálica",
+        "Vena subclavia",
+        "Vena yugular interna",
+        "Vena yugular anterior"
+      ],
+      "correcta": 1,
+      "explicacion": "Antes de terminar, la VYE recibe las venas cervicales transversas, supraescapulares y la yugular anterior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Venas de la región cervical lateral",
+        "pagina": "1781",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Venas de la región cervical lateral», p. 1781."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-037",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Dónde se comunican las venas yugulares anteriores de ambos lados por encima del manubrio?",
+      "opciones": [
+        "En el plexo venoso tiroideo, anterior a la tráquea",
+        "En el arco venoso yugular, en el espacio supraesternal",
+        "En la vena braquiocefálica izquierda, tras el manubrio",
+        "En el seno sigmoideo, dentro de la fosa craneal posterior"
+      ],
+      "correcta": 1,
+      "explicacion": "La yugular anterior nace cerca del hioides, gira lateralmente posterior al ECM y desemboca en la VYE o en la subclavia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: venas",
+        "pagina": "1814",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: venas», p. 1814."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-038",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué arteria forman las dos arterias vertebrales al unirse en el borde inferior del puente?",
+      "opciones": [
+        "Arteria comunicante posterior",
+        "Arteria carótida interna",
+        "Arteria cerebral media",
+        "Arteria basilar"
+      ],
+      "correcta": 3,
+      "explicacion": "La basilar participa en la formación del círculo arterial del cerebro; la vertebral aporta ramas a la médula oblongada y a la médula espinal.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: arterias",
+        "pagina": "1814",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: arterias», p. 1814."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-039",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿A qué arteria acompañan los nódulos linfáticos supraclaviculares?",
+      "opciones": [
+        "Arteria cervical ascendente",
+        "Arteria supraescapular",
+        "Arteria tiroidea inferior",
+        "Arteria cervical transversa"
+      ],
+      "correcta": 3,
+      "explicacion": "La mayor parte de la linfa de los seis a ocho nódulos cervicales profundos inferiores drena en los supraclaviculares, que acompañan a la arteria cervical transversa.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Linfáticos del cuello",
+        "pagina": "1855",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Linfáticos del cuello», p. 1855."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-040",
+      "tema": "vascularizacion-cuello",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿Dónde drenan los troncos linfáticos yugulares del lado derecho?",
+      "opciones": [
+        "En el ángulo venoso derecho, directamente o por el conducto linfático derecho",
+        "En la vena yugular externa derecha, antes de llegar a la subclavia",
+        "En el conducto torácico, tras cruzar la línea media del cuello",
+        "En la vena braquiocefálica izquierda, por detrás del manubrio"
+      ],
+      "correcta": 0,
+      "explicacion": "Los troncos yugulares nacen de los vasos eferentes de los nódulos cervicales profundos; en el lado izquierdo suelen unirse al conducto torácico.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Linfáticos del cuello",
+        "pagina": "1855",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Linfáticos del cuello», p. 1855."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-041",
+      "tema": "vascularizacion-cuello",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Cuál de las siguientes estructuras NO está contenida dentro de la vaina carotídea?",
+      "opciones": [
+        "Nervio vago",
+        "Tronco simpático cervical",
+        "Vena yugular interna",
+        "Arteria carótida común"
+      ],
+      "correcta": 1,
+      "explicacion": "La vaina contiene las carótidas común e interna, la VYI, el vago, algunos nódulos cervicales profundos, el nervio del seno carotídeo y fibras simpáticas. El tronco simpático la acompaña por detrás, pero lo rodea la lámina prevertebral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1768, 1795",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», pp. 1768, 1795."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-042",
+      "tema": "vascularizacion-cuello",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "La segunda porción de la arteria subclavia se sitúa:",
+      "opciones": [
+        "Posterior al músculo escaleno anterior",
+        "Medial al músculo escaleno anterior",
+        "Lateral al músculo escaleno anterior",
+        "Anterior al músculo escaleno anterior"
+      ],
+      "correcta": 0,
+      "explicacion": "La primera porción es medial al escaleno anterior, la segunda posterior y la tercera lateral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: arterias",
+        "pagina": "1813",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: arterias», p. 1813."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-043",
+      "tema": "vascularizacion-cuello",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Cuál de estas arterias NO es rama de la arteria subclavia?",
+      "opciones": [
+        "Arteria tiroidea superior",
+        "Tronco costocervical",
+        "Arteria vertebral",
+        "Arteria torácica interna"
+      ],
+      "correcta": 0,
+      "explicacion": "La tiroidea superior es rama de la carótida externa. La subclavia da la vertebral, la torácica interna, el tronco tirocervical, el costocervical y la dorsal de la escápula.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: arterias",
+        "pagina": "1795, 1813",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: arterias», pp. 1795, 1813."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-044",
+      "tema": "vascularizacion-cuello",
+      "patron": "P10",
+      "dificultad": 3,
+      "enunciado": "¿Cuáles son las cuatro ramas del tronco tirocervical?",
+      "opciones": [
+        "Tiroidea inferior, vertebral, torácica interna y supraescapular",
+        "Cervical ascendente, intercostal superior, cervical profunda y cervical transversa",
+        "Tiroidea inferior, cervical profunda, supraescapular y dorsal de la escápula",
+        "Tiroidea inferior, cervical ascendente, supraescapular y cervical transversa"
+      ],
+      "correcta": 3,
+      "explicacion": "Las ramas terminales son la tiroidea inferior y la cervical ascendente; la supraescapular y el tronco cervicodorsal nacen de las caras laterales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: arterias",
+        "pagina": "1814",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: arterias», p. 1814."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-045",
+      "tema": "vascularizacion-cuello",
+      "patron": "P10",
+      "dificultad": 3,
+      "enunciado": "¿Qué estructura nerviosa se sitúa directamente posterior a la tercera porción de la arteria subclavia?",
+      "opciones": [
+        "Nervio vago",
+        "Nervio frénico",
+        "Tronco superior del plexo braquial",
+        "Tronco inferior del plexo braquial"
+      ],
+      "correcta": 3,
+      "explicacion": "La tercera porción, la más larga y superficial, descansa sobre la 1.ª costilla y se palpa en el triángulo omoclavicular.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical lateral",
+        "pagina": "1780",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical lateral», p. 1780."
+      },
+      "imagen": null,
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-046",
+      "tema": "vascularizacion-cuello",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema de las arterias del cuello, ¿qué arteria señala la flecha, que continúa hacia el cráneo sin dar ramas con nombre en el cuello?",
+      "opciones": [
+        "Vertebral",
+        "Carótida interna",
+        "Carótida externa",
+        "Carótida común"
+      ],
+      "correcta": 1,
+      "explicacion": "A nivel del borde superior del cartílago tiroides la carótida común se divide en interna y externa.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1791",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1791."
+      },
+      "imagen": {
+        "id": "a2-img-06",
+        "descripcion": "Vista lateral del cuello con la carótida común y su bifurcación a nivel del borde superior del cartílago tiroides. Una flecha señala la rama que asciende sin ramas hacia el conducto carotídeo.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-047",
+      "tema": "vascularizacion-cuello",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema de la carótida externa, ¿qué rama señala la flecha, la más inferior de las tres ramas anteriores?",
+      "opciones": [
+        "Arteria tiroidea superior",
+        "Arteria facial, rama anterior superior",
+        "Arteria occipital, rama posterior",
+        "Arteria lingual, rama anterior media"
+      ],
+      "correcta": 0,
+      "explicacion": "La tiroidea superior desciende profunda a los infrahioideos hasta la tiroides y da origen a la arteria laríngea superior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Arterias de la región cervical anterior",
+        "pagina": "1795",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Arterias de la región cervical anterior», p. 1795."
+      },
+      "imagen": {
+        "id": "a2-img-07",
+        "descripcion": "Vista lateral de la carótida externa con sus seis ramas. Una flecha señala la rama anterior más inferior, que desciende hacia la glándula tiroides.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-048",
+      "tema": "vascularizacion-cuello",
+      "patron": "P13",
+      "dificultad": 1,
+      "enunciado": "En el esquema lateral del cuello, ¿qué vena señala la flecha, que cruza oblicuamente el esternocleidomastoideo?",
+      "opciones": [
+        "Vena yugular interna",
+        "Vena yugular externa",
+        "Vena yugular anterior",
+        "Vena facial"
+      ],
+      "correcta": 1,
+      "explicacion": "La VYE se forma cerca del ángulo de la mandíbula y cruza el ECM, profunda al platisma.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Venas de la región cervical lateral",
+        "pagina": "1780",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Venas de la región cervical lateral», p. 1780."
+      },
+      "imagen": {
+        "id": "a2-img-08",
+        "descripcion": "Vista lateral del cuello con el esternocleidomastoideo y el platisma. Una flecha señala una vena que cruza oblicuamente el esternocleidomastoideo desde el ángulo de la mandíbula hacia la clavícula.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-049",
+      "tema": "vascularizacion-cuello",
+      "patron": "P13",
+      "dificultad": 3,
+      "enunciado": "En el esquema de la raíz del cuello izquierda, ¿qué estructura señala la flecha, que se arquea posterior a la vaina carotídea y drena en el ángulo venoso?",
+      "opciones": [
+        "Conducto linfático derecho",
+        "Vena yugular interna",
+        "Conducto torácico",
+        "Tronco simpático"
+      ],
+      "correcta": 2,
+      "explicacion": "El conducto torácico asciende por el borde izquierdo del esófago y termina en la unión de la vena subclavia izquierda con la VYI.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Linfáticos del cuello",
+        "pagina": "1857",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Linfáticos del cuello», p. 1857."
+      },
+      "imagen": {
+        "id": "a2-img-09",
+        "descripcion": "Vista del lado izquierdo de la raíz del cuello con la vaina carotídea, el esófago y la vena subclavia. Una flecha señala el conducto que asciende por el borde izquierdo del esófago, se arquea lateralmente y desemboca en la unión de las venas subclavia y yugular interna.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "a2-t2-050",
+      "tema": "vascularizacion-cuello",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema de la arteria subclavia, ¿qué tronco señala la flecha, que nace de la primera porción cerca del borde medial del escaleno anterior?",
+      "opciones": [
+        "Arteria torácica interna",
+        "Tronco tirocervical",
+        "Tronco costocervical",
+        "Arteria vertebral"
+      ],
+      "correcta": 1,
+      "explicacion": "El tirocervical da la tiroidea inferior, la cervical ascendente, la supraescapular y el tronco cervicodorsal.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "9. Cuello",
+        "seccion": "Raíz del cuello: arterias",
+        "pagina": "1814",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Raíz del cuello: arterias», p. 1814."
+      },
+      "imagen": {
+        "id": "a2-img-10",
+        "descripcion": "Vista anterior de la raíz del cuello con las arterias subclavia, carótida común y escaleno anterior. Una flecha señala el tronco corto que nace de la cara anterosuperior de la primera porción de la subclavia.",
+        "estado": "pendiente"
+      },
+      "estado": "borrador"
+    }
+  ]
+}
