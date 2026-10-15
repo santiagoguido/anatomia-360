@@ -1,18 +1,36 @@
-name: Desplegar función rondas
+name: Preparar y desplegar función rondas
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - 'supabase/functions/**'
+      - 'contenido/preguntas/**'
+      - 'src/game/ronda/**'
+      - 'src/servidor/**'
+      - 'supabase/functions/rondas/**'
       - 'supabase/config.toml'
+
+permissions:
+  contents: write
 
 jobs:
   desplegar:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Copiar lo que usa la función
+        run: node scripts/sincronizar-funcion.js
+      - name: Guardar la copia si cambió
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add supabase/functions/_shared
+          git diff --staged --quiet || git commit -m "Actualizar copia de la función"
+          git push
       - uses: supabase/setup-cli@v1
         with:
           version: latest
