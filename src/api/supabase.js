@@ -48,6 +48,14 @@ export const api = {
     return rpc('registrar_jugador', { p_matricula: matricula, p_nombre: nombre, p_genero: genero });
   },
 
+  /**
+   * Calendario de aulas con la hora del SERVIDOR: para cada aula, si ya está abierta y
+   * cuántos segundos faltan. Devuelve un arreglo de filas (ver supabase/schema.sql → estado_aulas).
+   */
+  estadoAulas() {
+    return rpc('estado_aulas', {});
+  },
+
   /** Marca la última entrada del jugador. Si falla no importa: no se espera ni se muestra. */
   registrarAcceso(matricula) {
     rpc('registrar_acceso', { p_matricula: matricula }).catch(() => {});

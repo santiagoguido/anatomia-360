@@ -1,8 +1,45 @@
-# Anatomía 360 · Sesión 1: base técnica
+# Anatomía 360 · Sesión 2: campus pixel art
 
 Juego web pixel art (Phaser 3 + Supabase + Netlify) para Anatomía de 1.er semestre, UMSNH.
-Esta sesión incluye: portada, registro por pasos, aviso de privacidad, recuperación de jugador por
-matrícula y un campus vacío. El mapa se hace en la Sesión 2.
+Esta sesión agrega el **campus**: mapa de 3 × 3 pantallas con avatar, joystick, sprint, colisiones,
+minimapa, tarjetas al acercarse a una puerta y aulas que se abren por fecha. Las puertas todavía no
+llevan a las rondas, la Clínica, el Salón de la Fama ni Control Escolar (Sesiones 3 en adelante).
+
+**Si ya hiciste la Sesión 1 no tienes que tocar Supabase:** esta sesión usa la función `estado_aulas()`
+que ya estaba en `schema.sql`.
+
+## Cómo se juega
+| | Celular / tablet | Computadora |
+|---|---|---|
+| Mover | joystick (abajo a la izquierda) | WASD o flechas |
+| Correr | mantener **CORRER** (abajo a la derecha) | mantener Shift |
+| Entrar a un lugar | botón de la tarjeta | botón de la tarjeta, o tecla E / Enter |
+
+Correr gasta una resistencia de 5 barras (unos 3 s seguidos); al vaciarse hay que esperar a recuperar un poco.
+
+## El campus
+Cada pantalla mide 52 × 24 tiles de 16 px (el tamaño de un celular en horizontal). El minimapa dibuja el campus completo, 1 píxel por tile.
+
+| | Oeste | Centro | Este |
+|---|---|---|---|
+| **Norte** | jardín y biblioteca | jardín | estanque |
+| **Medio** | Control Escolar | plaza con fuente, Aulas 1-3, Clínica, Salón de la Fama | Aulas 4, 5 y 6 |
+| **Sur** | cafetería | jardín | estanque |
+
+El avatar aparece en la plaza. Las aulas abren cada lunes a las 00:00 (CDMX) y el juego pregunta
+la hora **al servidor**, no al teléfono: si el reloj del alumno está mal, no se abre nada antes de tiempo.
+Un aula bloqueada se ve apagada y con candado; su tarjeta muestra la fecha y una cuenta regresiva.
+Si no hay internet, el campus usa el calendario de `src/config.js` (solo como respaldo).
+
+## Qué cambiar y dónde
+| Quiero cambiar… | Archivo |
+|---|---|
+| Fechas de las aulas | `supabase/schema.sql` (vuelve a ejecutarlo) **y** `CALENDARIO_AULAS` en `src/config.js` |
+| Velocidad, correr, resistencia, distancia de las tarjetas | `MOVIMIENTO` y `PROXIMIDAD` en `src/config.js` |
+| Dónde está cada edificio, camino, banca o árbol | `src/game/mapa.js` (todo en tiles; `npm test` avisa si algo queda inalcanzable) |
+| Colores y dibujo de edificios, árboles, fuente | `src/game/texturas.js` |
+| Textos de tarjetas, carteles y menú | `src/textos.js` → `CAMPUS` |
+| Cuando una puerta ya lleve a algún lado | `ctx.entrarALugar` en `src/ui/pantallas/campus.js` |
 
 ## 1. Correrlo en tu computadora
 Necesitas Node 20.19 o más nuevo.
@@ -11,7 +48,7 @@ Necesitas Node 20.19 o más nuevo.
 npm install
 cp .env.example .env     # después llena los dos valores (paso 3)
 npm run dev              # abre http://localhost:5173
-npm test                 # pruebas de validación (opcional)
+npm test                 # pruebas de lógica: validación, mapa, colisiones, calendario… (opcional)
 ```
 
 ## 2. Crear las tablas en Supabase
@@ -50,5 +87,8 @@ Nunca uses la clave `secret` / `service_role` en este proyecto.
 - El proyecto gratuito de Supabase se pausa tras una semana sin actividad.
 
 ## Estructura
-`src/ui/pantallas/` pantallas · `src/game/` Phaser · `src/api/` Supabase · `src/textos.js` todos los textos ·
-`src/config.js` reglas (formato de matrícula) · `supabase/schema.sql` base de datos.
+`src/ui/pantallas/` pantallas · `src/ui/campus/` joystick, botón correr, minimapa y tarjeta ·
+`src/game/` Phaser (`scenes/CampusScene.js`) y la lógica pura que se prueba sin navegador
+(`mapa`, `colisiones`, `entrada`, `resistencia`, `aulas`, `tarjetas`, `avatarFrames`) ·
+`src/api/` Supabase · `src/textos.js` todos los textos · `src/config.js` reglas ·
+`supabase/schema.sql` base de datos · `tests/` pruebas.

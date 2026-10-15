@@ -1,6 +1,6 @@
 {
   "name": "anatomia-360",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Anatomía 360 — juego didáctico de Anatomía Humana (UMSNH)",
   "scripts": {
     "dev": "vite",

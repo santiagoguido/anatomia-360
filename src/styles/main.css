@@ -780,6 +780,7 @@ h1:focus {
   overflow: hidden;
   padding: 0;
   background: var(--fondo);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .campus__juego {
@@ -794,61 +795,481 @@ h1:focus {
   display: block;
 }
 
+/* Barra superior: fichas sueltas sobre el mapa, como en el mockup. */
 .hud {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding-top: calc(env(safe-area-inset-top, 0px) + 8px);
-  padding-bottom: 8px;
-  padding-left: max(12px, env(safe-area-inset-left, 0px));
-  padding-right: max(12px, env(safe-area-inset-right, 0px));
-  background: rgba(8, 19, 33, 0.92);
-  border-bottom: 2px solid var(--trazo);
+  gap: 8px;
+  padding-top: calc(env(safe-area-inset-top, 0px) + 10px);
+  padding-left: max(10px, env(safe-area-inset-left, 0px));
+  padding-right: max(10px, env(safe-area-inset-right, 0px));
+  pointer-events: none;
+}
+
+.hud > * {
+  pointer-events: auto;
+}
+
+.hud__jugador {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 4px 12px 4px 4px;
+  background: var(--fondo);
+  border: 2px solid var(--turquesa);
+  box-shadow: 3px 3px 0 var(--fondo-hondo);
+}
+
+.hud__iniciales {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: var(--turquesa);
+  font-family: var(--fuente-titulo);
+  font-size: 10px;
+}
+
+.hud__textos {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.15;
 }
 
 .hud__nombre {
-  flex: 1 1 auto;
-  min-width: 0;
+  max-width: 170px;
   overflow: hidden;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.hud__dato {
+.hud__record {
+  color: var(--texto-suave);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.hud__record strong {
+  color: var(--dorado);
+  font-weight: 700;
+}
+
+.hud__chip {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--dorado);
-  font-size: 0.95rem;
+  padding: 7px 10px;
+  background: var(--fondo);
+  border: 2px solid var(--trazo);
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+  white-space: nowrap;
 }
 
-.hud__dato strong {
+.hud__racha {
+  margin-left: auto;
+  border-color: #d9644a;
   color: var(--texto);
+}
+
+.hud__racha .icono {
+  width: 14px;
+  height: 16px;
+  color: #d9644a;
+}
+
+.hud__boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 10px;
+  background: var(--fondo);
+  border: 2px solid var(--dorado);
+  border-radius: 0;
+  color: var(--texto);
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.hud__boton .icono {
+  width: 14px;
+  height: 16px;
+  color: var(--dorado);
+}
+
+.hud__boton--icono {
+  width: 36px;
+  padding: 0;
+  border-color: var(--trazo);
+}
+
+.hud__boton--icono svg {
+  width: 14px;
+  height: 12px;
+  color: var(--dorado-claro);
+}
+
+/* Minimapa: 1 píxel por tile del campus. */
+.minimapa {
+  position: absolute;
+  top: calc(env(safe-area-inset-top, 0px) + 58px);
+  right: max(10px, env(safe-area-inset-right, 0px));
+  z-index: 2;
+  padding: 6px;
+  background: var(--fondo);
+  border: 2px solid var(--dorado);
+  box-shadow: 3px 3px 0 var(--fondo-hondo);
+  pointer-events: none;
+}
+
+.minimapa__titulo {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: 8px;
+}
+
+.minimapa__lienzo {
+  display: block;
+  width: 156px;
+  height: 72px;
+  image-rendering: pixelated;
+}
+
+/* Tarjeta de proximidad: aparece junto a la puerta a la que te acercas. */
+.tarjeta-lugar {
+  position: absolute;
+  right: calc(max(24px, env(safe-area-inset-right, 0px)) + 104px);
+  bottom: calc(max(16px, env(safe-area-inset-bottom, 0px)));
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 232px;
+  padding: 14px;
+  background: var(--panel);
+  border: 2px solid #126b68;
+  box-shadow: 4px 4px 0 var(--fondo-hondo);
+}
+
+.tarjeta-lugar[hidden] {
+  display: none;
+}
+
+.tarjeta-lugar--bloqueada {
+  background: var(--fondo-hondo);
+  border: 2px dashed var(--trazo-fuerte);
+}
+
+.tarjeta-lugar__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tarjeta-lugar__titulo {
+  color: var(--dorado);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.sello {
+  padding: 3px 9px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sello--ok {
+  background: #5fd3a0;
+  color: var(--fondo);
+}
+
+.sello--bloqueada {
+  background: var(--trazo);
+  color: var(--texto);
+}
+
+.tarjeta-lugar__lineas p {
+  font-size: 0.875rem;
+  line-height: 1.35;
+}
+
+.tarjeta-lugar--bloqueada .tarjeta-lugar__lineas p {
+  color: var(--texto-suave);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.chips li {
+  padding: 3px 8px;
+  background: var(--turquesa-hondo);
+  font-size: 0.75rem;
+}
+
+.metricas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.metrica {
+  padding: 8px 10px;
+  background: var(--fondo);
+}
+
+.metrica span {
+  display: block;
+  color: var(--texto-suave);
+  font-size: 0.72rem;
+}
+
+.metrica strong {
+  display: block;
+  margin-top: 2px;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
-.hud__dato .icono {
-  width: 16px;
-  height: 16px;
+.cuenta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  background: var(--fondo);
 }
 
-.hud .boton {
-  min-height: 40px;
-  padding: 0 14px;
+.cuenta span {
+  color: var(--texto-suave);
+  font-size: 0.75rem;
+}
+
+.cuenta__valor {
+  color: var(--dorado);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.tarjeta-lugar__nota {
+  color: var(--texto-suave);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.tarjeta-lugar .boton {
+  min-height: 44px;
+  padding: 0 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.boton:disabled {
+  border: 2px solid var(--trazo-fuerte);
+  background: transparent;
+  box-shadow: none;
+  color: var(--texto-suave);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Controles táctiles: solo en pantallas táctiles. En computadora se juega con el teclado. */
+.controles {
+  display: none;
+}
+
+.ayuda-teclado {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  z-index: 2;
+  padding: 4px 10px;
+  background: rgba(8, 19, 33, 0.88);
+  border: 2px solid var(--trazo);
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+@media (pointer: coarse), (hover: none) {
+  .controles {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
+    pointer-events: none;
+  }
+
+  .ayuda-teclado {
+    display: none;
+  }
+}
+
+.joystick {
+  position: absolute;
+  bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  left: max(24px, env(safe-area-inset-left, 0px));
+  width: 104px;
+  height: 104px;
+  background: rgba(10, 24, 40, 0.55);
+  border: 3px solid var(--dorado-claro);
+  clip-path: polygon(24px 0, 80px 0, 104px 24px, 104px 80px, 80px 104px, 24px 104px, 0 80px, 0 24px);
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.joystick--activo {
+  background: rgba(10, 24, 40, 0.75);
+}
+
+.joystick__palanca {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  background: var(--turquesa);
+  border: 3px solid var(--dorado);
+  pointer-events: none;
+}
+
+.correr {
+  position: absolute;
+  right: max(24px, env(safe-area-inset-right, 0px));
+  bottom: max(24px, env(safe-area-inset-bottom, 0px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 88px;
+  height: 72px;
+  padding: 0;
+  background: var(--fondo);
+  border: 3px solid var(--dorado);
+  border-radius: 0;
+  box-shadow: 0 4px 0 var(--fondo-hondo);
+  color: var(--texto);
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.correr__texto {
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: 10px;
+}
+
+.correr__barras {
+  display: flex;
+  gap: 2px;
+}
+
+.correr__barra {
+  width: 10px;
+  height: 8px;
+  background: var(--trazo);
+}
+
+.correr__barra--encendida {
+  background: #5fd3a0;
+}
+
+.correr--presionado {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--fondo-hondo);
+}
+
+.correr--agotada {
+  border-color: #d9644a;
+}
+
+.correr--agotada .correr__barra--encendida {
+  background: #d9644a;
+}
+
+.aviso-campus {
+  position: absolute;
+  top: calc(env(safe-area-inset-top, 0px) + 62px);
+  left: 50%;
+  z-index: 4;
+  max-width: min(90vw, 420px);
+  padding: 8px 14px;
+  background: var(--panel);
+  border-left: 4px solid var(--dorado);
+  color: var(--dorado-claro);
   font-size: 0.9rem;
+  transform: translateX(-50%);
+}
+
+.aviso-campus[hidden] {
+  display: none;
+}
+
+/* Ventana del menú y de las insignias. */
+.panel {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(8, 19, 33, 0.72);
+}
+
+.panel__caja {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(420px, 100%);
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 20px;
+  background: var(--panel);
+  border: 3px solid var(--dorado);
+  box-shadow: 4px 4px 0 var(--fondo-hondo);
+}
+
+.panel__titulo {
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.panel__contenido {
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .campus__estado {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -863,7 +1284,7 @@ h1:focus {
 .campus__girar {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 7;
   display: none;
   align-items: center;
   justify-content: center;
@@ -877,6 +1298,90 @@ h1:focus {
 @media (orientation: portrait) and (max-width: 640px) {
   .campus__girar {
     display: flex;
+  }
+}
+
+/* Celulares en horizontal (844 × 390): formato compacto del mockup, para que el botón Entrar siempre se vea. */
+@media (max-height: 430px) {
+  .tarjeta-lugar {
+    gap: 6px;
+    padding: 10px 12px;
+  }
+
+  .chips {
+    gap: 4px;
+  }
+
+  .chips li {
+    padding: 2px 6px;
+    font-size: 0.7rem;
+  }
+
+  .tarjeta-lugar__lineas p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .tarjeta-lugar__nota {
+    display: none;
+  }
+
+  .metricas {
+    display: flex;
+    gap: 14px;
+  }
+
+  .metrica {
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+    padding: 0;
+    background: none;
+  }
+
+  .metrica span {
+    display: inline;
+    font-size: 0.78rem;
+  }
+
+  .metrica strong {
+    display: inline;
+    margin: 0;
+    font-size: 0.85rem;
+  }
+
+  .cuenta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 6px 10px;
+  }
+
+  .cuenta span {
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+
+  .cuenta__valor {
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .tarjeta-lugar {
+    bottom: max(10px, env(safe-area-inset-bottom, 0px));
+  }
+
+  .tarjeta-lugar .boton {
+    min-height: 40px;
+    padding: 0 8px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .hud__semana {
+    display: none;
   }
 }
 
@@ -925,12 +1430,8 @@ h1:focus {
     align-items: center;
   }
 
-  .hud {
-    gap: 10px;
-  }
-
   .hud__nombre {
-    font-size: 0.9rem;
+    max-width: 120px;
   }
 }
 

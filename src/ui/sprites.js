@@ -4,7 +4,7 @@
 // que camina por el campus.
 import { s } from '../utils/dom.js';
 
-const PALETA = {
+export const PALETA = {
   h: '#3A2216', H: '#6B4330', // pelo largo y su brillo
   k: '#1E1410', K: '#4A3326', // pelo corto y su brillo
   s: '#C98E6B', S: '#A9714F', // piel y sombra
@@ -65,7 +65,7 @@ export function crearAvatar(genero) {
   );
 }
 
-const ICONOS = {
+export const ICONOS = {
   check: ['........', '.......#', '......##', '#....##.', '##..##..', '.####...', '..##....', '........'],
   trofeo: ['########', '#.####.#', '#.####.#', '.######.', '..####..', '...##...', '...##...', '.######.'],
   estrella: ['...##...', '...##...', '########', '.######.', '..####..', '.##..##.', '.#....#.', '........'],
