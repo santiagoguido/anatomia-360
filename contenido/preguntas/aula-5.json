@@ -1,0 +1,2484 @@
+{
+  "version": 1,
+  "aula": 5,
+  "titulo": "Aula 5",
+  "generado": "2026-10-15",
+  "fuente": {
+    "referencias": {
+      "moore2017": {
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer.",
+        "autores": [
+          "Keith L. Moore",
+          "Arthur F. Dalley II",
+          "Anne M. R. Agur"
+        ],
+        "titulo": "Anatomía con orientación clínica",
+        "edicion": "8.ª ed.",
+        "editorial": "Wolters Kluwer",
+        "ciudad": "Barcelona",
+        "anio": 2017,
+        "isbn": "978-84-17033-63-7"
+      }
+    },
+    "terminologia": "Se usa la terminología de Moore en español (p. ej. «isquiático», «fibular común», «tracto iliotibial»)."
+  },
+  "temas": [
+    {
+      "id": "gluteo-muslo",
+      "nombre": "Glúteo y muslo"
+    },
+    {
+      "id": "plexo-lumbosacro",
+      "nombre": "Plexo lumbosacro"
+    }
+  ],
+  "patrones": {
+    "P09": "Viñeta clínica corta: signo o síntoma → estructura lesionada",
+    "P02": "Disección o anfiteatro: descripción → identificación",
+    "P04": "Función o mecanismo",
+    "P10": "Límites, relaciones y contenidos de espacios",
+    "P13": "Estructura señalada en una imagen"
+  },
+  "preguntas": [
+    {
+      "id": "a5-t1-001",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Al palpar el pulso femoral justo por debajo del punto inguinal medio, ¿qué estructura queda inmediatamente medial a la arteria?",
+      "opciones": [
+        "La vena safena magna",
+        "El nervio femoral",
+        "La vena femoral",
+        "El nervio obturador"
+      ],
+      "correcta": 2,
+      "explicacion": "El nervio femoral se sitúa lateral, a un través de dedo, y la cabeza del fémur queda justo posterior a la arteria.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1301",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1301."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-002",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una mujer tiene una masa dolorosa en el triángulo femoral, inferolateral al tubérculo del pubis. ¿Qué ligamento limita medialmente el anillo por el que sale esta hernia?",
+      "opciones": [
+        "Ligamento pectíneo",
+        "Ligamento arqueado",
+        "Ligamento lagunar",
+        "Ligamento inguinal"
+      ],
+      "correcta": 2,
+      "explicacion": "En la hernia femoral el saco queda limitado lateralmente por la vena femoral y medialmente por el ligamento lagunar; su borde cóncavo puede estrangular la hernia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1308",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1308."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-003",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "¿Por qué las hernias femorales son más frecuentes en las mujeres?",
+      "opciones": [
+        "Porque el conducto aductor es más ancho y deja pasar el saco",
+        "Porque el ligamento inguinal es más corto y deja menos espacio",
+        "Porque su pelvis es más ancha y sus anillos inguinales más pequeños",
+        "Porque la vena femoral es más voluminosa y se dilata más"
+      ],
+      "correcta": 2,
+      "explicacion": "También pueden aparecer tras varios embarazos, por el ensanchamiento del anillo femoral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1308",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1308."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-004",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "En el 20 % de las personas una rama aumentada de la arteria epigástrica inferior sustituye a la obturatriz y se relaciona con el cuello de una hernia femoral. ¿Qué rama es?",
+      "opciones": [
+        "La rama púbica",
+        "La rama circunfleja ilíaca",
+        "La rama cremastérica",
+        "La rama acetabular"
+      ],
+      "correcta": 0,
+      "explicacion": "Su trayecto pasa junto o a través del anillo femoral; podría afectarse si se estrangula la hernia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1309",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1309."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-005",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un paciente con tuberculosis vertebral presenta edema en la parte proximal del muslo y una masa inguinal. ¿Por dónde desciende el pus desde el abdomen hasta el muslo?",
+      "opciones": [
+        "Por el hiato del aductor",
+        "Por el conducto aductor",
+        "Entre el sartorio y el tracto iliotibial",
+        "Entre el psoas mayor y su fascia"
+      ],
+      "correcta": 3,
+      "explicacion": "Un absceso del psoas puede confundirse con una hernia inguinal o femoral, una vena safena varicosa o adenopatías inguinales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1302",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1302."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-006",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Al golpear el tendón patelar con el martillo de reflejos la pierna se extiende. ¿Qué nervio y qué segmentos comprueba este reflejo?",
+      "opciones": [
+        "Nervio femoral, L2–L4",
+        "Nervio femoral, S1–S2",
+        "Nervio obturador, L2–L4",
+        "Nervio isquiático, L4–S2"
+      ],
+      "correcta": 0,
+      "explicacion": "Los husos del cuádriceps envían impulsos por el nervio femoral a L2–L4 y la respuesta vuelve por el mismo nervio.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1303",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1303."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-007",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Una persona no puede extender la pierna contra resistencia y se presiona el extremo distal del muslo al caminar para evitar que la rodilla se flexione. ¿Qué músculo está paralizado?",
+      "opciones": [
+        "Aductor mayor",
+        "Isquiotibiales",
+        "Sartorio",
+        "Cuádriceps femoral"
+      ],
+      "correcta": 3,
+      "explicacion": "La debilidad de los vastos medial o lateral puede además provocar movimientos anormales de la patela.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1302",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1302."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-008",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Un corredor de maratón tiene dolor alrededor y por detrás de la patela por desequilibrio del cuádriceps. ¿Cómo se llama este cuadro?",
+      "opciones": [
+        "Fractura transversa de la patela",
+        "Bursitis trocantérea",
+        "Condromalacia patelar",
+        "Patela bipartita"
+      ],
+      "correcta": 2,
+      "explicacion": "También se llama «rodilla de corredor» o síndrome del estrés femoropatelar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1302",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1302."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-009",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En una fractura transversa de la patela por una contracción súbita del cuádriceps, ¿con qué estructura se desplaza el fragmento superior?",
+      "opciones": [
+        "Con el tendón del cuádriceps",
+        "Con el tendón del sartorio",
+        "Con el tracto iliotibial",
+        "Con el ligamento patelar"
+      ],
+      "correcta": 0,
+      "explicacion": "El fragmento distal permanece unido al ligamento patelar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1302–1303",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», pp. 1302–1303."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-010",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una radiografía muestra una patela con dos fragmentos en un adulto sin traumatismo. ¿Por qué conviene examinar la rodilla contralateral?",
+      "opciones": [
+        "Porque la patela bipartita suele ser bilateral",
+        "Porque el reflejo patelar es simétrico",
+        "Porque las fracturas de patela son siempre bilaterales",
+        "Porque la patela se osifica a los 20 años"
+      ],
+      "correcta": 0,
+      "explicacion": "La patela se osifica entre los 3 y 6 años y puede conservar centros separados; no debe confundirse con una fractura.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1303",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1303."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-011",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Los cirujanos pueden trasplantar el músculo grácil a la mano sin dejar una pérdida notable de acción en la pierna. ¿Por qué?",
+      "opciones": [
+        "Porque tiene una irrigación independiente del resto del grupo",
+        "Porque es un miembro relativamente débil del grupo aductor",
+        "Porque se inserta en la patela y no en la tibia proximal",
+        "Porque está inervado por el nervio femoral y no por el obturador"
+      ],
+      "correcta": 1,
+      "explicacion": "Se trasplanta con sus vasos y nervio para sustituir un músculo lesionado, por ejemplo de la mano.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1304",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1304."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-012",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En los jinetes puede producirse osificación de los tendones de un músculo por la aducción activa de los muslos para no caer. ¿Qué músculo se sobrecarga?",
+      "opciones": [
+        "Sartorio",
+        "Aductor largo",
+        "Pectíneo",
+        "Recto femoral"
+      ],
+      "correcta": 1,
+      "explicacion": "Las zonas osificadas se denominan «huesos de los jinetes».",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1305",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1305."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-013",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Si hay que ligar la arteria femoral, una anastomosis puede mantener el riego del miembro. ¿Qué arterias la forman con la glútea inferior y la primera perforante?",
+      "opciones": [
+        "La poplítea y la tibial anterior",
+        "Las circunflejas femorales medial y lateral",
+        "Las circunflejas ilíacas superficial y profunda",
+        "La obturatriz y la epigástrica inferior"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la anastomosis cruzada, posterior al fémur, que se produce con menos frecuencia de lo que su mención implica.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1307",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1307."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-014",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Un médico llama «vena femoral superficial» a la vena femoral antes de unirse a las venas femorales profundas. ¿Por qué es peligrosa esta denominación?",
+      "opciones": [
+        "Porque es subcutánea y se comprime con facilidad al palpar",
+        "Porque es profunda y su trombosis aguda puede ser mortal",
+        "Porque no tiene válvulas y se colapsa con la bipedestación",
+        "Porque drena directamente en la vena safena magna del muslo"
+      ],
+      "correcta": 1,
+      "explicacion": "La mayoría de las embolias pulmonares proceden de venas profundas; el riesgo se reduce con anticoagulación.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1307",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», p. 1307."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-015",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un edema en el triángulo femoral se confunde con un absceso del psoas, pero hay varices en otras zonas de la pierna. ¿Qué vena está dilatada en su parte terminal?",
+      "opciones": [
+        "Safena parva",
+        "Femoral profunda",
+        "Safena magna",
+        "Femoral"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la variz de la vena safena; en la cirugía de varices hay que identificar bien la safena magna y no ligar por error la vena femoral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones anterior y medial del muslo",
+        "pagina": "1307–1308",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones anterior y medial del muslo», pp. 1307–1308."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-016",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una paciente tiene dolor profundo en la cara lateral del muslo, puntual a la presión sobre el trocánter mayor, que aumenta al abducir y rotar lateralmente contra resistencia. ¿Qué diagnóstico es el más probable?",
+      "opciones": [
+        "Síndrome del piriforme",
+        "Bursitis trocantérea",
+        "Distensión inguinal",
+        "Bursitis isquiática"
+      ],
+      "correcta": 1,
+      "explicacion": "El dolor se irradia a lo largo del tracto iliotibial y se debe al vaivén de las fibras del glúteo mayor sobre la bolsa trocantérea.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1340",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1340."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-017",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un ciclista tiene dolor localizado sobre la tuberosidad isquiática, que aumenta con los movimientos del glúteo mayor. ¿Qué diagnóstico es el más probable?",
+      "opciones": [
+        "Lesión del aductor largo",
+        "Bursitis trocantérea",
+        "Bursitis isquiática",
+        "Condromalacia patelar"
+      ],
+      "correcta": 2,
+      "explicacion": "Se produce por microtraumatismos repetidos, por ejemplo al pedalear o remar con extensión repetida de la cadera en posición sentada.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1340",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1340."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-018",
+      "tema": "gluteo-muslo",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Un jugador de rugby sufre una avulsión de la tuberosidad isquiática por flexión forzada de la cadera con la rodilla extendida. ¿Qué inserciones proximales se arrancan?",
+      "opciones": [
+        "Las del aductor largo y el grácil",
+        "Las del glúteo medio y el glúteo menor",
+        "Las del recto femoral y el sartorio",
+        "Las del bíceps femoral y el semitendinoso"
+      ],
+      "correcta": 3,
+      "explicacion": "Las distensiones de los isquiotibiales son el doble de frecuentes que las del cuádriceps y se acompañan de hematoma contenido por la fascia lata.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1340–1341",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», pp. 1340–1341."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-019",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "Un músculo en forma de cinta limita lateralmente el triángulo femoral. ¿Cuál es?",
+      "opciones": [
+        "Recto femoral",
+        "Pectíneo",
+        "Aductor largo",
+        "Sartorio"
+      ],
+      "correcta": 3,
+      "explicacion": "El triángulo femoral está limitado superiormente por el ligamento inguinal, medialmente por el aductor largo y lateralmente por el sartorio.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1293",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1293."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-020",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Qué músculo limita medialmente el triángulo femoral?",
+      "opciones": [
+        "Sartorio",
+        "Pectíneo",
+        "Aductor largo",
+        "Grácil"
+      ],
+      "correcta": 2,
+      "explicacion": "El nervio y los vasos femorales entran por la base y salen por el vértice del triángulo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1293",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1293."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-021",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Qué músculos forman el suelo del triángulo femoral, de lateral a medial?",
+      "opciones": [
+        "Sartorio e iliopsoas",
+        "Pectíneo y aductor largo",
+        "Iliopsoas y pectíneo",
+        "Vasto medial y grácil"
+      ],
+      "correcta": 2,
+      "explicacion": "El iliopsoas queda lateralmente y el pectíneo medialmente.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1293",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1293."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-022",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Cuál de estos músculos NO forma parte del cuádriceps femoral?",
+      "opciones": [
+        "Sartorio",
+        "Vasto medial",
+        "Recto femoral",
+        "Vasto lateral"
+      ],
+      "correcta": 0,
+      "explicacion": "El cuádriceps lo forman el recto femoral y los vastos lateral, medial e intermedio; extiende la pierna y lo inerva el nervio femoral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Muslo: músculos anteriores",
+        "pagina": "1283–1285",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Muslo: músculos anteriores», pp. 1283–1285."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-023",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Cuál es el músculo más voluminoso de la región glútea, que forma la prominencia de la nalga?",
+      "opciones": [
+        "Glúteo medio",
+        "Glúteo menor",
+        "Glúteo mayor",
+        "Tensor de la fascia lata"
+      ],
+      "correcta": 2,
+      "explicacion": "Lo inerva el nervio glúteo inferior, que entra por su cara profunda.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: músculos",
+        "pagina": "1314, 1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: músculos», pp. 1314, 1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-024",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Dos músculos de la región glútea, inervados por el nervio glúteo superior, impiden que la pelvis caiga al apoyar un solo pie. ¿Cuáles son?",
+      "opciones": [
+        "Glúteo mayor y piriforme",
+        "Obturador interno y gemelos",
+        "Cuadrado femoral y obturador externo",
+        "Glúteo medio y glúteo menor"
+      ],
+      "correcta": 3,
+      "explicacion": "El nervio glúteo superior discurre entre ambos y también inerva el tensor de la fascia lata.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: músculos",
+        "pagina": "1316, 1328, 1341",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: músculos», pp. 1316, 1328, 1341."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-025",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Qué músculo es la referencia para dividir el foramen isquiático mayor?",
+      "opciones": [
+        "Obturador interno",
+        "Piriforme",
+        "Gemelo superior",
+        "Cuadrado femoral"
+      ],
+      "correcta": 1,
+      "explicacion": "El glúteo superior sale por encima del piriforme; los demás nervios glúteos profundos, por debajo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: músculos",
+        "pagina": "1320, 1328",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: músculos», pp. 1320, 1328."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-026",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "Un músculo posterior del muslo tiene dos cabezas con distinta inervación: la larga por el componente tibial del isquiático y la corta por el fibular. ¿Cuál es?",
+      "opciones": [
+        "Semimembranoso",
+        "Semitendinoso",
+        "Bíceps femoral",
+        "Aductor mayor"
+      ],
+      "correcta": 2,
+      "explicacion": "La cabeza larga cruza y protege el nervio isquiático; una lesión nerviosa puede paralizar una cabeza y no la otra.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región posterior del muslo",
+        "pagina": "1326",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región posterior del muslo», p. 1326."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-027",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Los isquiotibiales mediales producen una rotación medial limitada de la tibia con la rodilla flexionada. ¿Cuáles son?",
+      "opciones": [
+        "Bíceps femoral y semimembranoso",
+        "Grácil y sartorio",
+        "Semitendinoso y semimembranoso",
+        "Bíceps femoral y semitendinoso"
+      ],
+      "correcta": 2,
+      "explicacion": "El bíceps femoral es el isquiotibial lateral y el «mulo de carga» de la extensión de la cadera.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región posterior del muslo",
+        "pagina": "1325–1326",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región posterior del muslo», pp. 1325–1326."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-028",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Un engrosamiento de la fascia lata va del tubérculo ilíaco a la tibia y recibe refuerzos del tensor de la fascia lata y del glúteo mayor. ¿Cómo se llama?",
+      "opciones": [
+        "Tracto iliotibial",
+        "Ligamento sacrotuberoso",
+        "Retináculo patelar",
+        "Ligamento inguinal"
+      ],
+      "correcta": 0,
+      "explicacion": "El dolor de la bursitis trocantérea se irradia por él.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1340",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1340."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-029",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "Por una abertura del aductor mayor pasan la arteria y la vena femorales hacia la fosa poplítea. ¿Cómo se llama?",
+      "opciones": [
+        "Hiato safeno",
+        "Conducto obturador",
+        "Hiato del aductor",
+        "Anillo femoral"
+      ],
+      "correcta": 2,
+      "explicacion": "El conducto aductor termina en esta abertura, donde la arteria femoral se continúa con la poplítea.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Muslo: músculos mediales y conducto aductor",
+        "pagina": "1289, 1298",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Muslo: músculos mediales y conducto aductor», pp. 1289, 1298."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-030",
+      "tema": "gluteo-muslo",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "La vaina femoral tiene varios compartimentos. ¿Cuál es el medial, que contiene tejido conectivo laxo, grasa y linfáticos?",
+      "opciones": [
+        "Compartimento arterial",
+        "Compartimento venoso",
+        "Hiato safeno",
+        "Conducto femoral"
+      ],
+      "correcta": 3,
+      "explicacion": "Su abertura proximal es el anillo femoral, sitio de origen de las hernias femorales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1294, 1308",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», pp. 1294, 1308."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-031",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué acción principal realiza el cuádriceps femoral?",
+      "opciones": [
+        "Rotar lateralmente la tibia",
+        "Extender la pierna en la rodilla",
+        "Aducir el muslo",
+        "Flexionar la rodilla"
+      ],
+      "correcta": 1,
+      "explicacion": "Su parálisis impide extender la pierna contra resistencia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Muslo: músculos anteriores",
+        "pagina": "1302",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Muslo: músculos anteriores», p. 1302."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-032",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué función cumple el tensor de la fascia lata?",
+      "opciones": [
+        "Extiende la cadera con la rodilla flexionada al caminar",
+        "Aduce el muslo y flexiona la rodilla contra resistencia",
+        "Rota medialmente la tibia con la rodilla extendida",
+        "Tensa el tracto iliotibial y ayuda a abducir el muslo"
+      ],
+      "correcta": 3,
+      "explicacion": "Lo inerva el nervio glúteo superior; junto con el bíceps femoral produce rotación lateral de la tibia con la rodilla flexionada.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: músculos",
+        "pagina": "1317, 1326, 1340",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: músculos», pp. 1317, 1326, 1340."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-033",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Cuál es la acción principal del iliopsoas?",
+      "opciones": [
+        "Rotar medialmente el muslo",
+        "Abducir el muslo",
+        "Extender el muslo en la cadera",
+        "Flexionar el muslo en la cadera"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el flexor principal del muslo y su fascia puede conducir un absceso desde el abdomen hasta el muslo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Muslo: músculos anteriores",
+        "pagina": "1282, 1302",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Muslo: músculos anteriores», pp. 1282, 1302."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-034",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué acción realizan los músculos aductores del muslo?",
+      "opciones": [
+        "Abducen el muslo",
+        "Extienden la rodilla",
+        "Flexionan la pierna",
+        "Aducen el muslo"
+      ],
+      "correcta": 3,
+      "explicacion": "Los músculos mediales los inerva sobre todo el obturador.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Muslo: músculos mediales y conducto aductor",
+        "pagina": "1286–1288",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Muslo: músculos mediales y conducto aductor», pp. 1286–1288."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-035",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué acción es la más importante del glúteo mayor?",
+      "opciones": [
+        "Flexionar el muslo en la cadera al subir la rodilla al pecho",
+        "Aducir el muslo contra resistencia, juntando las dos piernas",
+        "Abducir el muslo para caminar de lado y separar las piernas",
+        "Extender el muslo, al levantarse de una silla o subir escaleras"
+      ],
+      "correcta": 3,
+      "explicacion": "En la bursitis trocantérea se desplazan sus fibras tendinosas sobre la bolsa del trocánter mayor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: músculos",
+        "pagina": "1314, 1340",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: músculos», pp. 1314, 1340."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-036",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué función cumplen los glúteos medio y menor durante la marcha?",
+      "opciones": [
+        "Extienden la rodilla durante el apoyo de la pierna contraria",
+        "Elevan el tronco al subir una escalera con el pie apoyado",
+        "Rotan lateralmente la tibia durante la fase de balanceo",
+        "Evitan que la pelvis caiga hacia el lado del pie en el aire"
+      ],
+      "correcta": 3,
+      "explicacion": "Su debilidad produce la prueba de Trendelenburg positiva y la marcha glútea.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: músculos",
+        "pagina": "1341",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: músculos», p. 1341."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-037",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué acciones realizan los músculos isquiotibiales?",
+      "opciones": [
+        "Abducen la cadera y rotan el pie",
+        "Extienden la cadera y flexionan la rodilla",
+        "Flexionan la cadera y extienden la rodilla",
+        "Aducen la cadera y extienden la pierna"
+      ],
+      "correcta": 1,
+      "explicacion": "Su parálisis, por ejemplo por una lesión del nervio isquiático, altera la extensión del muslo y la flexión de la pierna.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región posterior del muslo",
+        "pagina": "1343",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región posterior del muslo», p. 1343."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-038",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "Con la rodilla flexionada 90°, ¿qué produce la contracción del bíceps femoral y del tensor de la fascia lata?",
+      "opciones": [
+        "Abducción de la cadera",
+        "Rotación medial de la tibia de unos 10°",
+        "Extensión de la rodilla",
+        "Rotación lateral de la tibia de unos 40°"
+      ],
+      "correcta": 3,
+      "explicacion": "Esta rotación de la rodilla flexionada es especialmente importante en el esquí.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región posterior del muslo",
+        "pagina": "1326",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región posterior del muslo», p. 1326."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-039",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "En una distensión de los isquiotibiales, ¿qué estructura contiene el hematoma?",
+      "opciones": [
+        "La densa fascia lata, que actúa como una media",
+        "El tabique intermuscular medial, junto al fémur",
+        "La aponeurosis plantar, adherida a los metatarsianos",
+        "La vaina femoral, que rodea los vasos femorales"
+      ],
+      "correcta": 0,
+      "explicacion": "Por eso el muslo se tumefacta y duele al estirar la pierna.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1340",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1340."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-040",
+      "tema": "gluteo-muslo",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué refuerzos recibe el tracto iliotibial?",
+      "opciones": [
+        "Tendones del tensor de la fascia lata y del glúteo mayor",
+        "Tendones del semitendinoso, del semimembranoso y del bíceps",
+        "Tendones del sartorio, del grácil y del semitendinoso",
+        "Tendones del cuádriceps femoral y del aductor mayor"
+      ],
+      "correcta": 0,
+      "explicacion": "El tracto se extiende desde el tubérculo ilíaco hasta la tibia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1340",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1340."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-041",
+      "tema": "gluteo-muslo",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "¿Cuáles son los límites del triángulo femoral?",
+      "opciones": [
+        "Ligamento inguinal, aductor largo y sartorio",
+        "Ligamento lagunar, sartorio y recto femoral",
+        "Ligamento inguinal, grácil y pectíneo",
+        "Ligamento inguinal, aductor mayor y vasto medial"
+      ],
+      "correcta": 0,
+      "explicacion": "El vértice, hacia abajo, da paso a los vasos y nervios hacia el conducto aductor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1293",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1293."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-042",
+      "tema": "gluteo-muslo",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "En la base del triángulo femoral, ¿cuál es la disposición de lateral a medial?",
+      "opciones": [
+        "Nervio femoral, arteria femoral y vena femoral",
+        "Vena femoral, arteria femoral y nervio femoral",
+        "Arteria femoral, nervio femoral y vena femoral",
+        "Nervio femoral, vena femoral y arteria femoral"
+      ],
+      "correcta": 0,
+      "explicacion": "El nervio queda lateral a un través de dedo de la arteria y la vena inmediatamente medial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1301",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1301."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-043",
+      "tema": "gluteo-muslo",
+      "patron": "P10",
+      "dificultad": 3,
+      "enunciado": "¿Dónde se sitúa la vena femoral respecto a la arteria en el vértice del triángulo femoral?",
+      "opciones": [
+        "Posterior a la arteria",
+        "Anterior a la arteria",
+        "Lateral a la arteria",
+        "Medial a la arteria"
+      ],
+      "correcta": 0,
+      "explicacion": "En la base es medial y en el conducto aductor, posterolateral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1301",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1301."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-044",
+      "tema": "gluteo-muslo",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Qué músculo cubre la arteria femoral en el conducto aductor?",
+      "opciones": [
+        "Vasto medial",
+        "Sartorio",
+        "Pectíneo",
+        "Aductor largo"
+      ],
+      "correcta": 1,
+      "explicacion": "La arteria sigue un trayecto superficial de unos 5 cm en el triángulo antes de quedar cubierta.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1301",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1301."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-045",
+      "tema": "gluteo-muslo",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "Para una inyección intraglútea segura, ¿en qué zona de la nalga debe ponerse?",
+      "opciones": [
+        "En el lado lateral, alejado del nervio isquiático",
+        "Sobre la tuberosidad isquiática, en posición sentada",
+        "En la parte más prominente de la nalga, sobre el glúteo",
+        "En el lado medial, cerca del pliegue glúteo y del sacro"
+      ],
+      "correcta": 0,
+      "explicacion": "El nervio isquiático está profundo en la parte más prominente de la nalga; el lado medial es el peligroso.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1343",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1343."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-046",
+      "tema": "gluteo-muslo",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema anterior del muslo, ¿qué región señala la flecha, limitada por el ligamento inguinal, el sartorio y el aductor largo?",
+      "opciones": [
+        "Triángulo lumbar",
+        "Triángulo femoral",
+        "Conducto aductor",
+        "Fosa poplítea"
+      ],
+      "correcta": 1,
+      "explicacion": "Contiene el nervio femoral, la arteria y la vena femorales y ganglios linfáticos inguinales profundos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1293",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1293."
+      },
+      "imagen": {
+        "id": "a5-img-01",
+        "descripcion": "Vista anterior de la raíz del muslo con el ligamento inguinal, el sartorio y el aductor largo. Una flecha señala el área triangular que limitan estas tres estructuras.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-047",
+      "tema": "gluteo-muslo",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema posterior de la nalga, ¿qué músculo señala la flecha, que separa el foramen isquiático mayor en dos partes?",
+      "opciones": [
+        "Obturador interno",
+        "Piriforme",
+        "Gemelo inferior",
+        "Cuadrado femoral"
+      ],
+      "correcta": 1,
+      "explicacion": "El nervio isquiático sale normalmente inferior a él; el glúteo superior, superior a él.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: músculos",
+        "pagina": "1320, 1328",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: músculos», pp. 1320, 1328."
+      },
+      "imagen": {
+        "id": "a5-img-02",
+        "descripcion": "Vista posterior de la región glútea con el glúteo mayor reclinado, el sacro, el piriforme y el nervio isquiático. Una flecha señala el músculo que sale de la cara anterior del sacro y cruza el foramen isquiático mayor.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-048",
+      "tema": "gluteo-muslo",
+      "patron": "P13",
+      "dificultad": 1,
+      "enunciado": "En el esquema anterior del muslo, ¿qué músculo señala la flecha, el que limita lateralmente el triángulo femoral?",
+      "opciones": [
+        "Sartorio",
+        "Grácil",
+        "Recto femoral",
+        "Aductor largo"
+      ],
+      "correcta": 0,
+      "explicacion": "Cubre la arteria femoral en el conducto aductor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1293",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1293."
+      },
+      "imagen": {
+        "id": "a5-img-03",
+        "descripcion": "Vista anterior del muslo derecho con el sartorio, el recto femoral y el aductor largo. Una flecha señala el músculo en forma de cinta que cruza oblicuamente el muslo de lateral a medial.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-049",
+      "tema": "gluteo-muslo",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema del triángulo femoral, ¿qué estructura señala la flecha, situada entre el nervio femoral y la vena femoral?",
+      "opciones": [
+        "Arteria femoral profunda",
+        "Arteria femoral",
+        "Arteria obturatriz",
+        "Vena safena magna"
+      ],
+      "correcta": 1,
+      "explicacion": "Su pulso se palpa justo por debajo del punto medio del ligamento inguinal.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Triángulo femoral y vasos femorales",
+        "pagina": "1301",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Triángulo femoral y vasos femorales», p. 1301."
+      },
+      "imagen": {
+        "id": "a5-img-04",
+        "descripcion": "Vista anterior del triángulo femoral con el nervio femoral, la arteria femoral y la vena femoral de lateral a medial. Una flecha señala el vaso arterial situado en el centro de las tres estructuras.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t1-050",
+      "tema": "gluteo-muslo",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema lateral del muslo, ¿qué estructura señala la flecha, que va del tubérculo ilíaco a la tibia?",
+      "opciones": [
+        "Ligamento inguinal",
+        "Tracto iliotibial",
+        "Retináculo patelar lateral",
+        "Ligamento sacrotuberoso"
+      ],
+      "correcta": 1,
+      "explicacion": "Recibe refuerzos del tensor de la fascia lata y del glúteo mayor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1340",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1340."
+      },
+      "imagen": {
+        "id": "a5-img-05",
+        "descripcion": "Vista lateral del muslo con la fascia lata y el tensor de la fascia lata. Una flecha señala el engrosamiento longitudinal de la fascia que desciende hasta la cara lateral de la tibia.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-001",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Al pedir a un paciente que se apoye sobre un solo pie, la pelvis desciende en el lado del pie levantado (prueba de Trendelenburg positiva). ¿Qué nervio está lesionado?",
+      "opciones": [
+        "Glúteo inferior",
+        "Glúteo superior",
+        "Isquiático",
+        "Femoral"
+      ],
+      "correcta": 1,
+      "explicacion": "Su lesión debilita la abducción del muslo por los glúteos medio y menor y la rotación medial del muslo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1341",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1341."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-002",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En una lesión del nervio glúteo superior, ¿qué músculos del lado sin apoyo están debilitados?",
+      "opciones": [
+        "El cuádriceps femoral",
+        "Los glúteos medio y menor",
+        "Los aductores del muslo",
+        "El glúteo mayor y el piriforme"
+      ],
+      "correcta": 1,
+      "explicacion": "También se afecta el tensor de la fascia lata, que inerva este nervio.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1341",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1341."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-003",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En la marcha glútea, ¿cómo compensa el paciente la caída de la pelvis hacia el lado sin apoyo?",
+      "opciones": [
+        "Rotando medialmente el pie",
+        "Inclinándose hacia el lado enfermo",
+        "Flexionando la rodilla del lado sano",
+        "Inclinándose hacia el lado sano"
+      ],
+      "correcta": 3,
+      "explicacion": "Otras compensaciones son elevar más el pie (marcha equina) o balancearlo hacia fuera (marcha en guadaña).",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1342",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1342."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-004",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Una patinadora tiene dolor en la nalga por compresión del nervio isquiático por un músculo (síndrome piriforme). ¿Qué músculo lo comprime?",
+      "opciones": [
+        "Cuadrado femoral",
+        "Piriforme",
+        "Obturador interno",
+        "Glúteo mayor"
+      ],
+      "correcta": 1,
+      "explicacion": "En cerca del 50 % de los casos hay antecedentes de traumatismo en las nalgas con hipertrofia y espasmo del piriforme.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1343",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1343."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-005",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En alrededor del 12 % de las personas un componente del isquiático atraviesa el piriforme y puede ser comprimido por él. ¿Cuál es?",
+      "opciones": [
+        "El nervio pudendo",
+        "El nervio tibial",
+        "El nervio fibular común",
+        "El nervio glúteo inferior"
+      ],
+      "correcta": 2,
+      "explicacion": "En esos casos los nervios tibial y fibular común se separan al abandonar la pelvis.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio isquiático",
+        "pagina": "1329, 1343",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio isquiático», pp. 1329, 1343."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-006",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una herida en el lado medial de la nalga lesiona el nervio isquiático y sus ramos para los isquiotibiales. ¿Qué movimientos se alteran?",
+      "opciones": [
+        "La extensión del muslo y la flexión de la pierna",
+        "La extensión de la rodilla y la rotación medial",
+        "La aducción del muslo y la extensión de la cadera",
+        "La abducción del muslo y la flexión de la cadera"
+      ],
+      "correcta": 0,
+      "explicacion": "Para el isquiático la nalga tiene un lado seguro (lateral) y uno peligroso (medial).",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1343",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1343."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-007",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Tras la sección completa del nervio isquiático, ¿qué movimientos se pierden?",
+      "opciones": [
+        "Extensión de la cadera, flexión de la pierna y movimientos del tobillo y el pie",
+        "La extensión de la rodilla y la flexión de la cadera, sin afectar el pie",
+        "Solo la flexión plantar del tobillo y de los dedos del pie en el apoyo",
+        "Solo los movimientos del tobillo, conservando la extensión de la cadera"
+      ],
+      "correcta": 0,
+      "explicacion": "Es una lesión rara; su recuperación suele ser lenta y habitualmente incompleta.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1343",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1343."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-008",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Para bloquear el nervio isquiático se inyecta anestésico en una zona precisa de la nalga. ¿Cuál es?",
+      "opciones": [
+        "Sobre la tuberosidad isquiática, en la línea media de la nalga",
+        "Sobre el punto medio entre la EIAS y la sínfisis del pubis",
+        "Lateral a la arteria femoral, bajo el ligamento inguinal",
+        "Bajo el punto medio de la línea entre la EIPS y el trocánter mayor"
+      ],
+      "correcta": 3,
+      "explicacion": "Las parestesias se irradian al pie porque los nervios plantares son ramos terminales del tibial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1342",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1342."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-009",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Tras un bloqueo del nervio isquiático, el paciente siente parestesias en la planta del pie. ¿De qué ramos terminales proceden los nervios plantares?",
+      "opciones": [
+        "Del nervio safeno",
+        "Del nervio fibular común",
+        "Del nervio tibial",
+        "Del nervio obturador"
+      ],
+      "correcta": 2,
+      "explicacion": "El tibial deriva de las divisiones anteriores de los ramos anteriores que forman el isquiático.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: regiones glútea y posterior del muslo",
+        "pagina": "1342",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: regiones glútea y posterior del muslo», p. 1342."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-010",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "El nervio femoral puede bloquearse inferiormente al ligamento inguinal. ¿Dónde se inyecta el anestésico?",
+      "opciones": [
+        "En el vértice del triángulo femoral, bajo el músculo sartorio",
+        "2 cm sobre el ligamento, un través de dedo medial a la vena",
+        "En el punto medio entre la EIAS y la sínfisis, sobre la arteria",
+        "2 cm bajo el ligamento, un través de dedo lateral a la arteria"
+      ],
+      "correcta": 3,
+      "explicacion": "Si se afecta el nervio safeno, aparecen parestesias hacia la rodilla y el lado medial de la pierna.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: fascias, venas y nervios del miembro inferior",
+        "pagina": "1273",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: fascias, venas y nervios del miembro inferior», p. 1273."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-011",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Tras una disección de la vena safena magna anterior al maléolo medial, el paciente tiene dolor en el borde medial del pie. ¿Qué nervio se lesionó?",
+      "opciones": [
+        "Safeno",
+        "Sural",
+        "Cutáneo femoral posterior",
+        "Fibular superficial"
+      ],
+      "correcta": 0,
+      "explicacion": "El nervio safeno es un ramo terminal del femoral y acompaña a la vena safena magna anterior al maléolo medial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: fascias, venas y nervios del miembro inferior",
+        "pagina": "1272–1273",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: fascias, venas y nervios del miembro inferior», pp. 1272–1273."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-012",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Al extraer un injerto óseo de la cresta ilíaca se pueden lesionar unos nervios cutáneos superficiales que inervan la piel sobre ella. ¿Cuáles son?",
+      "opciones": [
+        "Los nervios clúneos superiores",
+        "Los nervios cutáneos femorales laterales",
+        "Los nervios glúteos profundos",
+        "Los nervios clúneos inferiores"
+      ],
+      "correcta": 0,
+      "explicacion": "Estos nervios superficiales inervan la piel sobre la cresta ilíaca, entre las espinas ilíacas posteriores y el tubérculo ilíaco.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: nervios y vasos",
+        "pagina": "1326–1327",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: nervios y vasos», pp. 1326–1327."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-013",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Tras una lesión del nervio obturador, ¿qué movimiento del muslo está debilitado?",
+      "opciones": [
+        "La abducción",
+        "La flexión",
+        "La extensión",
+        "La aducción"
+      ],
+      "correcta": 3,
+      "explicacion": "El nervio obturador sale de la pelvis por el conducto obturador e inerva los músculos mediales del muslo; no inerva ninguna estructura de la pelvis.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio obturador y tronco lumbosacro",
+        "pagina": "1072",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio obturador y tronco lumbosacro», p. 1072."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-014",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Un paciente tiene anestesia en la parte posterior del muslo y en la parte proximal de la pierna, además de en el periné. ¿Qué nervio, que inerva más piel que cualquier otro cutáneo, está afectado?",
+      "opciones": [
+        "Obturador",
+        "Cutáneo femoral lateral",
+        "Cutáneo femoral posterior",
+        "Safeno"
+      ],
+      "correcta": 2,
+      "explicacion": "A diferencia de la mayoría de los nervios cutáneos, su parte principal es profunda a la fascia lata.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: nervios y vasos",
+        "pagina": "1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: nervios y vasos», p. 1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-015",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una lesión de un nervio periférico no produce el mismo mapa de anestesia que la lesión de una raíz. ¿Por qué?",
+      "opciones": [
+        "Porque los nervios cutáneos llevan únicamente fibras motoras",
+        "Porque el mapa de los dermatomas cambia con la edad del paciente",
+        "Porque el nervio contiene fibras de más de un segmento medular",
+        "Porque los dermatomas vecinos nunca se superponen entre sí"
+      ],
+      "correcta": 2,
+      "explicacion": "Los dermatomas vecinos se superponen y el patrón segmentario persiste toda la vida.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Cuadros clínicos: fascias, venas y nervios del miembro inferior",
+        "pagina": "1273",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Cuadros clínicos: fascias, venas y nervios del miembro inferior», p. 1273."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-016",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "El tronco lumbosacro desciende sobre el ala del sacro para unirse al plexo sacro. ¿De qué ramos anteriores se forma?",
+      "opciones": [
+        "L3 y L4",
+        "S1 y S2",
+        "L5 y S1",
+        "L4 y L5"
+      ],
+      "correcta": 3,
+      "explicacion": "Se forma en la línea terminal, o justo superior a ella, y tiene aspecto de cordón.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio obturador y tronco lumbosacro",
+        "pagina": "1072",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio obturador y tronco lumbosacro», p. 1072."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-017",
+      "tema": "plexo-lumbosacro",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un cirujano quiere reconocer el nervio más grande del cuerpo, que se forma en la cara anterior del piriforme. ¿Cuáles son sus raíces?",
+      "opciones": [
+        "L1–L3",
+        "S2–S4",
+        "L4–S3",
+        "L2–L4"
+      ],
+      "correcta": 2,
+      "explicacion": "Pasa por el foramen isquiático mayor, normalmente inferior al piriforme, hacia la región glútea.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio isquiático",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio isquiático», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-018",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Cuál es el nervio más voluminoso del cuerpo?",
+      "opciones": [
+        "Pudendo",
+        "Isquiático",
+        "Obturador",
+        "Femoral"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la continuación de la parte principal del plexo sacro, una banda aplanada de unos 2 cm de ancho.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio isquiático",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio isquiático», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-019",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Cuál es el nervio principal del periné y el principal nervio sensitivo de los genitales externos?",
+      "opciones": [
+        "Isquiático",
+        "Pudendo",
+        "Cutáneo femoral posterior",
+        "Obturador"
+      ],
+      "correcta": 1,
+      "explicacion": "Acompaña a la arteria pudenda interna y sale de la pelvis entre el piriforme y el coccígeo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Plexo sacro",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Plexo sacro», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-020",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Qué nervio del plexo sacro sale de la pelvis superior al piriforme?",
+      "opciones": [
+        "Glúteo superior",
+        "Pudendo",
+        "Isquiático",
+        "Glúteo inferior"
+      ],
+      "correcta": 0,
+      "explicacion": "Inerva los músculos de la región glútea medios y menores y el tensor de la fascia lata.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervios glúteos",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervios glúteos», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-021",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Un nervio sale de la pelvis inferior al piriforme, superficial al isquiático, y acompaña a la arteria glútea inferior. ¿Cuál es?",
+      "opciones": [
+        "Glúteo superior",
+        "Cutáneo femoral posterior",
+        "Glúteo inferior",
+        "Pudendo"
+      ],
+      "correcta": 2,
+      "explicacion": "Se divide en ramos que entran por la cara profunda del glúteo mayor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervios glúteos",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervios glúteos», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-022",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "El nervio isquiático es en realidad la unión de dos nervios en una misma vaina de tejido conectivo. ¿Cuáles son?",
+      "opciones": [
+        "Tibial y safeno",
+        "Peroneo y obturador",
+        "Fibular profundo y sural",
+        "Tibial y fibular común"
+      ],
+      "correcta": 3,
+      "explicacion": "El tibial deriva de las divisiones anteriores de los ramos anteriores; el fibular común, de las posteriores.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio isquiático",
+        "pagina": "1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio isquiático», p. 1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-023",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "Un nervio sale de la pelvis anterior al isquiático, da un ramo articular a la cadera e inerva el gemelo inferior. ¿Cuál es?",
+      "opciones": [
+        "Nervio del cuadrado femoral",
+        "Nervio pudendo",
+        "Nervio glúteo inferior",
+        "Nervio del obturador interno"
+      ],
+      "correcta": 0,
+      "explicacion": "También inerva el músculo cuadrado femoral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervios glúteos",
+        "pagina": "1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervios glúteos», p. 1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-024",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Un nervio cutáneo que inerva más piel que cualquier otro discurre profundo a la fascia lata. ¿Cuál es?",
+      "opciones": [
+        "Sural",
+        "Safeno",
+        "Cutáneo femoral posterior",
+        "Cutáneo femoral lateral"
+      ],
+      "correcta": 2,
+      "explicacion": "Solo sus ramos terminales penetran en el tejido subcutáneo; da ramos perineales y los nervios clúneos inferiores.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervios glúteos",
+        "pagina": "1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervios glúteos», p. 1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-025",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Unos nervios superficiales inervan la piel sobre la cresta ilíaca, entre las espinas ilíacas posteriores y el tubérculo ilíaco. ¿Cómo se llaman?",
+      "opciones": [
+        "Nervios clúneos superiores",
+        "Nervios glúteos profundos",
+        "Nervios clúneos inferiores",
+        "Nervios cutáneos femorales"
+      ],
+      "correcta": 0,
+      "explicacion": "Pueden lesionarse al extraer hueso del ilion.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región glútea: nervios y vasos",
+        "pagina": "1326–1327",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región glútea: nervios y vasos», pp. 1326–1327."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-026",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Cuál es el mayor ramo del plexo lumbar, que se origina en el abdomen dentro del psoas mayor?",
+      "opciones": [
+        "Nervio isquiático",
+        "Nervio femoral",
+        "Nervio obturador",
+        "Nervio pudendo"
+      ],
+      "correcta": 1,
+      "explicacion": "Entra en el triángulo femoral lateral a los vasos femorales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio femoral",
+        "pagina": "1292",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio femoral», p. 1292."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-027",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "Un nervio de L2–L4 sale de la pelvis por el conducto obturador y se divide en ramos anterior y posterior. ¿Cuál es?",
+      "opciones": [
+        "Nervio femoral",
+        "Nervio isquiático",
+        "Nervio genitofemoral",
+        "Nervio obturador"
+      ],
+      "correcta": 3,
+      "explicacion": "No inerva ninguna estructura de la pelvis, sino los músculos mediales del muslo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio obturador y tronco lumbosacro",
+        "pagina": "1072",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio obturador y tronco lumbosacro», p. 1072."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-028",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Por qué foramen salen de la pelvis la mayoría de los ramos del plexo sacro?",
+      "opciones": [
+        "Conducto obturador",
+        "Foramen isquiático mayor",
+        "Foramen isquiático menor",
+        "Foramen obturado"
+      ],
+      "correcta": 1,
+      "explicacion": "El nervio pudendo entra después en el periné por el foramen isquiático menor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Plexo sacro",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Plexo sacro», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-029",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "Un nervio se incurva alrededor de la espina isquiática y el ligamento sacroespinoso y entra en el periné por el foramen isquiático menor. ¿Cuál es?",
+      "opciones": [
+        "Pudendo",
+        "Glúteo inferior",
+        "Obturador",
+        "Isquiático"
+      ],
+      "correcta": 0,
+      "explicacion": "Sale de la pelvis entre el piriforme y el coccígeo, acompañando a la arteria pudenda interna.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Plexo sacro",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Plexo sacro», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-030",
+      "tema": "plexo-lumbosacro",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "Una arteria de gran tamaño acompaña al nervio isquiático. ¿De qué arteria procede?",
+      "opciones": [
+        "Pudenda interna",
+        "Glútea inferior",
+        "Glútea superior",
+        "Obturatriz"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la arteria satélite del nervio isquiático.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio isquiático",
+        "pagina": "1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio isquiático», p. 1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-031",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué músculos inerva el nervio obturador?",
+      "opciones": [
+        "Los músculos mediales del muslo",
+        "Los músculos posteriores del muslo",
+        "Los músculos anteriores del muslo",
+        "Los músculos de la región glútea"
+      ],
+      "correcta": 0,
+      "explicacion": "No inerva ninguna estructura de la pelvis.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio obturador y tronco lumbosacro",
+        "pagina": "1072",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio obturador y tronco lumbosacro», p. 1072."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-032",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué músculos inerva el nervio glúteo superior?",
+      "opciones": [
+        "Glúteo medio, glúteo menor y tensor de la fascia lata",
+        "Aductor largo, grácil, pectíneo y aductor corto",
+        "Glúteo mayor, piriforme y gemelo superior",
+        "Obturador interno, gemelos y obturador externo"
+      ],
+      "correcta": 0,
+      "explicacion": "Discurre entre los glúteos medio y menor con la rama profunda de la arteria glútea superior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervios glúteos",
+        "pagina": "1328",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervios glúteos», p. 1328."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-033",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué músculo inerva el nervio glúteo inferior?",
+      "opciones": [
+        "Glúteo medio",
+        "Glúteo mayor",
+        "Tensor de la fascia lata",
+        "Piriforme"
+      ],
+      "correcta": 1,
+      "explicacion": "Sus ramos entran por la cara profunda del glúteo mayor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervios glúteos",
+        "pagina": "1328–1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervios glúteos», pp. 1328–1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-034",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "El nervio isquiático no inerva ninguna estructura de la región glútea. ¿Qué inerva?",
+      "opciones": [
+        "Los glúteos medio y menor, el tensor de la fascia lata y la piel lateral",
+        "Músculos posteriores del muslo, de la pierna y del pie, y la piel de la pierna",
+        "Los músculos mediales del muslo y la piel de su cara medial y la rodilla",
+        "El glúteo mayor, el piriforme y la piel de la nalga y del periné"
+      ],
+      "correcta": 1,
+      "explicacion": "También proporciona ramos articulares para todas las articulaciones del miembro inferior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio isquiático",
+        "pagina": "1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio isquiático», p. 1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-035",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿Qué componente del isquiático inerva la cabeza corta del bíceps femoral?",
+      "opciones": [
+        "El componente tibial",
+        "El nervio obturador",
+        "El componente fibular",
+        "El nervio glúteo inferior"
+      ],
+      "correcta": 2,
+      "explicacion": "La inervación de los isquiotibiales es común, del componente tibial; la cabeza corta del bíceps es la excepción.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Región posterior del muslo",
+        "pagina": "1326",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Región posterior del muslo», p. 1326."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-036",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué estructuras inerva el nervio femoral?",
+      "opciones": [
+        "Músculos posteriores del muslo y de la pierna, y la piel de la planta del pie",
+        "Músculos anteriores del muslo, articulaciones de cadera y rodilla y piel anteromedial",
+        "Músculos mediales del muslo, articulación de la cadera y piel de la cara posterior",
+        "Los músculos glúteos, el tensor de la fascia lata y la piel de la región glútea"
+      ],
+      "correcta": 1,
+      "explicacion": "Su ramo terminal es el nervio safeno, que desciende por la pierna acompañando a la vena safena magna hasta el maléolo medial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio femoral",
+        "pagina": "1293, 1273",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio femoral», pp. 1293, 1273."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-037",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Cuál es el nervio sensitivo principal de los genitales externos?",
+      "opciones": [
+        "Isquiático",
+        "Pudendo",
+        "Obturador",
+        "Glúteo inferior"
+      ],
+      "correcta": 1,
+      "explicacion": "Es también el nervio principal del periné.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Plexo sacro",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Plexo sacro», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-038",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Por qué la mayoría de los músculos del miembro inferior están formados por más de un miotoma?",
+      "opciones": [
+        "Porque los miotomas se fusionan con los dermatomas en el adulto",
+        "Porque solo se inervan por ramos del plexo lumbar superior",
+        "Porque cada músculo recibe un único nervio de un solo segmento",
+        "Porque reciben fibras motoras de varios segmentos medulares"
+      ],
+      "correcta": 3,
+      "explicacion": "Un miotoma es la masa muscular embrionaria inervada por un solo segmento medular.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Inervación cutánea y motora del miembro inferior",
+        "pagina": "1269",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Inervación cutánea y motora del miembro inferior», p. 1269."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-039",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué ocurre con el patrón de dermatomas del miembro inferior a lo largo de la vida?",
+      "opciones": [
+        "Se limita a los territorios cutáneos del plexo sacro solamente",
+        "Desaparece por completo cuando se forman los plexos nerviosos",
+        "Se invierte de proximal a distal después de la pubertad",
+        "Se mantiene, aunque se deforma por el crecimiento del miembro"
+      ],
+      "correcta": 3,
+      "explicacion": "Los dermatomas adyacentes se superponen, salvo en la línea axial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Inervación cutánea y motora del miembro inferior",
+        "pagina": "1267, 1269",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Inervación cutánea y motora del miembro inferior», pp. 1267, 1269."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-040",
+      "tema": "plexo-lumbosacro",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿Con qué arteria acompaña el nervio pudendo y entre qué músculos sale de la pelvis?",
+      "opciones": [
+        "Con la arteria obturatriz, entre el obturador interno y el externo",
+        "Con la arteria femoral, bajo el ligamento inguinal",
+        "Con la arteria pudenda interna, entre el piriforme y el coccígeo",
+        "Con la arteria glútea superior, sobre el piriforme"
+      ],
+      "correcta": 2,
+      "explicacion": "Luego se incurva alrededor de la espina isquiática.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Plexo sacro",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Plexo sacro», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-041",
+      "tema": "plexo-lumbosacro",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "¿Dónde se localiza el plexo sacro?",
+      "opciones": [
+        "En el interior del psoas mayor, en el abdomen",
+        "Sobre el ala del sacro, en la cavidad abdominal",
+        "En el periné, bajo el diafragma pélvico y la fascia",
+        "En la pared posterolateral de la pelvis menor"
+      ],
+      "correcta": 3,
+      "explicacion": "Sus dos nervios principales, el isquiático y el pudendo, se sitúan externamente a la fascia parietal pélvica.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Plexo sacro",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Plexo sacro», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-042",
+      "tema": "plexo-lumbosacro",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Qué músculos forman un lecho para los plexos sacro y coccígeo?",
+      "opciones": [
+        "Piriforme y coccígeo",
+        "Obturador interno y elevador del ano",
+        "Glúteo mayor y coccígeo",
+        "Psoas mayor y piriforme"
+      ],
+      "correcta": 0,
+      "explicacion": "Los ramos anteriores de S2 y S3 emergen entre las digitaciones de estos músculos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Plexo sacro",
+        "pagina": "1071",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Plexo sacro», p. 1071."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-043",
+      "tema": "plexo-lumbosacro",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Sobre qué estructura ósea discurre el tronco lumbosacro?",
+      "opciones": [
+        "El cuerpo de L5",
+        "El ala del sacro",
+        "La rama superior del pubis",
+        "La espina isquiática"
+      ],
+      "correcta": 1,
+      "explicacion": "Discurre sobre su cara anterior para unirse al plexo sacro.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio obturador y tronco lumbosacro",
+        "pagina": "1072",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio obturador y tronco lumbosacro», p. 1072."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-044",
+      "tema": "plexo-lumbosacro",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "¿Cómo atraviesa normalmente el nervio isquiático el foramen isquiático mayor?",
+      "opciones": [
+        "Superior al piriforme",
+        "Dentro del piriforme",
+        "Inferior al piriforme",
+        "Anterior al obturador interno"
+      ],
+      "correcta": 2,
+      "explicacion": "Entra así en la región glútea y desciende por la cara posterior del muslo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio isquiático",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio isquiático», p. 1074."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-045",
+      "tema": "plexo-lumbosacro",
+      "patron": "P10",
+      "dificultad": 3,
+      "enunciado": "¿Por dónde discurre el nervio isquiático en la nalga?",
+      "opciones": [
+        "Entre el trocánter mayor y la tuberosidad isquiática",
+        "Lateral al tracto iliotibial, sobre el vasto lateral",
+        "Sobre el trocánter mayor, junto al tensor de la fascia lata",
+        "Medial a la tuberosidad isquiática, junto al sacro"
+      ],
+      "correcta": 0,
+      "explicacion": "Está cubierto por el glúteo mayor y descansa sobre el isquion, posterior al obturador interno, al cuadrado femoral y al aductor mayor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio isquiático",
+        "pagina": "1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio isquiático», p. 1329."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-046",
+      "tema": "plexo-lumbosacro",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema posterior de la nalga, ¿qué nervio señala la flecha, que sale inferior al piriforme?",
+      "opciones": [
+        "Cutáneo femoral posterior",
+        "Pudendo",
+        "Isquiático",
+        "Glúteo superior"
+      ],
+      "correcta": 2,
+      "explicacion": "Es la estructura más lateral de las que emergen por el foramen isquiático mayor bajo el piriforme.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio isquiático",
+        "pagina": "1329",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio isquiático», p. 1329."
+      },
+      "imagen": {
+        "id": "a5-img-06",
+        "descripcion": "Vista posterior de la región glútea con el glúteo mayor reclinado. Una flecha señala el nervio grueso y aplanado que sale bajo el piriforme y desciende hacia el muslo.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-047",
+      "tema": "plexo-lumbosacro",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema posterior de la nalga, ¿qué nervio señala la flecha, que sale superior al piriforme?",
+      "opciones": [
+        "Isquiático",
+        "Nervio del cuadrado femoral",
+        "Glúteo inferior",
+        "Glúteo superior"
+      ],
+      "correcta": 3,
+      "explicacion": "Discurre entre los glúteos medio y menor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervios glúteos",
+        "pagina": "1328",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervios glúteos», p. 1328."
+      },
+      "imagen": {
+        "id": "a5-img-07",
+        "descripcion": "Vista posterior de la región glútea con el glúteo mayor y el medio reclinados. Una flecha señala el nervio que sale del foramen isquiático mayor por encima del borde superior del piriforme.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-048",
+      "tema": "plexo-lumbosacro",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema del triángulo femoral, ¿qué nervio señala la flecha, lateral a la arteria femoral?",
+      "opciones": [
+        "Obturador",
+        "Cutáneo femoral lateral",
+        "Safeno",
+        "Femoral"
+      ],
+      "correcta": 3,
+      "explicacion": "Se divide en varios ramos para los músculos anteriores del muslo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "7. Miembro inferior",
+        "seccion": "Nervio femoral",
+        "pagina": "1292–1293",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 7, «Nervio femoral», pp. 1292–1293."
+      },
+      "imagen": {
+        "id": "a5-img-08",
+        "descripcion": "Vista anterior del triángulo femoral con los vasos femorales y el ligamento inguinal. Una flecha señala el nervio situado lateral a la arteria femoral.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-049",
+      "tema": "plexo-lumbosacro",
+      "patron": "P13",
+      "dificultad": 3,
+      "enunciado": "En el esquema de la pelvis, ¿qué nervio señala la flecha, que se incurva alrededor de la espina isquiática?",
+      "opciones": [
+        "Isquiático",
+        "Glúteo inferior",
+        "Pudendo",
+        "Obturador"
+      ],
+      "correcta": 2,
+      "explicacion": "Entra en el periné por el foramen isquiático menor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Plexo sacro",
+        "pagina": "1074",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Plexo sacro», p. 1074."
+      },
+      "imagen": {
+        "id": "a5-img-09",
+        "descripcion": "Vista lateral de la pelvis con el sacro, la espina isquiática y el ligamento sacroespinoso. Una flecha señala el nervio que rodea la espina isquiática antes de entrar en el periné.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a5-t2-050",
+      "tema": "plexo-lumbosacro",
+      "patron": "P13",
+      "dificultad": 3,
+      "enunciado": "En el esquema de la pelvis, ¿qué nervio señala la flecha, que va por la pared lateral hacia el conducto obturador?",
+      "opciones": [
+        "Obturador",
+        "Femoral",
+        "Isquiático",
+        "Pudendo"
+      ],
+      "correcta": 0,
+      "explicacion": "Se origina en L2–L4 y no inerva ninguna estructura de la pelvis.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "6. Pelvis y periné",
+        "seccion": "Nervio obturador y tronco lumbosacro",
+        "pagina": "1072",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 6, «Nervio obturador y tronco lumbosacro», p. 1072."
+      },
+      "imagen": {
+        "id": "a5-img-10",
+        "descripcion": "Vista medial de la pared lateral de la pelvis con el psoas, el foramen obturado y la membrana obturatriz. Una flecha señala el nervio que desciende por la pared lateral hacia el conducto obturador.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    }
+  ]
+}

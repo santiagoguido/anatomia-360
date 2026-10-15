@@ -1,0 +1,2484 @@
+{
+  "version": 1,
+  "aula": 4,
+  "titulo": "Aula 4",
+  "generado": "2026-10-15",
+  "fuente": {
+    "referencias": {
+      "moore2017": {
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer.",
+        "autores": [
+          "Keith L. Moore",
+          "Arthur F. Dalley II",
+          "Anne M. R. Agur"
+        ],
+        "titulo": "Anatomía con orientación clínica",
+        "edicion": "8.ª ed.",
+        "editorial": "Wolters Kluwer",
+        "ciudad": "Barcelona",
+        "anio": 2017,
+        "isbn": "978-84-17033-63-7"
+      }
+    },
+    "terminologia": "Se usa la terminología de Moore en español (p. ej. «ulnar», «conducto ulnar», «tabaquera anatómica»)."
+  },
+  "temas": [
+    {
+      "id": "antebrazo-mano",
+      "nombre": "Antebrazo y mano"
+    },
+    {
+      "id": "vascularizacion-miembro-superior",
+      "nombre": "Vascularización del miembro superior"
+    }
+  ],
+  "patrones": {
+    "P09": "Viñeta clínica corta: signo o síntoma → estructura lesionada",
+    "P02": "Disección o anfiteatro: descripción → identificación",
+    "P04": "Función o mecanismo",
+    "P10": "Límites, relaciones y contenidos de espacios",
+    "P13": "Estructura señalada en una imagen"
+  },
+  "preguntas": [
+    {
+      "id": "a4-t1-001",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Una tenista refiere dolor sobre el epicóndilo lateral que se irradia por la cara posterior del antebrazo y aumenta al abrir una puerta o levantar un vaso. ¿Qué estructura se distiende por el uso repetitivo?",
+      "opciones": [
+        "El ligamento colateral ulnar del codo",
+        "El tendón de la cabeza larga del tríceps",
+        "La inserción del tendón común de los flexores",
+        "La inserción del tendón común de los extensores"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la epicondilitis lateral («codo de tenis»): la flexión y extensión enérgicas repetidas del carpo distienden la inserción del tendón común de los extensores e inflaman el periostio del epicóndilo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "472",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 472."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-002",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un jugador de béisbol recibe un pelotazo en la punta de un dedo y ya no puede extender la articulación interfalángica distal. ¿Qué lesión es la más probable?",
+      "opciones": [
+        "Avulsión del tendón extensor en la base de la falange distal",
+        "Luxación de la articulación metacarpofalángica del dedo",
+        "Rotura del ligamento colateral ulnar del pulgar y su tendón",
+        "Rotura del tendón flexor profundo en la falange media"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el dedo en martillo o de béisbol: la hiperflexión forzada de la articulación interfalángica distal avulsiona la inserción del tendón extensor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "473",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 473."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-003",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Tras caer sobre el codo se fractura el olécranon y el fragmento queda desplazado hacia atrás. ¿Qué músculo lo desplaza?",
+      "opciones": [
+        "Tríceps braquial",
+        "Bíceps braquial",
+        "Ancóneo",
+        "Braquial"
+      ],
+      "correcta": 0,
+      "explicacion": "La contracción activa y tónica del tríceps tira del fragmento; por eso suele considerarse una fractura por avulsión y a menudo requiere clavos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "473",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 473."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-004",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Un paciente consulta por una protuberancia indolora del tamaño de una uva pequeña. ¿En qué localización aparece con más frecuencia un quiste sinovial del carpo?",
+      "opciones": [
+        "En la eminencia hipotenar",
+        "En el dorso del carpo",
+        "En la eminencia tenar",
+        "En la cara palmar de la muñeca"
+      ],
+      "correcta": 1,
+      "explicacion": "Es una protuberancia quística, indolora, de tamaño variable.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "473",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 473."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-005",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Al hacer una punción venosa en el antebrazo de un paciente se palpa un vaso pulsátil superficial que podría confundirse con una vena. ¿Qué variación debe recordarse?",
+      "opciones": [
+        "Arteria interósea anterior aberrante",
+        "División alta de la arteria braquial",
+        "Arteria ulnar superficial",
+        "Arteria radial superficial"
+      ],
+      "correcta": 2,
+      "explicacion": "En cerca de un 3 % de las personas la arteria ulnar desciende superficial a los músculos flexores; inyectar un fármaco en ella puede ser mortal.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "475",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 475."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-006",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "¿Dónde se palpa mejor el pulso radial?",
+      "opciones": [
+        "Sobre el escafoides y el trapecio, en la cara palmar de la mano",
+        "Lateral al flexor radial del carpo, sobre el extremo distal del radio",
+        "Medial al tendón del flexor ulnar del carpo, sobre la cabeza de la ulna",
+        "Profundo al braquiorradial, en el tercio medio del antebrazo y el radio"
+      ],
+      "correcta": 1,
+      "explicacion": "Ahí la arteria solo está cubierta por fascia y piel y puede comprimirse contra el radio. No se usa la yema del pulgar, porque tiene su propio pulso.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "475",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 475."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-007",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Una lesión penetrante del codo deja a un paciente incapaz de flexionar los dedos 2.º y 3.º; al cerrar el puño estos quedan parcialmente extendidos («mano en bendición»). ¿Qué nervio se lesionó?",
+      "opciones": [
+        "Ulnar",
+        "Mediano",
+        "Radial",
+        "Musculocutáneo"
+      ],
+      "correcta": 1,
+      "explicacion": "Se pierde la flexión de las interfalángicas proximales de los dedos 1.º a 3.º y de las distales de 2.º y 3.º; la flexión de los dedos 4.º y 5.º solo se debilita porque su porción del flexor profundo la inerva el ulnar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "477–478",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», pp. 477–478."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-008",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Un paciente no puede hacer el signo de «OK»: al oponer el pulgar y el índice forma un «pellizco» por falta de flexión de la interfalángica del pulgar y de la distal del índice, con músculos tenares normales. ¿Qué nervio está afectado?",
+      "opciones": [
+        "Ramo recurrente del mediano",
+        "Interóseo anterior",
+        "Interóseo posterior",
+        "Ramo palmar del mediano"
+      ],
+      "correcta": 1,
+      "explicacion": "Es el síndrome del interóseo anterior: hay paresia del flexor profundo de los dedos y del flexor largo del pulgar, pero los músculos tenares no resultan afectados.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "478",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 478."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-009",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Tras pronaciones repetidas, un paciente tiene dolor en la cara proximal del antebrazo anterior y menor sensibilidad en la cara palmar de los tres dedos y medio radiales. ¿Dónde se comprime el nervio mediano?",
+      "opciones": [
+        "Entre el pisiforme y el gancho del ganchoso",
+        "En el canal ulnar, bajo el flexor ulnar del carpo",
+        "Bajo el retináculo de los flexores",
+        "Entre las cabezas del pronador redondo"
+      ],
+      "correcta": 3,
+      "explicacion": "Es el síndrome del pronador, por traumatismo, hipertrofia muscular o bandas fibrosas.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "478",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 478."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-010",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un paciente con síndrome del túnel carpiano tiene parestesia en el pulgar y los dedos adyacentes, pero la sensibilidad de la parte central de la palma está intacta. ¿Por qué?",
+      "opciones": [
+        "El ramo superficial del radial cubre la palma central",
+        "El mediano no emite ramos sensitivos hacia la palma",
+        "El ramo palmar del ulnar inerva también la palma central",
+        "El ramo palmar del mediano nace antes del conducto carpiano"
+      ],
+      "correcta": 3,
+      "explicacion": "El nervio mediano es la estructura más sensible del conducto carpiano; su ramo terminal motor, el recurrente, inerva los tres músculos tenares.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "515",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 515."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-011",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Al liberar quirúrgicamente el túnel carpiano, la incisión se hace cerca del lado medial del carpo. ¿Qué estructura se evita lesionar?",
+      "opciones": [
+        "La arteria radial en la tabaquera",
+        "El ramo recurrente del nervio mediano",
+        "El tendón del palmar largo",
+        "El ramo palmar del nervio ulnar"
+      ],
+      "correcta": 1,
+      "explicacion": "La incisión del retináculo de los flexores se desplaza medialmente para no lesionar el ramo recurrente, que inerva los músculos tenares.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "515",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 515."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-012",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Una lesión distal del nervio ulnar produce una mano con los dedos 4.º y 5.º hiperextendidos en las metacarpofalángicas y flexionados en las interfalángicas. ¿Cómo se llama esta deformidad?",
+      "opciones": [
+        "Mano simiesca",
+        "Mano en bendición",
+        "Mano en garra",
+        "Mano péndula"
+      ],
+      "correcta": 2,
+      "explicacion": "Se debe a la atrofia de los interóseos inervados por el ulnar y a la acción sin oposición de los extensores y del flexor profundo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "482",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 482."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-013",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Un ciclista tiene hipoestesia en el dedo medial y debilidad de los músculos intrínsecos de la mano. ¿Qué ligamento transforma en conducto la depresión entre el pisiforme y el gancho del ganchoso, sitio de la compresión?",
+      "opciones": [
+        "Ligamento pisiganchoso",
+        "Ligamento carpiano palmar",
+        "Ligamento colateral ulnar",
+        "Retináculo de los músculos flexores"
+      ],
+      "correcta": 0,
+      "explicacion": "Es el conducto ulnar [de Guyon]; la presión del manillar sobre el gancho del ganchoso comprime el nervio ulnar (neuropatía del manillar).",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "517–518",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», pp. 517–518."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-014",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Un hombre de 55 años tiene los dedos 4.º y 5.º en flexión parcial por engrosamiento de la aponeurosis palmar. ¿Qué diagnóstico es el más probable?",
+      "opciones": [
+        "Contractura de Dupuytren",
+        "Tenosinovitis de De Quervain",
+        "Síndrome del conducto ulnar",
+        "Dedo en gatillo"
+      ],
+      "correcta": 0,
+      "explicacion": "La fibrosis de las bandas longitudinales en el lado medial de la mano tracciona los dedos 4.º y 5.º; suele ser bilateral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "511",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 511."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-015",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una persona que escurre ropa con frecuencia tiene dolor en el carpo que irradia hacia el pulgar y el antebrazo. ¿Qué tendones comparten la vaina afectada?",
+      "opciones": [
+        "Abductor largo y extensor corto del pulgar",
+        "Extensor del índice y extensor de los dedos",
+        "Extensor largo y extensor corto del pulgar",
+        "Abductor largo del pulgar y flexor largo del pulgar"
+      ],
+      "correcta": 0,
+      "explicacion": "Es la tenosinovitis estenosante de De Quervain, por fricción excesiva en el túnel osteofibroso del dorso de la muñeca.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "513",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 513."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-016",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Un paciente oye un chasquido al extender pasivamente un dedo y otro al flexionarlo, por engrosamiento de los tendones en el túnel osteofibroso. ¿Cómo se llama esta afección?",
+      "opciones": [
+        "Quiste sinovial del carpo en el dorso de la muñeca",
+        "Dedo en martillo por avulsión del tendón extensor",
+        "Tenosinovitis estenosante digital [dedo en gatillo]",
+        "Contractura de Dupuytren de la aponeurosis palmar"
+      ],
+      "correcta": 2,
+      "explicacion": "El engrosamiento de la vaina fibrosa del dedo estenosa el túnel; cuando los tendones aumentan de tamaño proximalmente al túnel, el dedo no puede extenderse.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "513",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 513."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-017",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Una herida punzante infecta la vaina sinovial del meñique y el pus llega hasta el antebrazo. ¿En qué espacio drena?",
+      "opciones": [
+        "Entre el flexor ulnar del carpo y la ulna, en el canal ulnar",
+        "Bajo el retináculo de los extensores, en el dorso del carpo",
+        "Entre el pronador cuadrado y los flexores [espacio de Parona]",
+        "Entre el braquiorradial y el supinador, en el antebrazo lateral"
+      ],
+      "correcta": 2,
+      "explicacion": "La vaina del meñique suele continuarse con la vaina común de los flexores, que pasa por la palma y el túnel carpiano hasta el antebrazo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "513",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 513."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-018",
+      "tema": "antebrazo-mano",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "Una paciente con crisis bilaterales de isquemia de los dedos por frío tiene un síndrome de Raynaud. ¿Qué procedimiento puede dilatar las arterias de sus dedos?",
+      "opciones": [
+        "Simpatectomía presináptica cervicodorsal",
+        "Ligadura de la arteria radial",
+        "Fasciectomía de la aponeurosis palmar",
+        "Liberación del túnel carpiano"
+      ],
+      "correcta": 0,
+      "explicacion": "Las arterias del miembro superior están inervadas por nervios simpáticos, cuyas fibras postsinápticas llegan a los dedos a través del plexo braquial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "514",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 514."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-019",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Un tendón del compartimento anterior del antebrazo sirve de referencia lateral para palpar el pulso radial. ¿De qué músculo es?",
+      "opciones": [
+        "Flexor radial del carpo",
+        "Palmar largo",
+        "Flexor ulnar del carpo",
+        "Braquiorradial"
+      ],
+      "correcta": 0,
+      "explicacion": "La arteria radial se palpa lateral a este tendón, sobre la cara anterior del extremo distal del radio.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: músculos flexores-pronadores",
+        "pagina": "475",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: músculos flexores-pronadores», p. 475."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-020",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "En la cara anterior distal del antebrazo, un músculo cuadrado cubre el espacio por el que puede drenar una infección desde la palma. ¿Cuál es?",
+      "opciones": [
+        "Pronador cuadrado",
+        "Pronador redondo",
+        "Flexor largo del pulgar",
+        "Supinador"
+      ],
+      "correcta": 0,
+      "explicacion": "Una infección no tratada del espacio mediopalmar puede avanzar por el túnel carpiano hasta el antebrazo, anterior al pronador cuadrado y su fascia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: músculos flexores-pronadores",
+        "pagina": "512–513",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: músculos flexores-pronadores», pp. 512–513."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-021",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Un músculo antebraquial tiene dos cabezas, humeral y ulnar, unidas por un arco tendinoso que forma un canal para el nervio ulnar. ¿Cuál es?",
+      "opciones": [
+        "Flexor profundo de los dedos",
+        "Pronador redondo",
+        "Flexor ulnar del carpo",
+        "Extensor ulnar del carpo"
+      ],
+      "correcta": 2,
+      "explicacion": "El nervio ulnar puede comprimirse en ese canal ulnar, con los mismos signos que su lesión en el surco posterior al epicóndilo medial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: nervios",
+        "pagina": "482",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: nervios», p. 482."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-022",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Al extender el pulgar aparece una depresión triangular en el dorso del carpo. ¿Qué tendón la limita medialmente?",
+      "opciones": [
+        "Abductor largo del pulgar",
+        "Extensor corto del pulgar",
+        "Extensor largo del pulgar",
+        "Extensor del índice"
+      ],
+      "correcta": 2,
+      "explicacion": "Lateralmente la limitan los tendones del extensor corto del pulgar y del abductor largo del pulgar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: músculos extensores",
+        "pagina": "457",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: músculos extensores», p. 457."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-023",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Qué dos huesos forman el suelo de la tabaquera anatómica?",
+      "opciones": [
+        "Escafoides y trapecio",
+        "Semilunar y piramidal",
+        "Ganchoso y hueso grande",
+        "Radio y ulna"
+      ],
+      "correcta": 0,
+      "explicacion": "Se palpan en el suelo de la tabaquera, entre el proceso estiloides del radio y el primer metacarpiano; por él cruza la arteria radial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: músculos extensores",
+        "pagina": "455, 457",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: músculos extensores», pp. 455, 457."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-024",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Cuál de estos músculos de la mano NO pertenece al grupo tenar?",
+      "opciones": [
+        "Oponente del pulgar",
+        "Abductor corto del pulgar",
+        "Aductor del pulgar",
+        "Flexor corto del pulgar"
+      ],
+      "correcta": 2,
+      "explicacion": "El aductor del pulgar se describe aparte y lo inerva el ulnar; los tres músculos tenares los inerva el ramo recurrente del mediano.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: músculos",
+        "pagina": "485–489",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: músculos», pp. 485–489."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-025",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Cuál de estos músculos forma parte de la eminencia hipotenar?",
+      "opciones": [
+        "Abductor corto del pulgar",
+        "Aductor del pulgar",
+        "Abductor del dedo meñique",
+        "Primer lumbrical"
+      ],
+      "correcta": 2,
+      "explicacion": "Los músculos hipotenares forman la eminencia del lado medial de la palma y los inerva el nervio ulnar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: músculos",
+        "pagina": "490",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: músculos», p. 490."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-026",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Qué nervio inerva a los lumbricales 1.º y 2.º?",
+      "opciones": [
+        "Mediano",
+        "Interóseo posterior",
+        "Ulnar",
+        "Radial"
+      ],
+      "correcta": 0,
+      "explicacion": "Por eso, en la lesión del mediano se afecta la flexión de las metacarpofalángicas de los dedos 2.º y 3.º.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: músculos",
+        "pagina": "477–478",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: músculos», pp. 477–478."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-027",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Qué acción realizan los músculos interóseos dorsales de la mano?",
+      "opciones": [
+        "Extienden la muñeca",
+        "Aducen los dedos",
+        "Flexionan las interfalángicas",
+        "Abducen los dedos"
+      ],
+      "correcta": 3,
+      "explicacion": "Los interóseos, inervados por el ulnar, se exploran separando y juntando los dedos; los palmares aducen.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: músculos",
+        "pagina": "493, 498",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: músculos», pp. 493, 498."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-028",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Cuál de estas estructuras atraviesa el túnel carpiano?",
+      "opciones": [
+        "Nervio radial",
+        "Nervio mediano",
+        "Arteria radial",
+        "Nervio ulnar"
+      ],
+      "correcta": 1,
+      "explicacion": "El retináculo de los flexores convierte la concavidad anterior del carpo en un túnel osteofibroso por donde pasan los tendones flexores y el mediano.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: nervios",
+        "pagina": "346, 515",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: nervios», pp. 346, 515."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-029",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Un nervio que continúa el ramo profundo del radial atraviesa el supinador y discurre entre los extensores superficiales y profundos del antebrazo. ¿Cuál es?",
+      "opciones": [
+        "Nervio interóseo anterior",
+        "Nervio interóseo posterior",
+        "Nervio cutáneo posterior del antebrazo",
+        "Ramo superficial del radial"
+      ],
+      "correcta": 1,
+      "explicacion": "Inerva los músculos del compartimento posterior del antebrazo y acompaña a la arteria interósea posterior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: nervios",
+        "pagina": "455",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: nervios», p. 455."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-030",
+      "tema": "antebrazo-mano",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Un ramo motor del nervio mediano en la mano inerva los tres músculos tenares y es subcutáneo, por lo que pequeñas laceraciones lo seccionan. ¿Cuál es?",
+      "opciones": [
+        "Ramo interóseo",
+        "Ramo recurrente",
+        "Ramo palmar",
+        "Ramo digital palmar propio"
+      ],
+      "correcta": 1,
+      "explicacion": "Su sección paraliza los músculos tenares y el pulgar pierde gran parte de su función.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: nervios",
+        "pagina": "515–516",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: nervios», pp. 515–516."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-031",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué función tiene el extensor del índice?",
+      "opciones": [
+        "Extiende la falange distal del pulgar y el carpo",
+        "Da independencia al índice, como al señalar",
+        "Flexiona la muñeca y abduce la mano hacia el radio",
+        "Abduce el pulgar en el suelo de la tabaquera"
+      ],
+      "correcta": 1,
+      "explicacion": "Puede actuar solo o con el extensor de los dedos para extender el índice en la interfalángica proximal; también participa en la extensión de la mano.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: músculos extensores",
+        "pagina": "455",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: músculos extensores», p. 455."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-032",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué movimiento pierden los dedos 2.º y 3.º al paralizarse los lumbricales 1.º y 2.º?",
+      "opciones": [
+        "Extensión de las articulaciones interfalángicas distales",
+        "Oposición de los dedos 2.º y 3.º hacia el pulgar",
+        "Abducción de las articulaciones metacarpofalángicas",
+        "Flexión de las articulaciones metacarpofalángicas"
+      ],
+      "correcta": 3,
+      "explicacion": "Por eso, al cerrar el puño, los dedos 2.º y 3.º quedan parcialmente extendidos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: músculos",
+        "pagina": "477–478",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: músculos», pp. 477–478."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-033",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "En la lesión del nervio mediano en el codo, ¿por qué se conserva la flexión de las interfalángicas distales de los dedos 4.º y 5.º?",
+      "opciones": [
+        "Porque la parte medial del flexor profundo la inerva el ulnar",
+        "Porque el flexor superficial flexiona esas articulaciones",
+        "Porque el radial inerva todo el flexor profundo de los dedos",
+        "Porque los lumbricales 3.º y 4.º flexionan esas articulaciones"
+      ],
+      "correcta": 0,
+      "explicacion": "El flexor profundo de los dedos tiene doble inervación: mediano para su porción lateral y ulnar para la medial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "477–478",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», pp. 477–478."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-034",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "Si se secciona el nervio mediano, el pulgar no puede oponerse, pero otros músculos imitan ineficazmente la oposición. ¿Cuáles?",
+      "opciones": [
+        "Flexor largo del pulgar y extensor corto del pulgar",
+        "Extensor largo del pulgar y oponente del meñique",
+        "Abductor largo del pulgar y aductor del pulgar",
+        "Abductor corto del pulgar y flexor corto del pulgar"
+      ],
+      "correcta": 2,
+      "explicacion": "Los inervan el interóseo posterior y el ulnar, respectivamente.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "516",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 516."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-035",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué arteria cruza diagonalmente el suelo de la tabaquera anatómica?",
+      "opciones": [
+        "Interósea posterior",
+        "Ulnar",
+        "Radial",
+        "Interósea anterior"
+      ],
+      "correcta": 2,
+      "explicacion": "Pasa desde la cara anterior del radio hasta el dorso de la mano, y se puede palpar ahí.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: arterias",
+        "pagina": "457",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: arterias», p. 457."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-036",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿Cómo reciben su irrigación los tendones de los flexores largos en los dedos?",
+      "opciones": [
+        "Por difusión desde el líquido sinovial de la vaina digital",
+        "Por vasos en pliegues sinoviales (vínculos) desde el periostio",
+        "Por ramas directas del arco palmar profundo a cada tendón",
+        "Por ramas de la arteria interósea anterior del antebrazo"
+      ],
+      "correcta": 1,
+      "explicacion": "Los vínculos son pliegues sinoviales que llevan los vasos desde el periostio de las falanges.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: músculos",
+        "pagina": "497",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: músculos», p. 497."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-037",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué función tienen las porciones anulares y cruciformes de las vainas fibrosas de los dedos («poleas»)?",
+      "opciones": [
+        "Fijar los lumbricales a la falange proximal del dedo",
+        "Separar los tendones superficiales de los tendones profundos",
+        "Abducir los dedos durante el cierre del puño cerrado",
+        "Evitar que los tendones se separen de los dedos (cuerda de arco)"
+      ],
+      "correcta": 3,
+      "explicacion": "Son refuerzos engrosados de las vainas fibrosas, que forman túneles osteofibrosos para los tendones.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: músculos",
+        "pagina": "497",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: músculos», p. 497."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-038",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Por qué las tumefacciones de las infecciones de la palma aparecen sobre todo en el dorso de la mano?",
+      "opciones": [
+        "Porque las venas del dorso están más dilatadas que las de la palma",
+        "Porque la fascia palmar es gruesa y fuerte, y la dorsal más delgada",
+        "Porque los tendones extensores tienen vainas sinoviales más grandes",
+        "Porque el pus sigue la arteria radial hacia el dorso de la mano"
+      ],
+      "correcta": 1,
+      "explicacion": "El pus se acumula según el sitio en los compartimentos tenar, hipotenar, mediopalmar o aductor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "512",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 512."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-039",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué función tiene el retináculo de los músculos flexores en el carpo?",
+      "opciones": [
+        "Divide la palma en compartimentos fasciales tenar e hipotenar",
+        "Une los extremos distales de la ulna y del radio entre sí",
+        "Convierte la concavidad anterior del carpo en un túnel osteofibroso",
+        "Fija los tendones del palmar largo y del flexor ulnar al carpo"
+      ],
+      "correcta": 2,
+      "explicacion": "Se extiende entre las prominencias anteriores de los huesos externos del carpo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: nervios",
+        "pagina": "346",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: nervios», p. 346."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-040",
+      "tema": "antebrazo-mano",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿Qué sistema nervioso regula el calibre de las arterias de los dedos, relevante en el síndrome de Raynaud?",
+      "opciones": [
+        "Fibras sensitivas del nervio radial hacia el dorso de la mano",
+        "Fibras simpáticas postsinápticas que viajan por el plexo braquial",
+        "Fibras motoras somáticas del nervio mediano hacia los dedos",
+        "Fibras parasimpáticas del nervio vago hacia las arterias"
+      ],
+      "correcta": 1,
+      "explicacion": "Por eso la simpatectomía presináptica cervicodorsal dilata las arterias de los dedos.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "514",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 514."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-041",
+      "tema": "antebrazo-mano",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Qué estructuras pasan por el conducto ulnar [de Guyon]?",
+      "opciones": [
+        "La arteria y el nervio ulnares",
+        "El nervio mediano y la arteria radial",
+        "El tendón del palmar largo y el nervio radial",
+        "La arteria interósea y el nervio mediano"
+      ],
+      "correcta": 0,
+      "explicacion": "El conducto está entre el pisiforme y el gancho del ganchoso; la arteria ulnar discurre lateral al nervio ulnar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: arterias y venas",
+        "pagina": "497, 517",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: arterias y venas», pp. 497, 517."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-042",
+      "tema": "antebrazo-mano",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Cuáles son los compartimentos fasciales de la palma donde puede acumularse pus?",
+      "opciones": [
+        "Aductor, interóseo, tenar y subcutáneo",
+        "Tenar, hipotenar, mediopalmar y aductor",
+        "Tenar, hipotenar, dorsal y lumbrical",
+        "Mediopalmar, radial, ulnar y dorsal"
+      ],
+      "correcta": 1,
+      "explicacion": "La infección de un espacio no tratada puede propagarse desde el espacio mediopalmar hacia el antebrazo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: fascia y compartimentos de la palma",
+        "pagina": "512",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: fascia y compartimentos de la palma», p. 512."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-043",
+      "tema": "antebrazo-mano",
+      "patron": "P10",
+      "dificultad": 3,
+      "enunciado": "¿Por dónde entra la arteria radial en la palma tras cruzar la tabaquera anatómica?",
+      "opciones": [
+        "Entre el pisiforme y el gancho del ganchoso",
+        "Entre las cabezas del pronador cuadrado y el radio",
+        "Bajo el retináculo de los flexores, junto al mediano",
+        "Entre las cabezas del primer músculo interóseo dorsal"
+      ],
+      "correcta": 3,
+      "explicacion": "Después gira medialmente entre las cabezas del aductor del pulgar y forma el arco palmar profundo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: arterias y venas",
+        "pagina": "497",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: arterias y venas», p. 497."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-044",
+      "tema": "antebrazo-mano",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "¿Qué dermatomas incluyen la mano?",
+      "opciones": [
+        "C3–C5",
+        "C5–C6",
+        "T2–T4",
+        "C6–C8"
+      ],
+      "correcta": 3,
+      "explicacion": "Los nervios mediano, ulnar y radial llevan fibras sensitivas de C6–C8 a la piel; los nervios mediano y ulnar contienen además fibras motoras de T1.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: nervios",
+        "pagina": "498",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: nervios», p. 498."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-045",
+      "tema": "antebrazo-mano",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Entre qué tendones se comprime la arteria radial contra el extremo distal del radio?",
+      "opciones": [
+        "Flexor radial del carpo y abductor largo del pulgar",
+        "Palmar largo y flexor ulnar del carpo",
+        "Braquiorradial y extensor radial largo del carpo",
+        "Extensor largo y extensor corto del pulgar"
+      ],
+      "correcta": 0,
+      "explicacion": "En ese punto la arteria solo está cubierta por fascia y piel.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "475",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 475."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-046",
+      "tema": "antebrazo-mano",
+      "patron": "P13",
+      "dificultad": 1,
+      "enunciado": "En el esquema del dorso del carpo con el pulgar extendido, ¿qué región señala la flecha?",
+      "opciones": [
+        "Fosa del codo",
+        "Túnel carpiano",
+        "Conducto ulnar",
+        "Tabaquera anatómica"
+      ],
+      "correcta": 3,
+      "explicacion": "Es una depresión triangular limitada por los tendones del extensor largo, el extensor corto y el abductor largo del pulgar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: músculos extensores",
+        "pagina": "457",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: músculos extensores», p. 457."
+      },
+      "imagen": {
+        "id": "a4-img-01",
+        "descripcion": "Vista lateral del carpo con el pulgar extendido. Una flecha señala la depresión triangular entre el tendón del extensor largo del pulgar y los tendones del extensor corto y del abductor largo del pulgar.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-047",
+      "tema": "antebrazo-mano",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema anterior del carpo, ¿qué estructura señala la flecha, que convierte la concavidad del carpo en un túnel?",
+      "opciones": [
+        "Retináculo de los músculos extensores",
+        "Ligamento pisiganchoso",
+        "Retináculo de los músculos flexores",
+        "Aponeurosis palmar"
+      ],
+      "correcta": 2,
+      "explicacion": "Bajo él pasan los tendones flexores y el nervio mediano.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: nervios",
+        "pagina": "346",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: nervios», p. 346."
+      },
+      "imagen": {
+        "id": "a4-img-02",
+        "descripcion": "Vista anterior del carpo con el pisiforme, el gancho del ganchoso, el escafoides y el trapecio. Una flecha señala la banda fibrosa que une las prominencias de los huesos externos del carpo y cubre el túnel.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-048",
+      "tema": "antebrazo-mano",
+      "patron": "P13",
+      "dificultad": 1,
+      "enunciado": "En el corte transversal del carpo, ¿qué nervio señala la flecha, situado dentro del túnel carpiano?",
+      "opciones": [
+        "Radial",
+        "Ulnar",
+        "Interóseo posterior",
+        "Mediano"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la estructura más sensible del conducto carpiano; su compresión causa el síndrome del túnel carpiano.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: nervios",
+        "pagina": "515",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: nervios», p. 515."
+      },
+      "imagen": {
+        "id": "a4-img-03",
+        "descripcion": "Corte transversal del carpo con los huesos del carpo, el retináculo de los flexores y los tendones flexores. Una flecha señala el nervio situado bajo el retináculo, junto a los tendones flexores superficiales.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-049",
+      "tema": "antebrazo-mano",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema anterior de la muñeca, ¿qué conducto señala la flecha, entre el pisiforme y el gancho del ganchoso?",
+      "opciones": [
+        "Tabaquera anatómica",
+        "Túnel carpiano",
+        "Canal ulnar del codo",
+        "Conducto ulnar [de Guyon]"
+      ],
+      "correcta": 3,
+      "explicacion": "Lo transforma en conducto osteofibroso el ligamento pisiganchoso; por él pasan la arteria y el nervio ulnares.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: arterias y venas",
+        "pagina": "497, 517",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: arterias y venas», pp. 497, 517."
+      },
+      "imagen": {
+        "id": "a4-img-04",
+        "descripcion": "Vista anterior del carpo con el pisiforme y el gancho del ganchoso. Una flecha señala el espacio entre ambos huesos, cerrado por un ligamento que va del pisiforme al gancho.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t1-050",
+      "tema": "antebrazo-mano",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema de la palma, ¿qué grupo muscular señala la flecha, en la base del pulgar?",
+      "opciones": [
+        "Músculos interóseos",
+        "Músculos lumbricales",
+        "Músculos hipotenares",
+        "Músculos tenares"
+      ],
+      "correcta": 3,
+      "explicacion": "Los tres músculos tenares los inerva el ramo recurrente del mediano.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: músculos",
+        "pagina": "485–487, 515",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: músculos», pp. 485–487, 515."
+      },
+      "imagen": {
+        "id": "a4-img-05",
+        "descripcion": "Vista palmar de la mano con las eminencias tenar e hipotenar. Una flecha señala los músculos que forman la eminencia en la base del pulgar.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-001",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Se liga la arteria axilar entre la 1.ª costilla y el origen de la arteria subescapular. ¿Qué arteria invierte la dirección de su flujo para irrigar la tercera porción de la axilar?",
+      "opciones": [
+        "Circunfleja humeral posterior",
+        "Braquial profunda",
+        "Toracoacromial",
+        "Subescapular"
+      ],
+      "correcta": 3,
+      "explicacion": "La subescapular recibe sangre por anastomosis con las arterias supraescapular, dorsal de la escápula e intercostales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "402",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», p. 402."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-002",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "¿Dónde la ligadura de la arteria axilar impide la irrigación del brazo porque la circulación colateral es inadecuada?",
+      "opciones": [
+        "Distal al origen de la arteria braquial profunda, en el brazo",
+        "Entre los orígenes de la arteria subescapular y de la braquial profunda",
+        "Proximal a la arteria torácica superior, junto a la 1.ª costilla",
+        "Entre la 1.ª costilla y la arteria subescapular, en la axila"
+      ],
+      "correcta": 1,
+      "explicacion": "Las anastomosis periarticulares del hombro y del codo no compensan una oclusión en ese tramo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "403–404",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», pp. 403–404."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-003",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En una herida por arma blanca en la axila con hemorragia abundante, ¿qué porción de la arteria axilar se comprime contra el húmero?",
+      "opciones": [
+        "La primera",
+        "La tercera",
+        "Las tres porciones a la vez",
+        "La segunda"
+      ],
+      "correcta": 1,
+      "explicacion": "Si se necesita comprimir más proximalmente, se comprime en su origen, donde la subclavia cruza la 1.ª costilla.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "404",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», p. 404."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-004",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Una herida en la porción proximal de la vena axilar es especialmente peligrosa. Además de la hemorragia profusa, ¿qué riesgo conlleva?",
+      "opciones": [
+        "Trombosis de la vena cefálica",
+        "Lesión del conducto torácico",
+        "Entrada de aire",
+        "Compresión del plexo braquial"
+      ],
+      "correcta": 2,
+      "explicacion": "Con el brazo abducido por completo, la vena axilar se solapa sobre la arteria por delante.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "404",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», p. 404."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-005",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "En una punción de la vena subclavia por vía infraclavicular, ¿qué vena se punciona en realidad en el punto de entrada?",
+      "opciones": [
+        "La vena braquiocefálica, tras el esternón",
+        "La vena cefálica, en el surco deltopectoral",
+        "La vena yugular interna, tras la clavícula",
+        "La porción terminal de la vena axilar"
+      ],
+      "correcta": 3,
+      "explicacion": "La vena axilar se convierte en subclavia al cruzar la 1.ª costilla, pero la punta de la aguja entra casi inmediatamente en la luz de la subclavia.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "404",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», p. 404."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-006",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Una infección en el miembro superior aumenta de tamaño los nódulos axilares y provoca estrías rojizas en la piel (linfangitis). ¿Qué grupo de nódulos suele afectarse primero?",
+      "opciones": [
+        "Humerales",
+        "Apicales",
+        "Centrales",
+        "Subescapulares"
+      ],
+      "correcta": 0,
+      "explicacion": "Los nódulos humerales reciben prácticamente toda la linfa del miembro superior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "405",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», p. 405."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-007",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "En un cáncer metastásico del grupo apical, el aumento de tamaño de los nódulos puede obstruir una vena superior al pectoral menor. ¿Cuál es?",
+      "opciones": [
+        "Vena axilar inferior",
+        "Vena basílica",
+        "Vena cefálica",
+        "Vena yugular externa"
+      ],
+      "correcta": 2,
+      "explicacion": "Los nódulos apicales suelen adherirse a la vena axilar, lo que puede obligar a extirpar parte del vaso.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "405",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», p. 405."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-008",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Tras extirpar los nódulos axilares de una paciente aparece una tumefacción del miembro por acumulación de linfa. ¿Cómo se llama esta complicación?",
+      "opciones": [
+        "Hematoma",
+        "Isquemia",
+        "Linfedema",
+        "Linfangitis"
+      ],
+      "correcta": 2,
+      "explicacion": "Se debe al compromiso del drenaje linfático del miembro superior tras la disección de nódulos axilares.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "405",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», p. 405."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-009",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Al medir la presión arterial con un esfigmomanómetro, el estetoscopio se coloca sobre la fosa del codo. ¿Qué arteria se ausculta?",
+      "opciones": [
+        "Ulnar",
+        "Axilar",
+        "Braquial",
+        "Radial"
+      ],
+      "correcta": 2,
+      "explicacion": "El primer ruido marca la presión sistólica y su desaparición, la diastólica.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: brazo y fosa del codo",
+        "pagina": "429",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: brazo y fosa del codo», p. 429."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-010",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "¿Por qué puede pinzarse la arteria braquial distalmente al origen de la braquial profunda sin dañar los tejidos?",
+      "opciones": [
+        "Porque la arteria axilar irriga directamente el antebrazo y la mano",
+        "Porque las venas satélites invierten su flujo y nutren la mano",
+        "Porque las anastomosis del codo mantienen irrigadas la radial y la ulnar",
+        "Porque la arteria interósea común reemplaza a la arteria braquial"
+      ],
+      "correcta": 2,
+      "explicacion": "La oclusión súbita completa o la laceración de la braquial, en cambio, es una urgencia quirúrgica.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: brazo y fosa del codo",
+        "pagina": "429",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: brazo y fosa del codo», p. 429."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-011",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "¿Por qué no debe tomarse el pulso radial con la yema del pulgar?",
+      "opciones": [
+        "Porque el pulgar tiene su propio pulso, que enmascara el ajeno",
+        "Porque la arteria radial es demasiado profunda en ese punto",
+        "Porque el pulgar no percibe la presión de la arteria radial",
+        "Porque su presión comprime la arteria ulnar en el carpo"
+      ],
+      "correcta": 0,
+      "explicacion": "Cuando no se palpa el pulso se intenta en el otro miembro, pues una arteria radial aberrante puede dificultarlo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "475",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 475."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-012",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "En una división alta de la arteria braquial, las arterias radial y ulnar nacen en el brazo. ¿Qué estructura pasa entre ambas?",
+      "opciones": [
+        "La vena basílica",
+        "El nervio mediano",
+        "El nervio radial",
+        "El nervio ulnar"
+      ],
+      "correcta": 1,
+      "explicacion": "Además, los nervios musculocutáneo y mediano suelen comunicarse.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "475",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 475."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-013",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Si se lacera un arco palmar arterial, ¿por qué no basta con ligar una sola arteria del antebrazo?",
+      "opciones": [
+        "Porque la interósea común irriga ambos arcos por separado",
+        "Porque radial y ulnar se anastomosan en los arcos palmares",
+        "Porque las venas profundas devuelven la sangre al arco palmar",
+        "Porque el arco superficial depende por completo del nervio mediano"
+      ],
+      "correcta": 1,
+      "explicacion": "Puede ser necesario ligar ambas o aplicar un torniquete proximal al codo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "513–514",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», pp. 513–514."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-014",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "Un paciente tiene crisis bilaterales de cianosis de los dedos con el frío y las emociones. Si la causa es idiopática, ¿cómo se llama?",
+      "opciones": [
+        "Síndrome del arco doloroso",
+        "Contractura de Volkmann",
+        "Síndrome del túnel carpiano",
+        "Síndrome de Raynaud"
+      ],
+      "correcta": 3,
+      "explicacion": "La isquemia intermitente se acompaña a menudo de parestesias y dolor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: mano",
+        "pagina": "514",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: mano», p. 514."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-015",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 1,
+      "enunciado": "En la fosa del codo, ¿qué vena superficial oblicua comunica la cefálica con la basílica?",
+      "opciones": [
+        "Vena mediana del codo",
+        "Vena axilar",
+        "Vena braquial",
+        "Vena mediana del antebrazo"
+      ],
+      "correcta": 0,
+      "explicacion": "Esta vena discurre oblicuamente por la fosa del codo y es la usada con frecuencia para extraer sangre.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje venoso del miembro superior",
+        "pagina": "345",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje venoso del miembro superior», p. 345."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-016",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 3,
+      "enunciado": "En una obstrucción de la vena cava inferior, ¿qué vena superficial permite el retorno venoso desde la región inguinal hacia la vena axilar?",
+      "opciones": [
+        "Vena cefálica",
+        "Vena toracoepigástrica",
+        "Vena torácica interna",
+        "Vena basílica"
+      ],
+      "correcta": 1,
+      "explicacion": "Se forma por anastomosis de venas superficiales inguinales con tributarias de la vena axilar, normalmente la vena torácica lateral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: vena axilar",
+        "pagina": "389",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: vena axilar», p. 389."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-017",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "La primera porción de la arteria axilar da una sola rama. ¿Cuál es?",
+      "opciones": [
+        "Arteria toracoacromial",
+        "Arteria subescapular",
+        "Arteria torácica superior",
+        "Arteria torácica lateral"
+      ],
+      "correcta": 2,
+      "explicacion": "Es un vaso pequeño y variable que irriga el subclavio, los dos primeros espacios intercostales y las digitaciones superiores del serrato anterior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: arteria axilar",
+        "pagina": "384",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: arteria axilar», p. 384."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-018",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Un tronco ancho y corto perfora la membrana costocoracoidea y se divide en cuatro ramas: acromial, deltoidea, pectoral y clavicular. ¿Cuál es?",
+      "opciones": [
+        "Arteria circunfleja humeral anterior",
+        "Arteria torácica lateral",
+        "Arteria subescapular",
+        "Arteria toracoacromial"
+      ],
+      "correcta": 3,
+      "explicacion": "Es una de las dos ramas de la segunda porción de la arteria axilar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: arteria axilar",
+        "pagina": "384",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: arteria axilar», p. 384."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-019",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Cuál es la mayor rama de la arteria axilar?",
+      "opciones": [
+        "Circunfleja humeral anterior",
+        "Torácica lateral",
+        "Toracoacromial",
+        "Subescapular"
+      ],
+      "correcta": 3,
+      "explicacion": "Nace de la tercera porción y de ella parte la rama circunfleja de la escápula.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: arteria axilar",
+        "pagina": "384",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: arteria axilar», p. 384."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-020",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Qué arteria acompaña al nervio axilar por el espacio cuadrangular?",
+      "opciones": [
+        "Subescapular",
+        "Circunfleja humeral anterior",
+        "Braquial profunda",
+        "Circunfleja humeral posterior"
+      ],
+      "correcta": 3,
+      "explicacion": "Irriga la articulación del hombro y músculos como el deltoides, los redondos y la cabeza larga del tríceps.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: arteria axilar",
+        "pagina": "387",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: arteria axilar», p. 387."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-021",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "¿Qué arteria acompaña al nervio radial por el surco del nervio radial?",
+      "opciones": [
+        "Circunfleja humeral posterior",
+        "Colateral ulnar superior",
+        "Recurrente radial",
+        "Braquial profunda"
+      ],
+      "correcta": 3,
+      "explicacion": "Es la mayor rama de la braquial y la de origen más superior; termina en las arterias colaterales media y radial.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Brazo: arteria braquial",
+        "pagina": "414",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Brazo: arteria braquial», p. 414."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-022",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 3,
+      "enunciado": "¿Qué arteria nace de la cara lateral de la arteria braquial?",
+      "opciones": [
+        "Braquial profunda",
+        "Nutricia del húmero",
+        "Colateral ulnar inferior",
+        "Colateral ulnar superior"
+      ],
+      "correcta": 1,
+      "explicacion": "Las ramas con nombre de la cara medial son la braquial profunda y las colaterales ulnares superior e inferior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Brazo: arteria braquial",
+        "pagina": "413–414",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Brazo: arteria braquial», pp. 413–414."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-023",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Una rama corta de la arteria ulnar nace en la parte distal de la fosa del codo y se divide casi de inmediato en dos arterias. ¿Cuál es?",
+      "opciones": [
+        "Colateral radial",
+        "Interósea posterior",
+        "Recurrente ulnar",
+        "Interósea común"
+      ],
+      "correcta": 3,
+      "explicacion": "Se divide en las arterias interóseas anterior y posterior.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: arterias",
+        "pagina": "456",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: arterias», p. 456."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-024",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "En la palma, ¿qué arco arterial es la terminación principal de la arteria ulnar?",
+      "opciones": [
+        "Arco palmar superficial",
+        "Arco palmar del carpo",
+        "Arco palmar profundo",
+        "Arco dorsal del carpo"
+      ],
+      "correcta": 0,
+      "explicacion": "Da tres arterias digitales palmares comunes que se anastomosan con las metacarpianas palmares del arco profundo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: arterias y venas",
+        "pagina": "497",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: arterias y venas», p. 497."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-025",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿De qué arteria depende principalmente el arco palmar profundo?",
+      "opciones": [
+        "Braquial profunda",
+        "Ulnar",
+        "Radial",
+        "Interósea anterior"
+      ],
+      "correcta": 2,
+      "explicacion": "Se forma por la anastomosis de la radial con la rama profunda de la ulnar y da las metacarpianas palmares y la principal del pulgar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: arterias y venas",
+        "pagina": "498",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: arterias y venas», p. 498."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-026",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 1,
+      "enunciado": "Una vena nace del lado lateral de la red venosa dorsal de la mano y asciende por el surco deltopectoral. ¿Cuál es?",
+      "opciones": [
+        "Vena cefálica",
+        "Vena basílica",
+        "Vena axilar",
+        "Vena mediana del antebrazo"
+      ],
+      "correcta": 0,
+      "explicacion": "Atraviesa la membrana costocoracoidea para unirse a la porción terminal de la vena axilar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje venoso del miembro superior",
+        "pagina": "345",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje venoso del miembro superior», p. 345."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-027",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "Una vena parte del extremo medial de la red venosa dorsal, atraviesa la fascia del brazo en la unión de los tercios medio e inferior y se une a las venas satélites de la braquial. ¿Cuál es?",
+      "opciones": [
+        "Vena basílica",
+        "Vena radial",
+        "Vena cefálica",
+        "Vena mediana del codo"
+      ],
+      "correcta": 0,
+      "explicacion": "Asciende paralela a la arteria braquial y al nervio cutáneo medial del antebrazo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje venoso del miembro superior",
+        "pagina": "346",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje venoso del miembro superior», p. 346."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-028",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Qué vena se forma por la unión de las venas braquiales y la basílica en el borde inferior del redondo mayor?",
+      "opciones": [
+        "Vena braquiocefálica",
+        "Vena cefálica",
+        "Vena subclavia",
+        "Vena axilar"
+      ],
+      "correcta": 3,
+      "explicacion": "Se convierte en vena subclavia en el borde lateral de la 1.ª costilla.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: vena axilar",
+        "pagina": "387",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: vena axilar», p. 387."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-029",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P02",
+      "dificultad": 2,
+      "enunciado": "¿Qué grupo de nódulos linfáticos axilares se sitúa en el vértice de la axila, a lo largo del lado medial de la vena axilar?",
+      "opciones": [
+        "Apicales",
+        "Humerales",
+        "Pectorales",
+        "Subescapulares"
+      ],
+      "correcta": 0,
+      "explicacion": "Reciben linfa de los demás grupos y de los vasos que acompañan a la parte proximal de la vena cefálica.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: nódulos linfáticos",
+        "pagina": "390–391",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: nódulos linfáticos», pp. 390–391."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-030",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 1,
+      "enunciado": "¿Qué función tienen las venas perforantes del miembro superior?",
+      "opciones": [
+        "Comunican las venas superficiales con las profundas",
+        "Drenan la red venosa dorsal hacia la vena cefálica",
+        "Acompañan a las arterias principales como satélites",
+        "Unen la vena cefálica con la vena basílica en el codo"
+      ],
+      "correcta": 0,
+      "explicacion": "Las venas profundas son pares satélites de las arterias; las superficiales discurren por el tejido subcutáneo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje venoso del miembro superior",
+        "pagina": "345",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje venoso del miembro superior», p. 345."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-031",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Cómo son las venas profundas del miembro superior?",
+      "opciones": [
+        "Vasos únicos que discurren en el tejido subcutáneo de la región",
+        "Venas sin conexión con las venas superficiales del miembro",
+        "Pares satélites de las arterias principales, que reciben su nombre",
+        "Troncos impares que perforan la fascia profunda en cada región"
+      ],
+      "correcta": 2,
+      "explicacion": "Se anastomosan continuamente y se extienden dentro de la fascia profunda.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje venoso del miembro superior",
+        "pagina": "347",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje venoso del miembro superior», p. 347."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-032",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Dónde se localizan los nódulos linfáticos del codo?",
+      "opciones": [
+        "En la fosa del codo, sobre la arteria braquial",
+        "Sobre el olécranon, bajo la bolsa subcutánea",
+        "Proximales al epicóndilo medial y mediales a la vena basílica",
+        "Distales al epicóndilo lateral y laterales a la vena cefálica"
+      ],
+      "correcta": 2,
+      "explicacion": "Reciben parte de los vasos linfáticos que acompañan a la basílica; sus eferentes terminan en los nódulos axilares humerales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje linfático del miembro superior",
+        "pagina": "347",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje linfático del miembro superior», p. 347."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-033",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿A qué nódulos axilares drenan principalmente los vasos linfáticos que acompañan a la vena cefálica?",
+      "opciones": [
+        "Subescapulares, siguiendo los vasos subescapulares",
+        "Apicales, algunos pasando antes por los deltopectorales",
+        "Humerales, sin pasar por otros grupos de nódulos",
+        "Centrales, a través de la base del pectoral menor"
+      ],
+      "correcta": 1,
+      "explicacion": "Es la excepción al drenaje general del miembro superior, que termina en los humerales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje linfático del miembro superior",
+        "pagina": "347, 390",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje linfático del miembro superior», pp. 347, 390."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-034",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿De qué región reciben linfa principalmente los nódulos pectorales (anteriores)?",
+      "opciones": [
+        "De la cabeza y el cuello, a través del tronco subclavio",
+        "De la pared torácica anterior, incluida la mayor parte de la mama",
+        "Del miembro superior, salvo los vasos de la vena cefálica",
+        "De la región escapular y la pared posterior del tórax"
+      ],
+      "correcta": 1,
+      "explicacion": "Se sitúan a lo largo de la pared medial de la axila, alrededor de la vena torácica lateral.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: nódulos linfáticos",
+        "pagina": "390",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: nódulos linfáticos», p. 390."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-035",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿Hacia qué grupo se dirigen los vasos eferentes de los nódulos pectorales, subescapulares y humerales?",
+      "opciones": [
+        "Nódulos del codo",
+        "Nódulos centrales",
+        "Nódulos apicales directamente",
+        "Nódulos supraclaviculares"
+      ],
+      "correcta": 1,
+      "explicacion": "Los centrales se sitúan profundos al pectoral menor y sus eferentes van a los apicales.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: nódulos linfáticos",
+        "pagina": "390",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: nódulos linfáticos», p. 390."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-036",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué estructuras forman el tronco linfático subclavio al reunirse los eferentes de los nódulos apicales?",
+      "opciones": [
+        "Los vasos que pasan por el espacio cuadrangular",
+        "Los vasos que bordean el pectoral mayor y el deltoides",
+        "Los vasos que atraviesan el conducto cervicoaxilar",
+        "Los vasos que acompañan a la vena basílica en el brazo"
+      ],
+      "correcta": 2,
+      "explicacion": "En el lado izquierdo el tronco subclavio normalmente se une al conducto torácico.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: nódulos linfáticos",
+        "pagina": "391",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: nódulos linfáticos», p. 391."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-037",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Por qué la mano está dotada de arterias tan ramificadas y anastomosadas?",
+      "opciones": [
+        "Para impedir la pérdida de calor cuando hace frío en el ambiente",
+        "Para que la arteria ulnar pueda sustituir por completo a la radial",
+        "Para que todas sus partes reciban sangre oxigenada en toda posición",
+        "Para que las venas superficiales sean visibles en el dorso"
+      ],
+      "correcta": 2,
+      "explicacion": "Además, las arterias son superficiales, lo que permite disipar el exceso de calor, y las arteriolas pueden reducir el flujo en el frío.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: arterias y venas",
+        "pagina": "497",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: arterias y venas», p. 497."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-038",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 2,
+      "enunciado": "¿Qué arterias forman las anastomosis alrededor de la escápula?",
+      "opciones": [
+        "Circunfleja humeral anterior, posterior y radial",
+        "Torácica superior, toracoacromial y torácica lateral",
+        "Dorsal de la escápula, supraescapular y subescapular",
+        "Braquial profunda, colateral ulnar y recurrente radial"
+      ],
+      "correcta": 2,
+      "explicacion": "La circulación colateral que resulta permite ligar una arteria subclavia o axilar dañada.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: axila",
+        "pagina": "401–402",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: axila», pp. 401–402."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-039",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P04",
+      "dificultad": 3,
+      "enunciado": "¿Qué importancia tienen las anastomosis arteriales periarticulares del codo?",
+      "opciones": [
+        "Unen la vena cefálica con la vena basílica sobre la fosa del codo",
+        "Reemplazan al arco palmar profundo cuando se lacera la mano",
+        "Permiten que la arteria axilar irrigue directamente la mano y el codo",
+        "Mantienen irrigadas la radial y la ulnar si se pinza la braquial distal"
+      ],
+      "correcta": 3,
+      "explicacion": "En ellas participan las colaterales ulnares, la braquial profunda y las ramas recurrentes de las arterias radial, ulnar e interóseas.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Brazo: arteria braquial",
+        "pagina": "414, 429",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Brazo: arteria braquial», pp. 414, 429."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-040",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "¿Dónde se inicia y dónde termina la arteria axilar?",
+      "opciones": [
+        "Del tronco braquiocefálico al borde inferior del pectoral mayor",
+        "Del borde lateral de la 1.ª costilla al borde inferior del redondo mayor",
+        "Del borde inferior del pectoral menor al surco intertubercular",
+        "Del borde medial de la clavícula al cuello quirúrgico del húmero"
+      ],
+      "correcta": 1,
+      "explicacion": "Es continuación de la arteria subclavia y se convierte en braquial al cruzar el borde inferior del redondo mayor.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: arteria axilar",
+        "pagina": "384",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: arteria axilar», p. 384."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-041",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P10",
+      "dificultad": 1,
+      "enunciado": "Las tres porciones de la arteria axilar se definen por su relación con un músculo. ¿Cuál?",
+      "opciones": [
+        "Subescapular",
+        "Pectoral menor",
+        "Coracobraquial",
+        "Pectoral mayor"
+      ],
+      "correcta": 1,
+      "explicacion": "La primera porción es medial al músculo, la segunda posterior y la tercera lateral; el número de porción indica el número de ramas.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: arteria axilar",
+        "pagina": "384",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: arteria axilar», p. 384."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-042",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Cómo se relaciona la vena axilar con la arteria axilar?",
+      "opciones": [
+        "Anteromedial a ella y, en su parte terminal, anteroinferior",
+        "Lateral a ella y posterior al fascículo medial en la axila",
+        "Medial a ella y posterior a los tres fascículos del plexo",
+        "Posterolateral a ella en toda su longitud de trayecto"
+      ],
+      "correcta": 0,
+      "explicacion": "Con el brazo abducido por completo, la vena se solapa sobre la arteria anteriormente.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: vena axilar",
+        "pagina": "387, 404",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: vena axilar», pp. 387, 404."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-043",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P10",
+      "dificultad": 2,
+      "enunciado": "¿Dónde termina la arteria braquial?",
+      "opciones": [
+        "En el carpo, entre el pisiforme y el gancho del ganchoso",
+        "En el borde inferior del redondo mayor, en la axila",
+        "En el surco intertubercular, frente al cuello del húmero",
+        "En la fosa del codo, frente al cuello del radio"
+      ],
+      "correcta": 3,
+      "explicacion": "Allí está recubierta por la aponeurosis bicipital.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Brazo: arteria braquial",
+        "pagina": "413",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Brazo: arteria braquial», p. 413."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-044",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P10",
+      "dificultad": 3,
+      "enunciado": "En el conducto ulnar, ¿qué relación guarda la arteria ulnar con el nervio ulnar?",
+      "opciones": [
+        "Discurre posterior a él, entre el pisiforme y el gancho",
+        "Discurre lateral a él, entre el pisiforme y el gancho",
+        "Discurre superficial a él, bajo el retináculo flexor",
+        "Discurre medial a él, entre el pisiforme y el gancho"
+      ],
+      "correcta": 1,
+      "explicacion": "La arteria entra en la mano anterior al retináculo de los flexores, entre el pisiforme y el gancho del ganchoso.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: arterias y venas",
+        "pagina": "497",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: arterias y venas», p. 497."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-045",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P13",
+      "dificultad": 1,
+      "enunciado": "En el esquema del carpo, ¿qué arteria señala la flecha, que cruza el suelo de la tabaquera anatómica?",
+      "opciones": [
+        "Radial",
+        "Interósea anterior",
+        "Braquial",
+        "Ulnar"
+      ],
+      "correcta": 0,
+      "explicacion": "Gira alrededor de la cara lateral del carpo, cruza la tabaquera y entra en la palma para formar el arco palmar profundo.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Antebrazo: arterias",
+        "pagina": "457",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Antebrazo: arterias», p. 457."
+      },
+      "imagen": {
+        "id": "a4-img-06",
+        "descripcion": "Vista lateral del carpo con los tendones de la tabaquera anatómica, el escafoides y el trapecio. Una flecha señala la arteria que cruza diagonalmente el suelo de la tabaquera.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-046",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema de la palma, ¿qué arco arterial señala la flecha, terminación principal de la arteria ulnar?",
+      "opciones": [
+        "Arco dorsal del carpo",
+        "Arco palmar del carpo",
+        "Arco palmar profundo",
+        "Arco palmar superficial"
+      ],
+      "correcta": 3,
+      "explicacion": "De él nacen tres arterias digitales palmares comunes.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Mano: arterias y venas",
+        "pagina": "497",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Mano: arterias y venas», p. 497."
+      },
+      "imagen": {
+        "id": "a4-img-07",
+        "descripcion": "Vista palmar de la mano con los arcos arteriales. Una flecha señala el arco más distal y superficial, que da tres arterias digitales palmares comunes.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-047",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P13",
+      "dificultad": 1,
+      "enunciado": "En el esquema del hombro y el brazo, ¿qué vena señala la flecha, que asciende por el surco deltopectoral?",
+      "opciones": [
+        "Cefálica",
+        "Axilar",
+        "Basílica",
+        "Mediana del codo"
+      ],
+      "correcta": 0,
+      "explicacion": "Entra en el triángulo clavipectoral y se une a la porción terminal de la vena axilar.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje venoso del miembro superior",
+        "pagina": "345",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje venoso del miembro superior», p. 345."
+      },
+      "imagen": {
+        "id": "a4-img-08",
+        "descripcion": "Vista anterior del hombro y el brazo con el deltoides y el pectoral mayor. Una flecha señala la vena superficial que asciende por el surco entre ambos músculos.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-048",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema de la axila, ¿qué arteria señala la flecha, la mayor rama de la arteria axilar?",
+      "opciones": [
+        "Subescapular",
+        "Toracoacromial",
+        "Torácica lateral",
+        "Circunfleja humeral posterior"
+      ],
+      "correcta": 0,
+      "explicacion": "Nace de la tercera porción y da la arteria circunfleja de la escápula, que participa en las anastomosis escapulares.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Axila: arteria axilar",
+        "pagina": "384, 401",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Axila: arteria axilar», pp. 384, 401."
+      },
+      "imagen": {
+        "id": "a4-img-09",
+        "descripcion": "Vista anterior de la axila con la arteria axilar y sus ramas respecto al pectoral menor. Una flecha señala la rama más grande de la tercera porción.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-049",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P13",
+      "dificultad": 2,
+      "enunciado": "En el esquema anterior del codo, ¿qué vena señala la flecha, que comunica la cefálica con la basílica?",
+      "opciones": [
+        "Mediana del codo",
+        "Braquial",
+        "Axilar",
+        "Mediana del antebrazo"
+      ],
+      "correcta": 0,
+      "explicacion": "Discurre oblicuamente por la fosa del codo y se usa con frecuencia para la punción venosa.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Drenaje venoso del miembro superior",
+        "pagina": "345",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Drenaje venoso del miembro superior», p. 345."
+      },
+      "imagen": {
+        "id": "a4-img-10",
+        "descripcion": "Vista anterior de la fosa del codo con las venas cefálica y basílica. Una flecha señala la vena oblicua que las une.",
+        "estado": "pendiente"
+      },
+      "estado": "aprobada"
+    },
+    {
+      "id": "a4-t2-050",
+      "tema": "vascularizacion-miembro-superior",
+      "patron": "P09",
+      "dificultad": 2,
+      "enunciado": "Al explorar el antebrazo se detecta un vaso pulsátil superficial a la fascia profunda cerca del carpo. ¿Qué variación es la más probable?",
+      "opciones": [
+        "Arteria mediana persistente",
+        "Arteria radial superficial",
+        "Arteria ulnar superficial",
+        "Arteria interósea anterior aberrante"
+      ],
+      "correcta": 1,
+      "explicacion": "El origen de la radial puede ser más proximal (axilar o braquial) y a veces es superficial a la fascia profunda; este vaso aberrante es vulnerable a la laceración.",
+      "referencia": {
+        "fuente": "moore2017",
+        "capitulo": "3. Miembro superior",
+        "seccion": "Cuadros clínicos: antebrazo",
+        "pagina": "477",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 3, «Cuadros clínicos: antebrazo», p. 477."
+      },
+      "imagen": null,
+      "estado": "aprobada"
+    }
+  ]
+}
