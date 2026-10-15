@@ -11,13 +11,13 @@
 | `opciones` / `correcta` | 4 opciones; `correcta` es la posición (0 = A … 3 = D). El juego mezcla el orden en cada ronda |
 | `explicacion` | 2–3 líneas para la retroalimentación al final de la ronda |
 | `referencia` | `fuente` (clave en `fuente.referencias` del encabezado), capítulo, sección, `pagina` y `cita`: la cita bibliográfica formal lista para mostrar en la retroalimentación |
-| `imagen` | solo en `P13`: descripción del esquema SVG que falta dibujar (`estado: "pendiente"`) |
-| `estado` | `borrador` → cambiar a `aprobada` cuando Santi la revise; la Edge Function (Sesión 4) solo debe servir las aprobadas |
+| `imagen` | solo en `P13`: descripción del esquema SVG que falta dibujar (`estado: "pendiente"`). Cuando el SVG esté listo, cambia a `"lista"`: **una P13 con la imagen pendiente nunca se sirve**, aunque esté aprobada |
+| `estado` | `borrador` → cambiar a `aprobada` cuando Santi la revise. **La Edge Function solo sirve las `aprobada`** (los borradores solo con el interruptor de pruebas, que nunca va en producción). Una ronda necesita 13 aprobadas por tema: `npm run banco:resumen` lo comprueba |
 
 | `nota_revision` | solo en algunas: avisa cuando el dato clínico va más allá del texto de Moore y conviene confirmarlo |
 
 ## Importante
-Las respuestas correctas **no deben viajar al navegador**: en la Sesión 4 se mueven a la Edge Function y el juego solo recibe enunciado y opciones.
+Las respuestas correctas **no viajan al navegador**: viven solo en la Edge Function `rondas` y el juego recibe enunciado y opciones. Esta carpeta sigue siendo la **fuente de verdad**; después de editar un JSON ejecuta `npm run funcion:preparar` (copia lo necesario a `supabase/functions/_shared/banco/`) y vuelve a desplegar la función. `npm test` falla si olvidas la copia.
 
 La obra se cita siempre de forma formal (autores, año, título, edición y editorial); nunca se menciona el archivo digital de donde se consultó.
 

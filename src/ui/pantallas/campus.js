@@ -9,6 +9,7 @@ import { crearTarjetaLugar } from '../campus/tarjetaLugar.js';
 import { aulasDesdeCalendario, estaAbierta, etiquetaSemana, normalizarAulas } from '../../game/aulas.js';
 import { lugarPorId } from '../../game/mapa.js';
 import { modeloTarjeta } from '../../game/tarjetas.js';
+import { INSIGNIAS } from '../../game/ronda/insignias.js';
 
 const SINCRONIZAR_CADA_MS = 60000;
 const ESPERA_MINIMA_MS = 3000; // entre una consulta al servidor y la siguiente
@@ -85,8 +86,8 @@ export function crearCampus(ctx) {
   function entrar(lugar) {
     const modelo = modeloDe(lugar);
     if (!modelo?.boton.habilitado) return;
-    if (ctx.entrarALugar) ctx.entrarALugar(lugar, { aulas });
-    else avisar(CAMPUS.pronto);
+    // El servidor vuelve a comprobar el calendario al iniciar la ronda; esto solo evita un viaje inútil.
+    if (!ctx.entrarALugar?.(lugar, { aulas })) avisar(CAMPUS.pronto);
   }
 
   function abrirPanel({ titulo, contenido, acciones }) {
@@ -115,7 +116,7 @@ export function crearCampus(ctx) {
     const lista = jugador.insignias ?? [];
     abrirPanel({
       titulo: CAMPUS.insignias,
-      contenido: lista.length ? h('ul', { class: 'chips' }, ...lista.map((i) => h('li', {}, i))) : h('p', {}, CAMPUS.sinInsignias),
+      contenido: lista.length ? h('ul', { class: 'chips' }, ...lista.map((id) => h('li', { title: INSIGNIAS[id]?.descripcion }, INSIGNIAS[id]?.nombre ?? id))) : h('p', {}, CAMPUS.sinInsignias),
     });
   };
 

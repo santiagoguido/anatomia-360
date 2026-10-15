@@ -4,6 +4,8 @@ import { crearRegistro } from './ui/pantallas/registro.js';
 import { crearPrivacidad } from './ui/pantallas/privacidad.js';
 import { crearBienvenida } from './ui/pantallas/bienvenida.js';
 import { crearCampus } from './ui/pantallas/campus.js';
+import { crearRonda } from './ui/pantallas/ronda.js';
+import { crearResultado } from './ui/pantallas/resultado.js';
 
 const PANTALLAS = {
   portada: crearPortada,
@@ -11,6 +13,8 @@ const PANTALLAS = {
   privacidad: crearPrivacidad,
   bienvenida: crearBienvenida,
   campus: crearCampus,
+  ronda: crearRonda,
+  resultado: crearResultado,
 };
 
 /**
@@ -21,7 +25,19 @@ export function crearApp({ raiz, api, almacen, iniciarJuego, configurado = true 
   const estado = crearEstado();
   let actual = null;
 
-  const ctx = { api, almacen, estado, iniciarJuego, configurado, irA };
+  const ctx = { api, almacen, estado, iniciarJuego, configurado, irA, entrarALugar };
+
+  /**
+   * Punto de enganche de las puertas del campus. Devuelve true si el lugar ya lleva a algún lado.
+   * Hoy: las 6 aulas → ronda. La Clínica, el Salón de la Fama y Control Escolar llegan en sesiones siguientes.
+   */
+  function entrarALugar(lugar) {
+    if (lugar.tipo === 'aula') {
+      irA('ronda', { aula: lugar.numero });
+      return true;
+    }
+    return false;
+  }
 
   function irA(nombre, params = {}) {
     actual?.alSalir?.();

@@ -3,8 +3,8 @@ import { CAMPUS } from '../../textos.js';
 import { crearBoton } from '../componentes.js';
 
 /** Ventana sencilla encima del juego (menú, insignias). Se cierra con Escape, con el botón o tocando afuera. */
-export function crearPanel({ titulo, contenido, acciones = [], alCerrar }) {
-  const cerrar = crearBoton({ texto: CAMPUS.cerrar, variante: 'secundario', onClick: alCerrar, foco: true });
+export function crearPanel({ titulo, contenido, acciones = [], alCerrar, textoCerrar = CAMPUS.cerrar }) {
+  const cerrar = crearBoton({ texto: textoCerrar, variante: 'secundario', onClick: alCerrar, foco: true });
   const el = h(
     'div',
     { class: 'panel', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'panel-titulo' },

@@ -53,6 +53,23 @@ export const ERRORES = {
     'Supabase no tiene las tablas del juego. Ejecuta supabase/schema.sql (README, paso 2).',
   clave_invalida:
     'Supabase rechazó la clave. Revisa VITE_SUPABASE_ANON_KEY en el .env o en Netlify.',
+  funcion_no_desplegada:
+    'Falta desplegar la función de rondas en Supabase (README, sección "Motor de rondas").',
+
+  // Motor de rondas (Sesión 4)
+  solicitud_invalida: 'Algo salió mal al preparar tu ronda. Vuelve al campus e inténtalo de nuevo.',
+  jugador_no_encontrado: 'No encontramos tu matrícula. Vuelve a la portada y entra otra vez.',
+  aula_cerrada: 'Esta aula todavía no abre. Las aulas se abren cada lunes a las 00:00 (hora de la Ciudad de México).',
+  banco_insuficiente: 'Esta aula aún no tiene suficientes preguntas listas. Avísale a tu docente.',
+  ronda_no_encontrada: 'Tu ronda ya no existe: empezaste otra o pasó mucho tiempo. Empieza una nueva.',
+  ronda_terminada: 'Esta ronda ya se calificó.',
+  ronda_expirada: 'Tu ronda caducó por tardar demasiado. Empieza una nueva.',
+  ronda_incompleta: 'Faltan preguntas por contestar en esta ronda.',
+  ronda_invalida: 'Tus tiempos de respuesta no parecen humanos, así que esta ronda no se guardó. Si crees que es un error, juega otra con calma.',
+  pregunta_ya_respondida: 'Esa pregunta ya estaba contestada.',
+  fuera_de_orden: 'Las preguntas se contestan en orden. Vuelve al campus e inténtalo de nuevo.',
+  respuesta_prematura: 'El reloj no coincide con el del servidor. Inténtalo de nuevo.',
+  conflicto: 'Se cruzaron dos envíos. Inténtalo de nuevo.',
 };
 
 // ---- Campus (Sesión 2) ------------------------------------------------------------
@@ -123,4 +140,76 @@ export const CAMPUS = {
     6: ['Rodilla, pierna y pie', 'Vasos del miembro inferior'],
   },
   pronto: 'Esta zona se abre en la próxima actualización del juego.',
+};
+
+// ---- Motor de rondas (Sesión 4) ---------------------------------------------------------
+
+export const RONDA_UI = {
+  preparando: 'Preparando tu ronda…',
+  calificando: 'Calificando tu ronda…',
+  aula: (n) => `AULA ${n}`,
+  progreso: (i, total) => `Pregunta ${i} de ${total}`,
+  puntos: 'Puntos',
+  racha: 'Racha',
+  tiempo: 'Tiempo',
+  segundos: (n) => `${n} s`,
+  relojAria: (n) => `Te quedan ${n} segundos`,
+  opcionAria: (letra, texto) => `Opción ${letra}: ${texto}`,
+  enviando: 'Enviando…',
+  correcto: (puntos) => `¡Correcto! +${puntos}`,
+  incorrecto: 'Incorrecta',
+  tiempoAgotado: '¡Se acabó el tiempo!',
+  marcaCorrecta: 'CORRECTA',
+  marcaIncorrecta: 'INCORRECTA',
+  ayudaTeclas: 'Responde con A–D o con 1–4',
+  salir: 'Salir',
+  salirTitulo: '¿Salir de la ronda?',
+  salirTexto: 'Si sales ahora, esta ronda se anula y no se guarda tu puntaje. El reloj de la pregunta sigue corriendo.',
+  salirConfirmar: 'Salir y anular',
+  seguir: 'Seguir jugando',
+  reintentar: 'Reintentar',
+  volverCampus: 'Volver al campus',
+  modoPruebas: 'MODO DE PRUEBAS DEL SERVIDOR ACTIVO: todas las aulas están abiertas y hay borradores. Esto no debe verse en producción.',
+};
+
+export const RESULTADO = {
+  titulo: 'Resultado de la ronda',
+  calificacion: 'Calificación',
+  sobreDiez: 'de 10',
+  aciertos: (a, t) => `${a} de ${t} aciertos`,
+  puntos: 'Puntos',
+  tiempoPromedio: 'Tiempo promedio',
+  rachaMax: 'Mejor racha',
+  titulos: {
+    perfecta: '¡Ronda perfecta!',
+    excelente: '¡Excelente!',
+    muyBien: 'Muy bien',
+    vasBien: 'Vas bien',
+    repasar: 'A repasar un poco',
+  },
+  record: {
+    nuevo: (d, anterior) => (anterior > 0 ? `¡Nuevo récord del aula! +${d.toLocaleString('en-US')} puntos` : '¡Primer récord del aula!'),
+    igual: 'Igualaste tu récord del aula.',
+    faltaron: (n) => `Te faltaron ${n.toLocaleString('en-US')} puntos para tu récord.`,
+    tuRecord: 'Tu récord del aula',
+    estaRonda: 'Esta ronda',
+  },
+  insigniasNuevas: 'Insignias nuevas',
+  porTema: 'Desempeño por tema',
+  revision: 'Para repasar',
+  sinErrores: 'No fallaste ninguna pregunta. ¡Así se hace!',
+  pregunta: (n) => `Pregunta ${n}`,
+  tuRespuesta: 'Tu respuesta',
+  correcta: 'Respuesta correcta',
+  sinContestar: 'Sin contestar',
+  porQue: 'Por qué',
+  fuente: 'Fuente',
+  racha: (n) => `${n} ${n === 1 ? 'día' : 'días'} de racha`,
+  salon: {
+    cuenta: 'Esta ronda suma a tu puntaje semanal del Salón de la Fama.',
+    antes: (fecha) => `Esta ronda cuenta para tu récord personal. El Salón de la Fama semanal arranca el ${fecha}.`,
+    despues: 'Esta ronda cuenta para tu récord personal. El Salón de la Fama semanal ya terminó.',
+  },
+  otraRonda: 'Otra ronda',
+  volverCampus: 'Volver al campus',
 };
