@@ -33,7 +33,8 @@ jobs:
           node-version: 22
       - name: Aprobar todas las preguntas en borrador
         if: ${{ inputs.aprobar_todas }}
-        run: sed -i 's/"estado": "borrador"/"estado": "aprobada"/' contenido/preguntas/aula-*.json
+        run: |
+          sed -i 's/"estado": "borrador"/"estado": "aprobada"/' contenido/preguntas/aula-*.json
       - name: Copiar lo que usa la función
         run: node scripts/sincronizar-funcion.js
       - name: Guardar los cambios en el repositorio
