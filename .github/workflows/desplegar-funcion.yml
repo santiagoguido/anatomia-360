@@ -2,6 +2,11 @@ name: Preparar y desplegar función rondas
 
 on:
   workflow_dispatch:
+    inputs:
+      aprobar_todas:
+        description: 'Marcar como aprobadas todas las preguntas en borrador (Aulas 1 a 6)'
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
@@ -14,6 +19,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: desplegar-rondas
+  cancel-in-progress: false
+
 jobs:
   desplegar:
     runs-on: ubuntu-latest
@@ -22,14 +31,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Aprobar todas las preguntas en borrador
+        if: ${{ inputs.aprobar_todas }}
+        run: sed -i 's/"estado": "borrador"/"estado": "aprobada"/' contenido/preguntas/aula-*.json
       - name: Copiar lo que usa la función
         run: node scripts/sincronizar-funcion.js
-      - name: Guardar la copia si cambió
+      - name: Guardar los cambios en el repositorio
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
-          git add supabase/functions/_shared
-          git diff --staged --quiet || git commit -m "Actualizar copia de la función"
+          git add contenido supabase/functions/_shared
+          git diff --staged --quiet || git commit -m "Aprobar preguntas y actualizar copia de la función"
+          git pull --rebase
           git push
       - uses: supabase/setup-cli@v1
         with:
