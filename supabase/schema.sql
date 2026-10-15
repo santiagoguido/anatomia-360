@@ -1,5 +1,5 @@
 -- =============================================================================
--- Anatomía 360 · Sesión 1 · Esquema de Supabase
+-- Anatomía 360 · Esquema de Supabase (Sesión 1 + motor de rondas de la Sesión 4)
 -- -----------------------------------------------------------------------------
 -- Cómo usarlo: Supabase → SQL Editor → New query → pegar TODO este archivo → Run.
 -- Es seguro volver a ejecutarlo: no borra datos de jugadores. Solo vuelve a
@@ -42,6 +42,18 @@ language sql stable parallel safe
 set search_path = ''
 as $$
   select date_trunc('week', p_momento at time zone 'America/Mexico_City')::date
+$$;
+
+
+-- ¿Esa semana (lunes) cuenta para el Salón de la Fama? Solo las semanas 1 a 6 del curso:
+-- del lunes 19 oct al lunes 23 nov de 2026. Las rondas de la semana 0 (antes del 19 oct) guardan
+-- récord personal pero no suman al Top 10. Mismas fechas que SALON en src/game/ronda/reglas.js.
+create or replace function public.semana_cuenta_para_salon(p_semana date)
+returns boolean
+language sql immutable parallel safe
+set search_path = ''
+as $$
+  select p_semana between date '2026-10-19' and date '2026-11-23'
 $$;
 
 
@@ -344,6 +356,11 @@ declare
   v_puntaje integer;
   v_rondas  integer;
 begin
+  -- Semana 0 (o después del curso): no se escribe en el Salón de la Fama.
+  if not public.semana_cuenta_para_salon(p_semana) then
+    return;
+  end if;
+
   select coalesce(sum(t.mejor), 0)::integer, coalesce(sum(t.n), 0)::integer
     into v_puntaje, v_rondas
   from (
@@ -394,6 +411,200 @@ to anon, authenticated;
 
 -- Solo el servidor (clave secreta) puede recalcular puntajes.
 grant execute on function public.recalcular_puntaje_semanal(text, date) to service_role;
+
+-- 7. MOTOR DE RONDAS (Sesión 4) -------------------------------------------------
+-- Lo usa SOLO la Edge Function `rondas` con la clave secreta (service_role).
+-- El navegador no puede leer ni escribir estas tablas ni ejecutar estas funciones.
+
+-- Ronda en curso: una por matrícula (empezar otra anula la anterior). Guarda las preguntas
+-- elegidas (ids y orden mezclado de A–D), las respuestas con su hora y, al terminar, el resumen.
+create table if not exists public.rondas_activas (
+  id           uuid        primary key,
+  matricula    text        not null unique references public.jugadores (matricula)
+                           on delete cascade on update cascade,
+  aula         smallint    not null references public.aulas (numero),
+  inicio       timestamptz not null,
+  expira_en    timestamptz not null,
+  preguntas    jsonb       not null,
+  respuestas   jsonb       not null default '[]'::jsonb,
+  terminada_en timestamptz,
+  resumen      jsonb,
+  check (jsonb_typeof(preguntas) = 'array' and jsonb_typeof(respuestas) = 'array')
+);
+
+alter table public.rondas_activas enable row level security;
+revoke all on table public.rondas_activas from public, anon, authenticated;
+drop policy if exists rondas_activas_sin_acceso_directo on public.rondas_activas;
+create policy rondas_activas_sin_acceso_directo on public.rondas_activas
+  for all to anon, authenticated using (false) with check (false);
+grant select, insert, update, delete on table public.rondas_activas to service_role;
+
+-- ¿El aula ya abrió? Con la hora de la BASE (la misma de estado_aulas()).
+create or replace function public.aula_abierta(p_aula smallint)
+returns boolean
+language sql stable security definer
+set search_path = ''
+as $$
+  select coalesce((select a.abre_en <= now() from public.aulas a where a.numero = p_aula), false)
+$$;
+
+-- Qué preguntas ya vio y cuáles tiene falladas el jugador en un aula (null si nunca jugó).
+create or replace function public.progreso_para_ronda(p_matricula text, p_aula smallint)
+returns jsonb
+language sql stable security definer
+set search_path = ''
+as $$
+  select jsonb_build_object('vistas', to_jsonb(p.preguntas_vistas), 'falladas', to_jsonb(p.preguntas_falladas))
+  from public.progreso_aula p
+  where p.matricula = p_matricula and p.aula = p_aula
+$$;
+
+-- Empieza una ronda: borra la activa anterior de esa matrícula y guarda la nueva.
+create or replace function public.crear_ronda_activa(
+  p_id uuid, p_matricula text, p_aula smallint,
+  p_inicio timestamptz, p_expira timestamptz, p_preguntas jsonb
+)
+returns void
+language plpgsql volatile security definer
+set search_path = ''
+as $$
+begin
+  delete from public.rondas_activas where matricula = p_matricula;
+  insert into public.rondas_activas (id, matricula, aula, inicio, expira_en, preguntas)
+  values (p_id, p_matricula, p_aula, p_inicio, p_expira, p_preguntas);
+end
+$$;
+
+-- Agrega la respuesta número `p_indice` SOLO si es la siguiente en orden y la ronda sigue abierta.
+-- Devuelve false si otra llamada se adelantó (así una pregunta no se contesta dos veces).
+create or replace function public.registrar_respuesta(p_id uuid, p_indice integer, p_registro jsonb)
+returns boolean
+language plpgsql volatile security definer
+set search_path = ''
+as $$
+begin
+  update public.rondas_activas
+     set respuestas = respuestas || jsonb_build_array(p_registro)
+   where id = p_id
+     and terminada_en is null
+     and jsonb_array_length(respuestas) = p_indice;
+  return found;
+end
+$$;
+
+-- Lo que la función necesita saber para calificar: fecha y semana de hoy (CDMX), racha de días,
+-- insignias, récord anterior del aula y el mejor número de aciertos por aula (de rondas ya guardadas).
+create or replace function public.contexto_cierre(p_matricula text, p_aula smallint)
+returns jsonb
+language sql stable security definer
+set search_path = ''
+as $$
+  select jsonb_build_object(
+    'hoy',               (now() at time zone 'America/Mexico_City')::date,
+    'semana',            public.semana_cdmx(),
+    'racha_dias',        j.racha_dias,
+    'ultimo_dia_jugado', j.ultimo_dia_jugado,
+    'insignias',         to_jsonb(j.insignias),
+    'record_anterior',   coalesce((select p.record from public.progreso_aula p
+                                    where p.matricula = j.matricula and p.aula = p_aula), 0),
+    'mejores_aciertos',  coalesce((select jsonb_object_agg(t.aula::text, t.mejor)
+                                     from (select r.aula, max(r.aciertos) as mejor
+                                             from public.rondas r
+                                            where r.matricula = j.matricula
+                                            group by r.aula) t), '{}'::jsonb)
+  )
+  from public.jugadores j
+  where j.matricula = p_matricula
+$$;
+
+-- Guarda una ronda terminada, TODO en una sola transacción: marca la activa como terminada,
+-- inserta en `rondas`, actualiza progreso_aula (récord, última ronda, vistas y falladas), el jugador
+-- (récord total, racha de días, insignias) y el puntaje semanal (solo semanas 1 a 6).
+create or replace function public.guardar_ronda_terminada(
+  p_activa_id uuid, p_matricula text, p_aula smallint,
+  p_inicio timestamptz, p_fin timestamptz, p_semana date, p_hoy date,
+  p_puntaje integer, p_aciertos integer, p_tiempo_promedio_ms integer,
+  p_respuestas jsonb, p_acertadas text[], p_falladas text[],
+  p_insignias text[], p_racha_dias integer, p_resumen jsonb
+)
+returns jsonb
+language plpgsql volatile security definer
+set search_path = ''
+as $$
+declare
+  v_cuenta boolean := public.semana_cuenta_para_salon(p_semana);
+begin
+  -- El resumen guardado (para repetir `terminar` sin recalcular) incluye si la ronda cuenta para el Salón.
+  update public.rondas_activas
+     set terminada_en = now(),
+         resumen = p_resumen || jsonb_build_object('salon', jsonb_build_object('cuenta', v_cuenta, 'semana', p_semana))
+   where id = p_activa_id and matricula = p_matricula and terminada_en is null;
+  if not found then
+    raise exception 'ronda_no_encontrada';
+  end if;
+
+  insert into public.rondas
+    (matricula, aula, puntaje, aciertos, tiempo_promedio_ms, inicio, fin, semana, respuestas)
+  values
+    (p_matricula, p_aula, p_puntaje, p_aciertos, p_tiempo_promedio_ms, p_inicio, p_fin, p_semana, p_respuestas);
+
+  insert into public.progreso_aula as p
+    (matricula, aula, ultimo_puntaje, record, rondas_jugadas, preguntas_vistas, preguntas_falladas)
+  values
+    (p_matricula, p_aula, p_puntaje, p_puntaje, 1, p_acertadas || p_falladas, p_falladas)
+  on conflict (matricula, aula) do update
+    set ultimo_puntaje     = excluded.ultimo_puntaje,
+        record             = greatest(p.record, excluded.record),
+        rondas_jugadas     = p.rondas_jugadas + 1,
+        preguntas_vistas   = array(select distinct x
+                                     from unnest(p.preguntas_vistas || p_acertadas || p_falladas) as x),
+        -- Fallada = su última respuesta fue incorrecta o sin contestar; si ahora la acierta, sale de la lista.
+        preguntas_falladas = array(select x from unnest(p.preguntas_falladas) as x
+                                    where x <> all (p_acertadas) and x <> all (p_falladas)) || p_falladas,
+        actualizado_en     = now();
+
+  update public.jugadores j
+     set record_total      = (select coalesce(sum(pa.record), 0) from public.progreso_aula pa
+                               where pa.matricula = j.matricula),
+         racha_dias        = p_racha_dias,
+         ultimo_dia_jugado = p_hoy,
+         insignias         = array(select u.x
+                                     from unnest(j.insignias || p_insignias) with ordinality as u(x, n)
+                                    group by u.x
+                                    order by min(u.n))
+   where j.matricula = p_matricula;
+
+  if v_cuenta then
+    perform public.recalcular_puntaje_semanal(p_matricula, p_semana);
+  end if;
+
+  return jsonb_build_object('jugador', public._jugador_json(p_matricula), 'cuenta_salon', v_cuenta);
+end
+$$;
+
+-- Permisos: solo el servidor (clave secreta). Ni anon ni authenticated.
+revoke execute on function
+  public.semana_cuenta_para_salon(date),
+  public.aula_abierta(smallint),
+  public.progreso_para_ronda(text, smallint),
+  public.crear_ronda_activa(uuid, text, smallint, timestamptz, timestamptz, jsonb),
+  public.registrar_respuesta(uuid, integer, jsonb),
+  public.contexto_cierre(text, smallint),
+  public.guardar_ronda_terminada(uuid, text, smallint, timestamptz, timestamptz, date, date,
+                                 integer, integer, integer, jsonb, text[], text[], text[], integer, jsonb)
+from public, anon, authenticated;
+
+grant execute on function
+  public._jugador_json(text),
+  public.semana_cuenta_para_salon(date),
+  public.aula_abierta(smallint),
+  public.progreso_para_ronda(text, smallint),
+  public.crear_ronda_activa(uuid, text, smallint, timestamptz, timestamptz, jsonb),
+  public.registrar_respuesta(uuid, integer, jsonb),
+  public.contexto_cierre(text, smallint),
+  public.guardar_ronda_terminada(uuid, text, smallint, timestamptz, timestamptz, date, date,
+                                 integer, integer, integer, jsonb, text[], text[], text[], integer, jsonb)
+to service_role;
 
 -- Que la API de Supabase detecte las funciones nuevas sin esperar.
 notify pgrst, 'reload schema';

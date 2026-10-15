@@ -1,0 +1,10 @@
+# Configuración mínima del proyecto para la CLI de Supabase (solo se usa para desplegar la función).
+# Si ya creaste tu propio config.toml con `supabase init`, conserva el tuyo y agrega solo el bloque [functions.rondas].
+project_id = "anatomia-360"
+
+# La función se llama desde el navegador con la clave PUBLICABLE en la cabecera `apikey`.
+# Esa clave no es un JWT, así que la verificación de JWT de la plataforma se desactiva para esta función.
+# (La seguridad no depende de esa clave: es pública. Depende de que la función valide todo y de que la
+# clave SECRETA solo exista dentro de la función.)
+[functions.rondas]
+verify_jwt = false

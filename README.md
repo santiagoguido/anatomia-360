@@ -1,12 +1,14 @@
-# Anatomía 360 · Sesión 2: campus pixel art
+# Anatomía 360 · Sesiones 2 a 4: campus, rondas y calificación en el servidor
 
 Juego web pixel art (Phaser 3 + Supabase + Netlify) para Anatomía de 1.er semestre, UMSNH.
 Esta sesión agrega el **campus**: mapa de 3 × 3 pantallas con avatar, joystick, sprint, colisiones,
-minimapa, tarjetas al acercarse a una puerta y aulas que se abren por fecha. Las puertas todavía no
-llevan a las rondas, la Clínica, el Salón de la Fama ni Control Escolar (Sesiones 3 en adelante).
+minimapa, tarjetas al acercarse a una puerta y aulas que se abren por fecha.
+**Sesión 4:** las puertas de las 6 aulas ya llevan a la ronda (25 preguntas, 42 s cada una), con calificación
+en una Edge Function de Supabase, retroalimentación, récord, racha de días e insignias. La Clínica, el Salón
+de la Fama y Control Escolar siguen pendientes (sesiones 5 en adelante).
 
-**Si ya hiciste la Sesión 1 no tienes que tocar Supabase:** esta sesión usa la función `estado_aulas()`
-que ya estaba en `schema.sql`.
+**Si ya hiciste las Sesiones 1–3, para la Sesión 4 SÍ tienes que tocar Supabase:** vuelve a ejecutar
+`supabase/schema.sql` completo (es seguro, no borra jugadores) y despliega la función (ver "Motor de rondas").
 
 ## Cómo se juega
 | | Celular / tablet | Computadora |
@@ -39,7 +41,7 @@ Si no hay internet, el campus usa el calendario de `src/config.js` (solo como re
 | Dónde está cada edificio, camino, banca o árbol | `src/game/mapa.js` (todo en tiles; `npm test` avisa si algo queda inalcanzable) |
 | Colores y dibujo de edificios, árboles, fuente | `src/game/texturas.js` |
 | Textos de tarjetas, carteles y menú | `src/textos.js` → `CAMPUS` |
-| Cuando una puerta ya lleve a algún lado | `ctx.entrarALugar` en `src/ui/pantallas/campus.js` |
+| Cuando una puerta ya lleve a algún lado | `entrarALugar` en `src/app.js` (el campus la llama desde `src/ui/pantallas/campus.js`) |
 
 ## 1. Correrlo en tu computadora
 Necesitas Node 20.19 o más nuevo.
@@ -85,6 +87,125 @@ Nunca uses la clave `secret` / `service_role` en este proyecto.
   `delete from public.jugadores where matricula = 'a0123456x';`
 - Cambiar la fecha de un aula: edita la tabla `aulas` (o `schema.sql` y vuelve a ejecutarlo).
 - El proyecto gratuito de Supabase se pausa tras una semana sin actividad.
+
+## Motor de rondas (Sesión 4)
+
+### Cómo funciona
+El navegador **nunca** conoce las respuestas correctas ni calcula puntos. Habla con la Edge Function
+`supabase/functions/rondas` (una sola función, tres operaciones):
+
+| Operación | Recibe | Devuelve |
+|---|---|---|
+| `iniciar` | matrícula, aula | 25 enunciados con sus 4 opciones (ya mezcladas), **sin** la correcta |
+| `responder` | ronda, número de pregunta, opción A–D (o `null` si se acabó el tiempo) | solo acierto/fallo, puntos y racha |
+| `terminar` | ronda | califica y guarda todo; devuelve el resumen con las falladas, sus explicaciones y citas |
+
+Reglas que aplica el servidor: la hora de inicio y de cada respuesta es la suya; una sola respuesta por pregunta y
+en orden; una sola ronda activa por matrícula (empezar otra anula la anterior); una ronda con tiempos imposibles
+(promedio < 1.5 s, o 5 respuestas de menos de 0.8 s) se descarta sin guardar; y **iniciar, responder y terminar
+rechazan un aula cerrada** según el reloj de la base (`aula_abierta()`, la misma hora que `estado_aulas()`).
+
+Puntos: correcta 100 + bono de velocidad (hasta 50, proporcional al tiempo que sobró) + bono de racha
+(+10 por acierto seguido, tope +50). Incorrecta o sin contestar: 0 y la racha vuelve a 0.
+**El máximo teórico es 4,900** (la base permite hasta 5,000). Calificación = aciertos de 25 en escala de 10.
+
+Decisiones tomadas en esta sesión (cámbialas en `src/game/ronda/reglas.js`, y el SQL si toca fechas):
+- **Semana 0:** las rondas jugadas antes del lunes 19 oct guardan récord personal, racha e insignias, pero **no** suman al
+  Top 10. El Salón arranca en la semana 1 (19 oct) y cuenta hasta la semana 6 (lunes 23 nov); rondas posteriores solo
+  cuentan para el récord personal. La regla vive en SQL (`semana_cuenta_para_salon`).
+- **Orden de las preguntas:** de cada tema salen 12 o 13 (al azar cuál), eligiendo primero no vistas, luego falladas y al
+  final ya acertadas; en pantalla se presentan en ese mismo orden. "Fallada" = su última respuesta fue incorrecta o sin contestar.
+- **Tiempos:** cada pregunta cuenta desde que el servidor contestó la anterior + 0.7 s de pausa (los acredita él). Una
+  respuesta que llega hasta 1.5 s tarde por la red todavía vale.
+- **Insignias** (se guarda el id; los nombres están en `src/game/ronda/insignias.js`): las que dependen de aulas cerradas
+  solo se pueden ganar cuando esas aulas abren, porque el servidor no deja jugarlas antes.
+
+### Archivos
+| | |
+|---|---|
+| `src/game/ronda/` | reglas, puntuación, selección de preguntas, plausibilidad, insignias, racha de días (puros, con pruebas) |
+| `src/servidor/` | `manejador.js` (la lógica de la función, sin Deno ni Supabase) e `interruptor.js` |
+| `supabase/functions/rondas/` | `index.ts` (Deno) y `datos.ts` (acceso a la base) |
+| `supabase/functions/_shared/` | **GENERADO** por `npm run funcion:preparar`: copia de `src/game/ronda`, `src/servidor` y de los bancos (`contenido/` sigue siendo la fuente) |
+| `supabase/schema.sql` (sección 7) | `rondas_activas`, `aula_abierta`, `crear_ronda_activa`, `registrar_respuesta`, `contexto_cierre`, `guardar_ronda_terminada` |
+| `src/ui/pantallas/ronda.js`, `resultado.js` | pantallas de la ronda y de la retroalimentación |
+
+Cuando edites algo en `src/game/ronda/`, `src/servidor/` o `contenido/preguntas/`: `npm run funcion:preparar` y vuelve a
+desplegar la función. `npm test` falla si la copia quedó desactualizada.
+
+### Antes de que los alumnos jueguen: aprobar preguntas
+La función solo sirve preguntas con `"estado": "aprobada"` (y las P13 solo con `imagen.estado: "lista"`). Mientras todo esté
+en `borrador`, **ni siquiera el Aula 1 puede arrancar una ronda** (el juego dice que aún no hay preguntas listas).
+`npm run banco:resumen` muestra cuántas servibles tiene cada tema; una ronda necesita 13 por tema. Tras aprobar:
+`npm run funcion:preparar` y `supabase functions deploy rondas --use-api`.
+
+### Desplegar la función (CLI de Supabase)
+Necesitas la CLI (`brew install supabase/tap/supabase`, o antepón `npx` a cada comando `supabase`). No hace falta Docker con `--use-api`.
+
+```bash
+# 1) Base de datos: pega TODO supabase/schema.sql en SQL Editor → Run (se puede repetir sin borrar jugadores)
+# 2) En esta carpeta:
+npm install
+npm run funcion:preparar          # copia lógica y bancos a supabase/functions/_shared
+npm test                          # todo en verde antes de desplegar
+supabase login
+supabase link --project-ref TU_REF            # TU_REF = lo que va antes de .supabase.co en tu Project URL
+supabase functions deploy rondas --use-api    # lee supabase/config.toml (verify_jwt = false para esta función)
+supabase secrets list                         # NO debe aparecer A360_MODO_PRUEBAS
+```
+La función usa la clave secreta que Supabase ya le inyecta (`SUPABASE_SECRET_KEYS` o `SUPABASE_SERVICE_ROLE_KEY`); no hay
+que configurarla ni ponerla en Netlify. Netlify no cambia: el juego deduce la URL de la función de `VITE_SUPABASE_URL`.
+
+### Probar la función y comprobar que un aula cerrada rechaza rondas
+Sustituye `TU_REF`, `TU_CLAVE_PUBLICABLE` y una matrícula ya registrada en el juego.
+
+```bash
+URL=https://TU_REF.supabase.co/functions/v1/rondas
+KEY=TU_CLAVE_PUBLICABLE
+llamar() { curl -s -w '\nHTTP %{http_code}\n' -X POST "$URL" -H "apikey: $KEY" -H 'Content-Type: application/json' -d "$1"; }
+
+# a) Aula cerrada → HTTP 403 {"error":"aula_cerrada"}   (Aulas 2–6 antes de su lunes)
+llamar '{"accion":"iniciar","matricula":"a0123456x","aula":2}'
+
+# b) Aula 1 abierta → HTTP 200 con "preguntas"; comprueba que NO viaja la respuesta:
+llamar '{"accion":"iniciar","matricula":"a0123456x","aula":1}' | grep -c -E 'correcta|explicacion|cita'   # debe imprimir 0
+
+# c) Calendario del servidor (SQL Editor): Aula 1 en true, 2–6 en false hasta su fecha
+#    select numero, abierta, abre_en from public.estado_aulas();
+```
+
+**Responder y terminar también rechazan un aula cerrada, aunque el cliente arme la llamada a mano.** No hay forma legítima de
+tener una ronda activa en un aula cerrada, así que se fabrica una en el SQL Editor (usa una matrícula de prueba registrada
+en el juego, p. ej. `prueba001`, y un id de pregunta real del Aula 3):
+
+```sql
+delete from public.rondas_activas where matricula = 'prueba001';
+insert into public.rondas_activas (id, matricula, aula, inicio, expira_en, preguntas)
+values ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa', 'prueba001', 3, now(), now() + interval '1 hour',
+        '[{"id":"a3-t1-001","orden":[0,1,2,3]}]');
+```
+```bash
+llamar '{"accion":"responder","ronda_id":"aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa","indice":0,"opcion":0}'   # 403 aula_cerrada
+llamar '{"accion":"terminar","ronda_id":"aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa"}'                         # 403 aula_cerrada
+```
+```sql
+delete from public.rondas_activas where id = 'aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa';   -- limpieza
+```
+Después del lunes 26 oct a las 00:00 (CDMX), el paso (a) con `aula: 2` debe dar 200: así se comprueba la apertura.
+
+### Probar las Aulas 2–6 antes de su fecha (interruptor de desarrollo)
+`A360_MODO_PRUEBAS` (variable de entorno de la función; apagada por defecto) hace que la función trate las 6 aulas como abiertas
+**y** sirva preguntas en `borrador`. **Nunca debe existir en producción.** Cómo usarlo sin riesgo:
+
+1. Crea un **segundo proyecto de Supabase solo para pruebas** (el plan gratuito permite dos), ejecuta `schema.sql` ahí y despliega la función.
+2. Solo en ese proyecto: `supabase secrets set A360_MODO_PRUEBAS=1 --project-ref REF_DE_PRUEBAS`
+3. Apunta un `npm run dev` local (o un deploy preview de Netlify) a ese proyecto con su propio `VITE_SUPABASE_URL` y clave.
+   Con el interruptor encendido el juego muestra una franja roja de "MODO DE PRUEBAS" para que no se te olvide.
+4. Al terminar: `supabase secrets unset A360_MODO_PRUEBAS --project-ref REF_DE_PRUEBAS`.
+
+Nunca uses `supabase secrets set --env-file` con un archivo que contenga el interruptor ni lo pongas en `supabase/functions/.env`
+(se carga solo). `tests/despliegue.test.js` falla si el interruptor aparece encendido en `config.toml`, `netlify.toml`,
+`package.json`, algún `.env*` (salvo `*.local`), workflows de GitHub o un Dockerfile. En producción verifica además con `supabase secrets list`.
 
 ## Estructura
 `src/ui/pantallas/` pantallas · `src/ui/campus/` joystick, botón correr, minimapa y tarjeta ·
