@@ -48,12 +48,20 @@ $$;
 -- ¿Esa semana (lunes) cuenta para el Salón de la Fama? Solo las semanas 1 a 6 del curso:
 -- del lunes 19 oct al lunes 23 nov de 2026. Las rondas de la semana 0 (antes del 19 oct) guardan
 -- récord personal pero no suman al Top 10. Mismas fechas que SALON en src/game/ronda/reglas.js.
+create or replace function public.salon_primer_lunes()
+returns date language sql immutable parallel safe set search_path = ''
+as $$ select date '2026-10-19' $$;
+
+create or replace function public.salon_ultimo_lunes()
+returns date language sql immutable parallel safe set search_path = ''
+as $$ select date '2026-11-23' $$;
+
 create or replace function public.semana_cuenta_para_salon(p_semana date)
 returns boolean
 language sql immutable parallel safe
 set search_path = ''
 as $$
-  select p_semana between date '2026-10-19' and date '2026-11-23'
+  select p_semana between public.salon_primer_lunes() and public.salon_ultimo_lunes()
 $$;
 
 
@@ -605,6 +613,138 @@ grant execute on function
   public.guardar_ronda_terminada(uuid, text, smallint, timestamptz, timestamptz, date, date,
                                  integer, integer, integer, jsonb, text[], text[], text[], integer, jsonb)
 to service_role;
+
+-- 8. SALÓN DE LA FAMA Y CONTROL ESCOLAR (Sesión 5) --------------------------------
+-- Las lee el navegador (anon). Solo devuelven nombre y matrícula OCULTA (••••4521) de otros jugadores;
+-- el detalle completo de resultados (por aula y por tema) solo se devuelve para la matrícula que se pide.
+
+-- Todo el Salón en una llamada y con la hora del SERVIDOR: la semana mostrada, las semanas disponibles,
+-- el Top 10, la posición del jugador y los ganadores de las semanas ya terminadas.
+-- Antes del lunes 19 oct devuelve { estado: 'antes' }; después de la semana 6 se queda en la última.
+create or replace function public.salon_de_la_fama(p_matricula text, p_semana date default null)
+returns jsonb
+language plpgsql stable security definer
+set search_path = ''
+as $$
+declare
+  v_mat    text := public.normalizar_matricula(p_matricula);
+  v_hoy    date := public.semana_cdmx();
+  v_primer date := public.salon_primer_lunes();
+  v_ultimo date := public.salon_ultimo_lunes();
+  v_actual date;
+  v_semana date;
+begin
+  if v_hoy < v_primer then
+    return jsonb_build_object('estado', 'antes', 'primer_lunes', v_primer);
+  end if;
+
+  v_actual := least(v_hoy, v_ultimo);
+  -- Se pide una semana: se lleva al lunes que le toca y se mantiene entre la semana 1 y la actual.
+  v_semana := least(greatest(date_trunc('week', coalesce(p_semana, v_actual))::date, v_primer), v_actual);
+
+  return jsonb_build_object(
+    'estado',        'activo',
+    'semana',        v_semana,
+    'semana_actual', v_actual,
+    'semanas',       (select jsonb_agg(d::date order by d) from generate_series(v_primer, v_actual, interval '7 days') d),
+    'jugadores',     (select count(*)::int from public.puntaje_semanal s where s.semana = v_semana and s.puntaje > 0),
+    'top10',         coalesce((
+      select jsonb_agg(jsonb_build_object(
+               'posicion', r.pos, 'nombre', r.nombre, 'matricula_oculta', r.mo,
+               'puntaje', r.puntaje, 'es_tuyo', r.matricula = v_mat) order by r.pos)
+      from (
+        select (row_number() over (order by s.puntaje desc, s.alcanzado_en asc))::int as pos,
+               j.nombre, public.enmascarar_matricula(j.matricula) as mo, s.puntaje, s.matricula
+          from public.puntaje_semanal s
+          join public.jugadores j on j.matricula = s.matricula
+         where s.semana = v_semana and s.puntaje > 0
+         order by 1
+         limit 10
+      ) r), '[]'::jsonb),
+    'mi_posicion',   (
+      select jsonb_build_object('posicion', t.pos, 'puntaje', t.puntaje)
+        from (select s.matricula, s.puntaje,
+                     (row_number() over (order by s.puntaje desc, s.alcanzado_en asc))::int as pos
+                from public.puntaje_semanal s
+               where s.semana = v_semana and s.puntaje > 0) t
+       where t.matricula = v_mat),
+    'ganadores',     coalesce((
+      select jsonb_agg(jsonb_build_object(
+               'semana', g.semana, 'nombre', g.nombre, 'matricula_oculta', g.mo,
+               'puntaje', g.puntaje, 'es_tuyo', g.matricula = v_mat) order by g.semana)
+      from (
+        select distinct on (s.semana) s.semana, j.nombre,
+               public.enmascarar_matricula(j.matricula) as mo, s.puntaje, s.matricula
+          from public.puntaje_semanal s
+          join public.jugadores j on j.matricula = s.matricula
+         where s.puntaje > 0 and (s.semana < v_actual or v_hoy > v_ultimo)
+         order by s.semana, s.puntaje desc, s.alcanzado_en asc
+      ) g), '[]'::jsonb)
+  );
+end
+$$;
+
+-- Control Escolar de UN jugador: récord total, racha, insignias, resultados por aula y por tema
+-- (de las respuestas de todas sus rondas). Devuelve null si la matrícula no existe.
+create or replace function public.control_escolar(p_matricula text)
+returns jsonb
+language plpgsql stable security definer
+set search_path = ''
+as $$
+declare
+  v_mat text := public.normalizar_matricula(p_matricula);
+begin
+  if v_mat !~ '^[a-z0-9]{7,10}$' or v_mat !~ '[0-9]' then
+    raise exception 'matricula_invalida' using errcode = '22023';
+  end if;
+
+  return (
+    select jsonb_build_object(
+      'nombre',       j.nombre,
+      'record_total', j.record_total,
+      'racha_dias',   j.racha_dias,
+      'insignias',    to_jsonb(j.insignias),
+      'rondas',       (select count(*)::int from public.rondas r where r.matricula = j.matricula),
+      'por_aula',     coalesce((
+        select jsonb_agg(jsonb_build_object(
+                 'aula', p.aula, 'record', p.record, 'ultimo_puntaje', p.ultimo_puntaje,
+                 'rondas_jugadas', p.rondas_jugadas,
+                 'mejores_aciertos', coalesce((select max(r.aciertos) from public.rondas r
+                                                where r.matricula = j.matricula and r.aula = p.aula), 0))
+               order by p.aula)
+          from public.progreso_aula p
+         where p.matricula = j.matricula), '[]'::jsonb),
+      'por_tema',     coalesce((
+        select jsonb_agg(jsonb_build_object(
+                 'aula', t.aula, 'tema', t.tema, 'aciertos', t.aciertos, 'total', t.total)
+               order by t.aula, t.tema)
+          from (select r.aula, e ->> 'tema' as tema,
+                       (count(*) filter (where (e ->> 'acierto')::boolean))::int as aciertos,
+                       count(*)::int as total
+                  from public.rondas r
+                 cross join lateral jsonb_array_elements(r.respuestas) as e
+                 where r.matricula = j.matricula and e ? 'tema'
+                 group by r.aula, e ->> 'tema') t), '[]'::jsonb)
+    )
+    from public.jugadores j
+    where j.matricula = v_mat
+  );
+end
+$$;
+
+revoke execute on function
+  public.salon_primer_lunes(),
+  public.salon_ultimo_lunes(),
+  public.salon_de_la_fama(text, date),
+  public.control_escolar(text)
+from public, anon, authenticated;
+
+grant execute on function
+  public.salon_de_la_fama(text, date),
+  public.control_escolar(text)
+to anon, authenticated;
+
+grant execute on function public.salon_primer_lunes(), public.salon_ultimo_lunes() to service_role;
 
 -- Que la API de Supabase detecte las funciones nuevas sin esperar.
 notify pgrst, 'reload schema';

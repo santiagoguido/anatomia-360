@@ -34,6 +34,7 @@ const esConfiguracionDeDespliegue = (ruta) => {
   if (nombre.endsWith('.local')) return false;
   return (
     /(^|\/)\.env(\.[^/]*)?$/.test(ruta) ||
+    /(^|\/)env\.ejemplo$/.test(ruta) ||
     ruta.endsWith('.toml') ||
     ruta === 'package.json' ||
     ruta.startsWith('.github/workflows/') ||
@@ -58,9 +59,9 @@ test('el interruptor de pruebas NO está activo en ningún archivo de configurac
   assert.deepEqual(activos, [], `${NOMBRE_INTERRUPTOR} no puede estar activo en producción. Quítalo de: ${activos.join(', ')}`);
 });
 
-test('el interruptor está documentado y apagado en supabase/functions/.env.example', () => {
-  const ruta = join(RAIZ, 'supabase/functions/.env.example');
-  assert.ok(existsSync(ruta), 'falta supabase/functions/.env.example');
+test('el interruptor está documentado y apagado en supabase/functions/env.ejemplo', () => {
+  const ruta = join(RAIZ, 'supabase/functions/env.ejemplo');
+  assert.ok(existsSync(ruta), 'falta supabase/functions/env.ejemplo');
   const texto = readFileSync(ruta, 'utf8');
   assert.match(texto, new RegExp(`^${NOMBRE_INTERRUPTOR}=\\s*$`, 'm'), 'debe aparecer vacío (apagado)');
   assert.match(texto, /NUNCA/, 'debe advertir que no va en producción');
@@ -149,8 +150,9 @@ test('config.toml desactiva verify_jwt solo para la función rondas (la clave pu
 const schema = readFileSync(join(RAIZ, 'supabase/schema.sql'), 'utf8');
 
 test('schema.sql: las funciones del motor solo las ejecuta service_role', () => {
-  const revoke = schema.slice(schema.lastIndexOf('revoke execute on function'), schema.indexOf('grant execute on function', schema.lastIndexOf('revoke execute on function')));
-  const grant = schema.slice(schema.lastIndexOf('grant execute on function'), schema.indexOf('notify pgrst'));
+  const seccion = schema.slice(schema.indexOf('-- 7. MOTOR DE RONDAS'), schema.indexOf('-- 8. SALÓN DE LA FAMA'));
+  const revoke = seccion.slice(seccion.lastIndexOf('revoke execute on function'), seccion.indexOf('grant execute on function', seccion.lastIndexOf('revoke execute on function')));
+  const grant = seccion.slice(seccion.lastIndexOf('grant execute on function'));
   for (const f of ['aula_abierta', 'progreso_para_ronda', 'crear_ronda_activa', 'registrar_respuesta', 'contexto_cierre', 'guardar_ronda_terminada', 'semana_cuenta_para_salon']) {
     assert.ok(revoke.includes(`public.${f}(`), `${f} debe quitarse a anon/authenticated`);
     assert.ok(grant.includes(`public.${f}(`), `${f} debe darse a service_role`);
@@ -173,7 +175,9 @@ test('schema.sql: rondas_activas está cerrada al navegador (RLS + sin permisos)
 });
 
 test('schema.sql: el candado de la semana 0 usa las mismas fechas que SALON y el SQL lo aplica al recalcular', () => {
-  assert.match(schema, new RegExp(`date '${SALON.primerLunes}' and date '${SALON.ultimoLunes}'`));
+  assert.match(schema, new RegExp(`function public\\.salon_primer_lunes\\(\\)[^$]*\\$\\$ select date '${SALON.primerLunes}' \\$\\$`));
+  assert.match(schema, new RegExp(`function public\\.salon_ultimo_lunes\\(\\)[^$]*\\$\\$ select date '${SALON.ultimoLunes}' \\$\\$`));
+  assert.match(schema, /between public\.salon_primer_lunes\(\) and public\.salon_ultimo_lunes\(\)/);
   const recalcular = schema.slice(schema.indexOf('function public.recalcular_puntaje_semanal'));
   assert.ok(recalcular.indexOf('semana_cuenta_para_salon') < recalcular.indexOf('insert into public.puntaje_semanal'));
   // La semana 1 es el lunes del inicio del curso y la última, 5 lunes después.
@@ -192,4 +196,14 @@ test('el calendario de aulas de schema.sql coincide con el de config.js (regla d
     '2026-10-26T06:00:00Z', '2026-11-02T06:00:00Z', '2026-11-09T06:00:00Z', '2026-11-16T06:00:00Z', '2026-11-23T06:00:00Z',
   ]);
   assert.ok(Date.parse(CALENDARIO_AULAS[0].abre_en) <= Date.parse('2026-10-15T00:00:00Z'));
+});
+
+test('schema.sql: el Salón y Control Escolar los lee el navegador, pero no exponen matrículas completas', () => {
+  const grant = schema.slice(schema.lastIndexOf('grant execute on function\n  public.salon_de_la_fama'));
+  assert.match(grant.slice(0, 200), /public\.salon_de_la_fama\(text, date\),\s*public\.control_escolar\(text\)\s*to anon, authenticated;/);
+  const salon = schema.slice(schema.indexOf('function public.salon_de_la_fama'), schema.indexOf('function public.control_escolar'));
+  assert.ok(!/'matricula'\s*,/.test(salon), 'el Salón no debe devolver la matrícula completa de nadie');
+  assert.ok(salon.includes('enmascarar_matricula'), 'las matrículas salen ocultas');
+  const control = schema.slice(schema.indexOf('function public.control_escolar'));
+  assert.ok(control.includes("where j.matricula = v_mat"), 'Control Escolar devuelve solo la matrícula pedida');
 });

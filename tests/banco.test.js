@@ -34,13 +34,13 @@ for (const archivo of archivos) {
     }
   });
 
-  test(`${archivo}: enunciado, explicación, dificultad y estado`, () => {
+  test(`${archivo}: enunciado, explicación, dificultad y estado (borrador o aprobada)`, () => {
     for (const p of P) {
       assert.ok(p.enunciado.trim().length >= 25, `${p.id}: enunciado muy corto`);
       assert.ok(p.explicacion.trim().length >= 40, `${p.id}: explicación muy corta`);
       assert.ok([1, 2, 3].includes(p.dificultad), `${p.id}: dificultad`);
       assert.ok(temas.includes(p.tema), `${p.id}: tema`);
-      assert.ok(['borrador', 'aprobada'].includes(p.estado), `${p.id}: estado inválido`);
+      assert.ok(['borrador', 'aprobada'].includes(p.estado), `${p.id}: estado ${p.estado} (usa "borrador" o "aprobada")`);
     }
   });
 
@@ -64,7 +64,7 @@ for (const archivo of archivos) {
     for (const p of P) {
       if (p.patron === 'P13') {
         assert.ok(p.imagen?.id && p.imagen?.descripcion, `${p.id}: falta imagen`);
-        assert.equal(p.imagen.estado, 'pendiente');
+        assert.ok(['pendiente', 'lista'].includes(p.imagen.estado), `${p.id}: imagen.estado debe ser "pendiente" o "lista"`);
       } else assert.equal(p.imagen, null, `${p.id}: no debería tener imagen`);
     }
     assert.equal(new Set(P.filter((p) => p.imagen).map((p) => p.imagen.id)).size, 10);

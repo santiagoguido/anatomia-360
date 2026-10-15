@@ -1,11 +1,11 @@
-# Anatomía 360 · Sesiones 2 a 4: campus, rondas y calificación en el servidor
+# Anatomía 360 · Sesiones 2 a 5: campus, rondas, Salón de la Fama y Control Escolar
 
 Juego web pixel art (Phaser 3 + Supabase + Netlify) para Anatomía de 1.er semestre, UMSNH.
 Esta sesión agrega el **campus**: mapa de 3 × 3 pantallas con avatar, joystick, sprint, colisiones,
 minimapa, tarjetas al acercarse a una puerta y aulas que se abren por fecha.
 **Sesión 4:** las puertas de las 6 aulas ya llevan a la ronda (25 preguntas, 42 s cada una), con calificación
-en una Edge Function de Supabase, retroalimentación, récord, racha de días e insignias. La Clínica, el Salón
-de la Fama y Control Escolar siguen pendientes (sesiones 5 en adelante).
+en una Edge Function de Supabase, retroalimentación, récord, racha de días e insignias. **Sesión 5:** el Salón de la Fama (Top 10 semanal) y Control Escolar (tu expediente) ya funcionan.
+La Clínica llega en la Sesión 6.
 
 **Si ya hiciste las Sesiones 1–3, para la Sesión 4 SÍ tienes que tocar Supabase:** vuelve a ejecutar
 `supabase/schema.sql` completo (es seguro, no borra jugadores) y despliega la función (ver "Motor de rondas").
@@ -206,6 +206,24 @@ Después del lunes 26 oct a las 00:00 (CDMX), el paso (a) con `aula: 2` debe dar
 Nunca uses `supabase secrets set --env-file` con un archivo que contenga el interruptor ni lo pongas en `supabase/functions/.env`
 (se carga solo). `tests/despliegue.test.js` falla si el interruptor aparece encendido en `config.toml`, `netlify.toml`,
 `package.json`, algún `.env*` (salvo `*.local`), workflows de GitHub o un Dockerfile. En producción verifica además con `supabase secrets list`.
+
+## Salón de la Fama y Control Escolar (Sesión 5)
+
+**Para publicarlo:** vuelve a ejecutar `supabase/schema.sql` completo en SQL Editor (agrega dos funciones nuevas, no borra
+nada) y sube los archivos a GitHub para que Netlify publique. **No hay que redesplegar la función `rondas`.**
+
+| | |
+|---|---|
+| Salón de la Fama | Top 10 de la semana, tu lugar si no estás en el Top 10, pestañas por semana (1 a 6) y los ganadores de las semanas terminadas. Nombre y matrícula oculta (••••4521). Antes del lunes 19 oct dice cuándo arranca |
+| Control Escolar | Solo tus resultados: récord total, racha, rondas, resultados por aula y por tema, "conviene repasar" e insignias (ganadas y por ganar) |
+| La lista completa del grupo | **No está** en el juego: llega en la Sesión 12, con exportación a Excel para la docente |
+
+- La semana y la hora las manda el servidor (`salon_de_la_fama()` en `schema.sql`), no el teléfono. Las fechas del Salón viven en
+  `salon_primer_lunes()` / `salon_ultimo_lunes()` y en `SALON` de `src/game/ronda/reglas.js`; una prueba verifica que coincidan.
+- Los temas se rotulan con `TEMAS_AULA` de `src/config.js`; una prueba verifica que coincida con `contenido/preguntas/`.
+- Un tema se recomienda para repasar con 5 o más respuestas y menos de 80% de aciertos (`src/ui/control/modelo.js`).
+- No hay PIN: igual que al recuperar tu sesión, quien conozca una matrícula puede pedir sus resultados por la API. En pantalla cada alumno ve solo lo suyo.
+- Lista de revisión para probar en celular: `docs/PRUEBA_CELULAR.md`.
 
 ## Estructura
 `src/ui/pantallas/` pantallas · `src/ui/campus/` joystick, botón correr, minimapa y tarjeta ·

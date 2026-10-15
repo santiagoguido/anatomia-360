@@ -15,11 +15,11 @@ export function cargarBancos({ aprobar = true } = {}) {
   const bancos = {};
   for (let n = 1; n <= 6; n++) {
     const banco = JSON.parse(readFileSync(new URL(`../../contenido/preguntas/aula-${n}.json`, import.meta.url), 'utf8'));
-    if (aprobar) {
-      for (const p of banco.preguntas) {
-        p.estado = 'aprobada';
-        if (p.imagen) p.imagen.estado = 'lista';
-      }
+    // `aprobar: true` → todo servible; `aprobar: false` → todo en borrador con las imágenes pendientes
+    // (sin depender del estado real de contenido/, que Santi va cambiando).
+    for (const p of banco.preguntas) {
+      p.estado = aprobar ? 'aprobada' : 'borrador';
+      if (p.imagen) p.imagen.estado = aprobar ? 'lista' : 'pendiente';
     }
     bancos[n] = banco;
   }
