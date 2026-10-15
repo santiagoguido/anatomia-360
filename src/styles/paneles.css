@@ -1,0 +1,482 @@
+/* ==========================================================================
+   Anatomía 360 · Salón de la Fama y Control Escolar (Sesión 5)
+   Mismo lenguaje del resto: pixel art, esquinas rectas, sombras duras, modo oscuro.
+   ========================================================================== */
+
+.pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--fondo);
+  padding-top: max(12px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(var(--margen), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--margen), env(safe-area-inset-right, 0px));
+}
+
+.pagina__caja {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: min(780px, 100%);
+  min-height: 100%;
+}
+
+.pagina__cabecera {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagina__titulo {
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: clamp(0.75rem, 3vw, 0.95rem);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.pagina__subtitulo {
+  margin: 0;
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.pagina__sub {
+  font-size: 1.1rem;
+}
+
+.pagina__bloque {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pagina__aviso {
+  padding: 12px 14px;
+  background: var(--panel);
+  border-left: 4px solid var(--dorado);
+  color: var(--dorado-claro);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.pagina__nota {
+  max-width: none;
+}
+
+.pagina__mi-lugar {
+  padding: 10px 14px;
+  background: var(--panel);
+  border-left: 4px solid var(--trazo-fuerte);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.pagina__mi-lugar--top {
+  background: var(--panel-activo);
+  border-left-color: var(--turquesa-vivo);
+}
+
+/* ---- Semanas y pestañas -------------------------------------------------------- */
+
+.semanas {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+}
+
+.semana {
+  appearance: none;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 96px;
+  min-height: 52px;
+  padding: 6px 12px;
+  background: var(--panel);
+  border: 2px solid var(--trazo-fuerte);
+  color: var(--texto);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.semana strong {
+  font-size: 0.95rem;
+}
+
+.semana span {
+  color: var(--texto-suave);
+  font-size: 0.78rem;
+}
+
+.semana--activa {
+  background: var(--panel-activo);
+  border-color: var(--turquesa-vivo);
+}
+
+.pestanas {
+  display: flex;
+  gap: 8px;
+}
+
+.pestana {
+  appearance: none;
+  flex: 1 1 0;
+  min-height: 48px;
+  background: transparent;
+  border: 2px solid var(--trazo-fuerte);
+  color: var(--texto);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.pestana--activa {
+  background: var(--turquesa);
+  border-color: var(--turquesa);
+  font-weight: 700;
+}
+
+/* ---- Top 10 ---------------------------------------------------------------------- */
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.top__encabezado,
+.top__fila {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.top__encabezado {
+  padding: 0 12px;
+  color: var(--texto-suave);
+  font-size: 0.75rem;
+}
+
+.top__encabezado span:last-child {
+  text-align: right;
+}
+
+.top__fila {
+  min-height: 56px;
+  padding: 6px 12px;
+  background: var(--panel);
+  border-left: 4px solid var(--trazo-fuerte);
+}
+
+.top__fila--tuyo {
+  background: var(--panel-activo);
+  border-left-color: var(--turquesa-vivo);
+}
+
+.top__lugar {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  background: var(--fondo);
+  font-family: var(--fuente-titulo);
+  font-size: 0.7rem;
+}
+
+.top__lugar--oro {
+  background: var(--dorado);
+  color: var(--fondo);
+}
+
+.top__lugar--plata {
+  background: var(--texto-suave);
+  color: var(--fondo);
+}
+
+.top__lugar--bronce {
+  background: #8c6a4f;
+  color: var(--texto);
+}
+
+.top__nombre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  min-width: 0;
+}
+
+.top__nombre strong {
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.top__tu {
+  padding: 1px 6px;
+  background: var(--turquesa);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.top__matricula {
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+}
+
+.top__puntos {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ---- Ganadores ------------------------------------------------------------------------ */
+
+.ganadores {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ganador {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 12px;
+  padding: 10px 14px;
+  background: var(--panel);
+  border-left: 4px solid var(--dorado);
+}
+
+.ganador--tuyo {
+  background: var(--panel-activo);
+  border-left-color: var(--turquesa-vivo);
+}
+
+.ganador__semana {
+  grid-column: 1 / -1;
+  color: var(--dorado);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ganador__nombre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  font-size: 1.05rem;
+}
+
+.ganador__puntos {
+  grid-row: 2 / span 2;
+  grid-column: 2;
+  align-self: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.ganador__tuyo {
+  grid-column: 1 / -1;
+  color: var(--turquesa-vivo);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ---- Control Escolar --------------------------------------------------------------------- */
+
+.metricas--cuatro {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+  .metricas--cuatro {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.aulas-resumen {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 640px) {
+  .aulas-resumen {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.aula-resumen {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  background: var(--panel);
+  border: 3px solid var(--trazo-fuerte);
+}
+
+.aula-resumen--vacia {
+  border-style: dashed;
+}
+
+.aula-resumen__titulo {
+  margin: 0;
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.aula-resumen__datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  margin: 0;
+}
+
+.aula-resumen__datos dt {
+  color: var(--texto-suave);
+  font-size: 0.72rem;
+}
+
+.aula-resumen__datos dd {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.aula-resumen__vacio {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+}
+
+.control__nivel--fuerte {
+  background: var(--turquesa-vivo);
+}
+
+.control__nivel--regular {
+  background: var(--dorado);
+}
+
+.control__nivel--repasar {
+  background: var(--error);
+}
+
+.control__nivel--sin-datos {
+  background: var(--trazo-fuerte);
+}
+
+.control__etiqueta {
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.control__etiqueta--fuerte {
+  color: var(--turquesa-vivo);
+}
+
+.control__etiqueta--regular {
+  color: var(--dorado);
+}
+
+.control__etiqueta--repasar {
+  color: var(--error);
+}
+
+.control__etiqueta--sin-datos {
+  color: var(--texto-suave);
+  font-weight: 400;
+}
+
+.repasar {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  counter-reset: repaso;
+}
+
+.repasar li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px 10px 44px;
+  background: var(--panel);
+  border-left: 4px solid var(--error);
+  counter-increment: repaso;
+  position: relative;
+}
+
+.repasar li::before {
+  content: counter(repaso);
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  color: var(--error);
+  font-family: var(--fuente-titulo);
+  font-size: 0.8rem;
+}
+
+.repasar li span {
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.insignias {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .insignias {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.insignia {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  background: var(--panel);
+  border-left: 4px solid var(--trazo-fuerte);
+  color: var(--texto-suave);
+}
+
+.insignia strong {
+  font-size: 1rem;
+}
+
+.insignia span {
+  font-size: 0.85rem;
+}
+
+.insignia em {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.insignia--ganada {
+  background: var(--panel-activo);
+  border-left-color: var(--dorado);
+  color: var(--texto);
+}
+
+.insignia--ganada em {
+  color: var(--dorado);
+}

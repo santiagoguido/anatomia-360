@@ -46,3 +46,14 @@ export const MOVIMIENTO = {
 
 // Distancia (en tiles de 16 px) a la que aparece la tarjeta de un lugar, y a la que se esconde.
 export const PROXIMIDAD = { entrar: 2, salir: 3 };
+
+// Temas de cada aula (los ids son los de contenido/preguntas/aula-N.json: así se rotulan los resultados por tema
+// en Control Escolar). Una prueba comprueba que coincidan con el banco.
+export const TEMAS_AULA = {
+  1: [{ id: 'musculos-triangulos', nombre: 'Músculos y triángulos del cuello' }, { id: 'faringe-esofago', nombre: 'Faringe y esófago' }],
+  2: [{ id: 'laringe-traquea-tiroides', nombre: 'Laringe, tráquea y glándula tiroides' }, { id: 'vascularizacion-cuello', nombre: 'Vascularización del cuello' }],
+  3: [{ id: 'hombro-brazo-codo', nombre: 'Hombro, brazo y codo' }, { id: 'plexo-braquial', nombre: 'Plexo braquial' }],
+  4: [{ id: 'antebrazo-mano', nombre: 'Antebrazo y mano' }, { id: 'vascularizacion-miembro-superior', nombre: 'Vascularización del miembro superior' }],
+  5: [{ id: 'gluteo-muslo', nombre: 'Glúteo y muslo' }, { id: 'plexo-lumbosacro', nombre: 'Plexo lumbosacro' }],
+  6: [{ id: 'rodilla-pierna-pie', nombre: 'Rodilla, pierna y pie' }, { id: 'vascularizacion-miembro-inferior', nombre: 'Vascularización del miembro inferior' }],
+};

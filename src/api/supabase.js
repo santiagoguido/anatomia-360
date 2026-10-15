@@ -96,6 +96,21 @@ export const api = {
     rpc('registrar_acceso', { p_matricula: matricula }).catch(() => {});
   },
 
+  // ---- Salón de la Fama y Control Escolar (Sesión 5) ----
+
+  /**
+   * Todo el Salón en una llamada, con la semana y la hora del SERVIDOR: { estado: 'antes' | 'activo', semana, semanas,
+   * top10, mi_posicion, jugadores, ganadores }. `semana` (opcional) es cualquier fecha de la semana que se quiere ver.
+   */
+  salonDeLaFama({ matricula, semana = null }) {
+    return rpc('salon_de_la_fama', { p_matricula: matricula, p_semana: semana });
+  },
+
+  /** Resultados de UN jugador (por aula y por tema), récord total, racha e insignias. null si la matrícula no existe. */
+  controlEscolar(matricula) {
+    return rpc('control_escolar', { p_matricula: matricula });
+  },
+
   // ---- Rondas (Edge Function `rondas`; ver supabase/functions/rondas) ----
 
   /** Empieza una ronda: devuelve { ronda_id, total, tiempo_ms, pausa_ms, preguntas: [{ enunciado, opciones }] }. */
