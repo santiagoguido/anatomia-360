@@ -152,7 +152,7 @@
         "fuente": "moore2017",
         "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Estructuras superficiales del cuello: regiones cervicales», pp. 1773–1774, 1801."
       },
-      "estado": "borrador"
+      "estado": "aprobado"
     },
     {
       "id": "c1-02",
@@ -258,7 +258,7 @@
         "fuente": "moore2017",
         "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Estructuras superficiales del cuello: regiones cervicales», pp. 1781, 1800, 1803–1804."
       },
-      "estado": "borrador"
+      "estado": "aprobado"
     },
     {
       "id": "c1-03",
@@ -363,7 +363,7 @@
         "fuente": "moore2017",
         "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Estructuras superficiales del cuello: regiones cervicales», pp. 1783, 1804."
       },
-      "estado": "borrador"
+      "estado": "aprobado"
     },
     {
       "id": "c1-04",
@@ -468,7 +468,7 @@
         "fuente": "moore2017",
         "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Estructuras superficiales del cuello: regiones cervicales», pp. 1780–1781, 1803."
       },
-      "estado": "borrador"
+      "estado": "aprobado"
     },
     {
       "id": "c1-05",
@@ -571,7 +571,7 @@
         "fuente": "moore2017",
         "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Huesos del cuello», pp. 1763, 1790, 1853."
       },
-      "estado": "borrador"
+      "estado": "aprobado"
     },
     {
       "id": "c1-06",
@@ -676,7 +676,7 @@
         "fuente": "moore2017",
         "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Fascia cervical», pp. 1769–1770."
       },
-      "estado": "borrador"
+      "estado": "aprobado"
     },
     {
       "id": "c1-07",
@@ -782,7 +782,7 @@
         "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Faringe y esófago», pp. 1848–1850, 1852."
       },
       "nota_revision": "Moore no describe el divertículo faringoesofágico (de Zenker) en este rango; el cuadro clínico es conocimiento clínico general. Sí describe las hendiduras entre constrictores (p. 1850), el cricofaríngeo como esfínter esofágico superior y la unión faringoesofágica como la porción más estrecha (pp. 1848, 1852), y la fase 3 de la deglución (p. 1845). Confirmar que entra en el departamental.",
-      "estado": "borrador"
+      "estado": "aprobado"
     },
     {
       "id": "c1-08",
@@ -888,7 +888,7 @@
         "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Faringe y esófago», pp. 1839, 1848."
       },
       "nota_revision": "Moore menciona que ramos del laríngeo superior y del laríngeo recurrente quedan profundos a la mucosa del receso piriforme y pueden dañarse con un cuerpo extraño (p. 1848); la pérdida del reflejo tusígeno por lesión del ramo interno, sensitivo del vestíbulo (p. 1839), es una deducción clínica. Confirmar el enfoque.",
-      "estado": "borrador"
+      "estado": "aprobado"
     }
   ]
 }
