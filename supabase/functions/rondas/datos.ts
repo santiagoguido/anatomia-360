@@ -10,7 +10,7 @@ export function crearDatos(supabase: Cliente) {
     const { data, error } = await supabase.rpc(funcion, argumentos);
     if (error) {
       // Otra llamada ya calificó esta ronda: el juego reintenta y recibe el mismo resumen.
-      if (String(error.message).includes('ronda_no_encontrada')) throw new ErrorRonda('conflicto', 409);
+      if (/ronda_no_encontrada|guardia_no_encontrada/.test(String(error.message))) throw new ErrorRonda('conflicto', 409);
       throw new Error(`${funcion}: ${error.message}`);
     }
     return data;
@@ -88,5 +88,64 @@ export function crearDatos(supabase: Cliente) {
         p_racha_dias: a.rachaDias,
         p_resumen: a.resumen,
       }),
+
+    // ---- Clínica (Sesión 6) ----
+
+    contextoClinica: (matricula: string) => rpc('contexto_clinica', { p_matricula: matricula }),
+
+    async crearGuardiaActiva(f: { id: string; matricula: string; inicio: number; expira: number; casos: unknown }) {
+      await rpc('crear_guardia_activa', {
+        p_id: f.id,
+        p_matricula: f.matricula,
+        p_inicio: iso(f.inicio),
+        p_expira: iso(f.expira),
+        p_casos: f.casos,
+      });
+    },
+
+    async leerGuardiaActiva(id: string) {
+      const { data, error } = await supabase
+        .from('guardias_activas')
+        .select('id, matricula, inicio, expira_en, casos, actual, version, terminada_en, resumen')
+        .eq('id', id)
+        .maybeSingle();
+      if (error) throw new Error(`leer guardia: ${error.message}`);
+      if (!data) return null;
+      return {
+        id: data.id,
+        matricula: data.matricula,
+        inicio: Date.parse(data.inicio),
+        expira: Date.parse(data.expira_en),
+        casos: data.casos,
+        actual: data.actual,
+        version: data.version,
+        terminada: data.terminada_en !== null,
+        resumen: data.resumen,
+      };
+    },
+
+    async actualizarGuardia(id: string, version: number, casos: unknown, actual: number) {
+      return (await rpc('actualizar_guardia', { p_id: id, p_version: version, p_casos: casos, p_actual: actual })) === true;
+    },
+
+    guardarGuardiaTerminada: (a: Record<string, any>) =>
+      rpc('guardar_guardia_terminada', {
+        p_activa_id: a.activaId,
+        p_matricula: a.matricula,
+        p_inicio: iso(a.inicio),
+        p_fin: iso(a.fin),
+        p_semana: a.semana,
+        p_hoy: a.hoy,
+        p_puntaje: a.puntaje,
+        p_casos: a.casos,
+        p_expedientes: a.expedientes,
+        p_insignias: a.insignias,
+        p_racha_dias: a.rachaDias,
+        p_resumen: a.resumen,
+      }),
+
+    async expedientesDe(matricula: string) {
+      return (await rpc('expedientes_de', { p_matricula: matricula })) ?? [];
+    },
   };
 }

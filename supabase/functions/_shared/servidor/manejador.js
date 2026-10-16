@@ -17,6 +17,7 @@ import { revisarTiempos } from '../game/ronda/plausibilidad.js';
 import { desempenoPorTema, puntuarRespuesta, resumirRonda } from '../game/ronda/puntuacion.js';
 import { armarRevision } from '../game/ronda/resumen.js';
 import { armarRonda } from '../game/ronda/seleccion.js';
+import { crearClinica } from './clinica.js';
 
 const MATRICULA = /^[a-z0-9]{7,10}$/;
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -45,9 +46,10 @@ function rondaIdValido(valor) {
  *   leerRondaActiva(id), guardarRespuesta(id, indice, registro), eliminarRondaActiva(id),
  *   contextoCierre(matricula, aula), guardarRondaTerminada(args)
  * @param bancos { 1: { temas, preguntas }, ... } (los JSON de contenido/ ya filtrados)
+ * @param casos  casos clínicos de todas las semanas (Sesión 6; ver clinica.js)
  * @param modoPruebas  interruptor de pruebas (ver interruptor.js)
  */
-export function crearManejador({ datos, bancos, modoPruebas = false, ahora = Date.now, azar = Math.random, nuevoId = () => globalThis.crypto.randomUUID() }) {
+export function crearManejador({ datos, bancos, casos = [], modoPruebas = false, ahora = Date.now, azar = Math.random, nuevoId = () => globalThis.crypto.randomUUID() }) {
   const indices = new Map(
     Object.entries(bancos).map(([aula, banco]) => [Number(aula), new Map(banco.preguntas.map((p) => [p.id, p]))]),
   );
@@ -259,12 +261,14 @@ export function crearManejador({ datos, bancos, modoPruebas = false, ahora = Dat
     return { resumen, jugador: guardado.jugador };
   }
 
-  const operaciones = { iniciar, responder, terminar };
+  // La Clínica (Sesión 6) comparte función con las rondas: sus acciones se suman aquí (ver clinica.js).
+  const clinica = crearClinica({ datos, casos, bancos, modoPruebas, ahora, azar, nuevoId });
+  const operaciones = { iniciar, responder, terminar, ...clinica };
 
   /** Recibe el cuerpo ya leído del POST. Devuelve { estado, cuerpo }; nunca lanza. */
   return async function manejar(cuerpo) {
     try {
-      const operacion = operaciones[cuerpo?.accion];
+      const operacion = Object.hasOwn(operaciones, cuerpo?.accion) ? operaciones[cuerpo.accion] : null;
       if (!operacion) throw new ErrorRonda('solicitud_invalida', 400);
       return { estado: 200, cuerpo: await operacion(cuerpo) };
     } catch (e) {

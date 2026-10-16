@@ -127,4 +127,36 @@ export const api = {
   terminarRonda(rondaId) {
     return llamarRondas({ accion: 'terminar', ronda_id: rondaId });
   },
+
+  // ---- Clínica (Sesión 6; misma función `rondas`, acciones guardia_*) ----
+
+  /** Empieza una guardia de 5 casos: devuelve { guardia_id, total, maximo, vista }. */
+  iniciarGuardia({ matricula }) {
+    return llamarRondas({ accion: 'guardia_iniciar', matricula });
+  },
+
+  /** Explora al paciente del caso `caso` (0–4). Devuelve { vista } con el hallazgo. Repetir no cuesta nada. */
+  explorarCaso({ guardiaId, caso, exploracion }) {
+    return llamarRondas({ accion: 'guardia_explorar', guardia_id: guardiaId, caso, exploracion });
+  },
+
+  /** Pide la pista del paso en curso (−50, una sola vez por paso). Devuelve { vista }. */
+  pedirPista({ guardiaId, caso, paso }) {
+    return llamarRondas({ accion: 'guardia_pista', guardia_id: guardiaId, caso, paso });
+  },
+
+  /** Responde un paso: `intento` es 1 o 2, `opcion` la posición A–D (0–3). Devuelve { resultado, vista }. */
+  responderPaso({ guardiaId, caso, paso, intento, opcion }) {
+    return llamarRondas({ accion: 'guardia_responder', guardia_id: guardiaId, caso, paso, intento, opcion });
+  },
+
+  /** Pasa al siguiente paciente o, tras el quinto, califica la guardia: { final, vista } o { final: true, resumen, jugador }. */
+  siguienteCaso({ guardiaId, caso }) {
+    return llamarRondas({ accion: 'guardia_siguiente', guardia_id: guardiaId, caso });
+  },
+
+  /** Los casos que el jugador ya resolvió, con su desenlace: { expedientes }. */
+  expedientes({ matricula }) {
+    return llamarRondas({ accion: 'expedientes', matricula });
+  },
 };

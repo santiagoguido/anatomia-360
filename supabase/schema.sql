@@ -1,5 +1,5 @@
 -- =============================================================================
--- Anatomía 360 · Esquema de Supabase (Sesión 1 + motor de rondas de la Sesión 4)
+-- Anatomía 360 · Esquema de Supabase (Sesión 1 + rondas de la Sesión 4 + Clínica de la Sesión 6)
 -- -----------------------------------------------------------------------------
 -- Cómo usarlo: Supabase → SQL Editor → New query → pegar TODO este archivo → Run.
 -- Es seguro volver a ejecutarlo: no borra datos de jugadores. Solo vuelve a
@@ -124,7 +124,7 @@ create index if not exists rondas_semana_idx         on public.rondas (semana, m
 
 -- Puntaje semanal de cada jugador: de aquí sale el Top 10 (carga rápido).
 -- puntaje = suma de la mejor ronda de cada aula de esa semana
---           (la mejor guardia de la Clínica se suma en la Sesión 6).
+--           + la mejor guardia de la Clínica de esa semana (Sesión 6).
 create table if not exists public.puntaje_semanal (
   semana         date    not null,
   matricula      text    not null references public.jugadores (matricula)
@@ -137,6 +137,34 @@ create table if not exists public.puntaje_semanal (
 );
 create index if not exists puntaje_semanal_top_idx
   on public.puntaje_semanal (semana, puntaje desc, alcanzado_en asc);
+
+
+-- Guardias de la Clínica terminadas (Sesión 6). Las escribe solo la Edge Function.
+-- Máximo 3,500 = 5 casos × 700 (reglas en src/game/clinica/reglas.js; una prueba comprueba que coincidan).
+create table if not exists public.guardias (
+  id        uuid        primary key default gen_random_uuid(),
+  matricula text        not null references public.jugadores (matricula)
+                        on delete cascade on update cascade,
+  puntaje   integer     not null check (puntaje between 0 and 3500),
+  casos     jsonb       not null default '[]'::jsonb,
+  inicio    timestamptz not null,
+  fin       timestamptz not null,
+  semana    date        not null,
+  check (fin >= inicio)
+);
+create index if not exists guardias_matricula_idx on public.guardias (matricula, puntaje desc);
+create index if not exists guardias_semana_idx    on public.guardias (semana, matricula);
+
+-- Expedientes: cada caso clínico que el jugador resolvió (los 3 pasos acertados). Se archiva una sola vez por caso;
+-- si lo vuelve a resolver solo se conserva su mejor puntaje. El contenido del caso vive en contenido/casos/.
+create table if not exists public.expedientes (
+  matricula   text        not null references public.jugadores (matricula)
+                          on delete cascade on update cascade,
+  caso_id     text        not null,
+  puntos      integer     not null check (puntos between 0 and 700),
+  resuelto_en timestamptz not null default now(),
+  primary key (matricula, caso_id)
+);
 
 
 -- 3. CALENDARIO DE AULAS --------------------------------------------------------
@@ -164,10 +192,12 @@ alter table public.jugadores       enable row level security;
 alter table public.progreso_aula   enable row level security;
 alter table public.rondas          enable row level security;
 alter table public.puntaje_semanal enable row level security;
+alter table public.guardias        enable row level security;
+alter table public.expedientes     enable row level security;
 
 -- Se quita todo acceso directo a las tablas para anon / authenticated.
 revoke all on table public.aulas, public.jugadores, public.progreso_aula,
-                    public.rondas, public.puntaje_semanal
+                    public.rondas, public.puntaje_semanal, public.guardias, public.expedientes
   from public, anon, authenticated;
 
 -- Solo el calendario de aulas es público (no tiene datos personales).
@@ -194,6 +224,14 @@ drop policy if exists puntaje_semanal_sin_acceso_directo on public.puntaje_seman
 create policy puntaje_semanal_sin_acceso_directo on public.puntaje_semanal
   for all to anon, authenticated using (false) with check (false);
 
+drop policy if exists guardias_sin_acceso_directo on public.guardias;
+create policy guardias_sin_acceso_directo on public.guardias
+  for all to anon, authenticated using (false) with check (false);
+
+drop policy if exists expedientes_sin_acceso_directo on public.expedientes;
+create policy expedientes_sin_acceso_directo on public.expedientes
+  for all to anon, authenticated using (false) with check (false);
+
 
 -- 5. FUNCIONES PARA EL JUEGO (RPC) ---------------------------------------------
 
@@ -211,6 +249,8 @@ as $$
     'record_total',     j.record_total,
     'racha_dias',       j.racha_dias,
     'insignias',        to_jsonb(j.insignias),
+    'mejor_guardia',    coalesce((select max(g.puntaje) from public.guardias g where g.matricula = j.matricula), 0),
+    'expedientes',      (select count(*)::int from public.expedientes e where e.matricula = j.matricula),
     'progreso', coalesce((
       select jsonb_agg(
                jsonb_build_object(
@@ -363,6 +403,7 @@ as $$
 declare
   v_puntaje integer;
   v_rondas  integer;
+  v_guardia integer;
 begin
   -- Semana 0 (o después del curso): no se escribe en el Salón de la Fama.
   if not public.semana_cuenta_para_salon(p_semana) then
@@ -377,6 +418,12 @@ begin
     where r.matricula = p_matricula and r.semana = p_semana
     group by r.aula
   ) t;
+
+  -- Sesión 6: la mejor guardia de la Clínica de esa semana se suma a la mejor ronda de cada aula.
+  select coalesce(max(g.puntaje), 0)::integer into v_guardia
+  from public.guardias g
+  where g.matricula = p_matricula and g.semana = p_semana;
+  v_puntaje := v_puntaje + v_guardia;
 
   insert into public.puntaje_semanal as s (semana, matricula, puntaje, rondas)
   values (p_semana, p_matricula, v_puntaje, v_rondas)
@@ -572,8 +619,7 @@ begin
         actualizado_en     = now();
 
   update public.jugadores j
-     set record_total      = (select coalesce(sum(pa.record), 0) from public.progreso_aula pa
-                               where pa.matricula = j.matricula),
+     set record_total      = public.record_total_de(j.matricula),   -- Sesión 6: suma también la mejor guardia
          racha_dias        = p_racha_dias,
          ultimo_dia_jugado = p_hoy,
          insignias         = array(select u.x
@@ -745,6 +791,182 @@ grant execute on function
 to anon, authenticated;
 
 grant execute on function public.salon_primer_lunes(), public.salon_ultimo_lunes() to service_role;
+
+-- 9. LA CLÍNICA (Sesión 6) ---------------------------------------------------------
+-- Guardias de 5 casos clínicos. Las usa SOLO la Edge Function `rondas` (acciones guardia_* y expedientes) con la clave
+-- secreta (service_role). El navegador no puede leer ni escribir estas tablas ni ejecutar estas funciones.
+--
+-- Récord total = suma del récord de las 6 aulas (máx. 4,900 cada una) + la MEJOR guardia (máx. 3,500) = 32,900.
+-- Puntaje semanal = mejor ronda de cada aula de la semana + mejor guardia de la semana (ver recalcular_puntaje_semanal).
+
+-- Récord total de un jugador: sus 6 récords de aula + su mejor guardia.
+create or replace function public.record_total_de(p_matricula text)
+returns integer
+language sql stable security definer
+set search_path = ''
+as $$
+  select (coalesce((select sum(pa.record) from public.progreso_aula pa where pa.matricula = p_matricula), 0)
+        + coalesce((select max(g.puntaje)  from public.guardias g       where g.matricula  = p_matricula), 0))::integer
+$$;
+
+-- Guardia en curso: una por matrícula (empezar otra anula la anterior). `casos` guarda los 5 casos elegidos con el orden
+-- mezclado de las opciones y el avance de cada uno (exploraciones, pistas, intentos). `version` evita que dos
+-- llamadas a la vez se pisen.
+create table if not exists public.guardias_activas (
+  id           uuid        primary key,
+  matricula    text        not null unique references public.jugadores (matricula)
+                           on delete cascade on update cascade,
+  inicio       timestamptz not null,
+  expira_en    timestamptz not null,
+  casos        jsonb       not null,
+  actual       smallint    not null default 0,
+  version      integer     not null default 0,
+  terminada_en timestamptz,
+  resumen      jsonb,
+  check (jsonb_typeof(casos) = 'array')
+);
+
+alter table public.guardias_activas enable row level security;
+revoke all on table public.guardias_activas from public, anon, authenticated;
+drop policy if exists guardias_activas_sin_acceso_directo on public.guardias_activas;
+create policy guardias_activas_sin_acceso_directo on public.guardias_activas
+  for all to anon, authenticated using (false) with check (false);
+grant select, insert, update, delete on table public.guardias_activas to service_role;
+
+-- Empieza una guardia: borra la activa anterior de esa matrícula y guarda la nueva.
+create or replace function public.crear_guardia_activa(
+  p_id uuid, p_matricula text, p_inicio timestamptz, p_expira timestamptz, p_casos jsonb
+)
+returns void
+language plpgsql volatile security definer
+set search_path = ''
+as $$
+begin
+  delete from public.guardias_activas where matricula = p_matricula;
+  insert into public.guardias_activas (id, matricula, inicio, expira_en, casos)
+  values (p_id, p_matricula, p_inicio, p_expira, p_casos);
+end
+$$;
+
+-- Guarda el avance SOLO si nadie se adelantó (misma versión) y la guardia sigue abierta. Devuelve false si hubo choque.
+create or replace function public.actualizar_guardia(p_id uuid, p_version integer, p_casos jsonb, p_actual integer)
+returns boolean
+language plpgsql volatile security definer
+set search_path = ''
+as $$
+begin
+  update public.guardias_activas
+     set casos = p_casos, actual = p_actual, version = version + 1
+   where id = p_id and version = p_version and terminada_en is null;
+  return found;
+end
+$$;
+
+-- Lo que la función necesita para armar y calificar una guardia: fecha y semana de hoy (CDMX), racha de días, insignias,
+-- mejor guardia, cuántas guardias lleva y qué casos ya resolvió (sus expedientes).
+create or replace function public.contexto_clinica(p_matricula text)
+returns jsonb
+language sql stable security definer
+set search_path = ''
+as $$
+  select jsonb_build_object(
+    'hoy',                 (now() at time zone 'America/Mexico_City')::date,
+    'semana',              public.semana_cdmx(),
+    'racha_dias',          j.racha_dias,
+    'ultimo_dia_jugado',   j.ultimo_dia_jugado,
+    'insignias',           to_jsonb(j.insignias),
+    'mejor_guardia',       coalesce((select max(g.puntaje) from public.guardias g where g.matricula = j.matricula), 0),
+    'guardias_terminadas', (select count(*)::int from public.guardias g where g.matricula = j.matricula),
+    'archivados',          coalesce((select jsonb_agg(e.caso_id order by e.caso_id)
+                                       from public.expedientes e where e.matricula = j.matricula), '[]'::jsonb)
+  )
+  from public.jugadores j
+  where j.matricula = p_matricula
+$$;
+
+-- Guarda una guardia terminada, TODO en una sola transacción: marca la activa como terminada, inserta en `guardias`,
+-- archiva los expedientes, actualiza al jugador (récord total, racha de días, insignias) y el puntaje semanal
+-- (solo semanas 1 a 6, igual que las rondas).
+create or replace function public.guardar_guardia_terminada(
+  p_activa_id uuid, p_matricula text, p_inicio timestamptz, p_fin timestamptz, p_semana date, p_hoy date,
+  p_puntaje integer, p_casos jsonb, p_expedientes jsonb, p_insignias text[], p_racha_dias integer, p_resumen jsonb
+)
+returns jsonb
+language plpgsql volatile security definer
+set search_path = ''
+as $$
+declare
+  v_cuenta boolean := public.semana_cuenta_para_salon(p_semana);
+begin
+  update public.guardias_activas
+     set terminada_en = now(),
+         resumen = p_resumen || jsonb_build_object('salon', jsonb_build_object('cuenta', v_cuenta, 'semana', p_semana))
+   where id = p_activa_id and matricula = p_matricula and terminada_en is null;
+  if not found then
+    raise exception 'guardia_no_encontrada';
+  end if;
+
+  insert into public.guardias (matricula, puntaje, casos, inicio, fin, semana)
+  values (p_matricula, p_puntaje, p_casos, p_inicio, p_fin, p_semana);
+
+  -- Un expediente se archiva una sola vez; si se resuelve otra vez solo sube su mejor puntaje.
+  insert into public.expedientes as ex (matricula, caso_id, puntos)
+  select p_matricula, x.e ->> 'caso_id', (x.e ->> 'puntos')::integer
+    from jsonb_array_elements(p_expedientes) as x(e)
+  on conflict (matricula, caso_id) do update
+    set puntos = greatest(ex.puntos, excluded.puntos);
+
+  update public.jugadores j
+     set record_total      = public.record_total_de(j.matricula),
+         racha_dias        = p_racha_dias,
+         ultimo_dia_jugado = p_hoy,
+         insignias         = array(select u.x
+                                     from unnest(j.insignias || p_insignias) with ordinality as u(x, n)
+                                    group by u.x
+                                    order by min(u.n))
+   where j.matricula = p_matricula;
+
+  if v_cuenta then
+    perform public.recalcular_puntaje_semanal(p_matricula, p_semana);
+  end if;
+
+  return jsonb_build_object('jugador', public._jugador_json(p_matricula), 'cuenta_salon', v_cuenta);
+end
+$$;
+
+-- Los casos que el jugador ya resolvió (el contenido lo pone la función, desde contenido/casos/).
+create or replace function public.expedientes_de(p_matricula text)
+returns jsonb
+language sql stable security definer
+set search_path = ''
+as $$
+  select coalesce(jsonb_agg(jsonb_build_object('caso_id', e.caso_id, 'puntos', e.puntos, 'resuelto_en', e.resuelto_en)
+                            order by e.resuelto_en desc), '[]'::jsonb)
+  from public.expedientes e
+  where e.matricula = p_matricula
+$$;
+
+-- Permisos: solo el servidor (clave secreta). Ni anon ni authenticated.
+revoke execute on function
+  public.record_total_de(text),
+  public.crear_guardia_activa(uuid, text, timestamptz, timestamptz, jsonb),
+  public.actualizar_guardia(uuid, integer, jsonb, integer),
+  public.contexto_clinica(text),
+  public.guardar_guardia_terminada(uuid, text, timestamptz, timestamptz, date, date,
+                                   integer, jsonb, jsonb, text[], integer, jsonb),
+  public.expedientes_de(text)
+from public, anon, authenticated;
+
+grant execute on function
+  public.record_total_de(text),
+  public.crear_guardia_activa(uuid, text, timestamptz, timestamptz, jsonb),
+  public.actualizar_guardia(uuid, integer, jsonb, integer),
+  public.contexto_clinica(text),
+  public.guardar_guardia_terminada(uuid, text, timestamptz, timestamptz, date, date,
+                                   integer, jsonb, jsonb, text[], integer, jsonb),
+  public.expedientes_de(text)
+to service_role;
+
 
 -- Que la API de Supabase detecte las funciones nuevas sin esperar.
 notify pgrst, 'reload schema';

@@ -15,6 +15,9 @@ export const INSIGNIAS = {
   vascular: { nombre: 'Vascular', descripcion: '22 o más aciertos en las Aulas 2, 4 y 6.' },
   remontada: { nombre: 'Remontada', descripcion: 'Subir el récord de un aula 1,000 puntos o más.' },
   'listo-departamental': { nombre: 'Listo para el departamental', descripcion: '20 o más aciertos en las 6 aulas.' },
+  // Clínica (Sesión 6): las evalúa src/game/clinica/insignias.js
+  'residente-de-guardia': { nombre: 'Residente de guardia', descripcion: 'Terminar 5 guardias en la Clínica.' },
+  'ojo-clinico': { nombre: 'Ojo clínico', descripcion: 'Resolver un caso sin pistas y con 3 exploraciones o menos.' },
 };
 
 const todas = (mejores, aulas, minimo) => aulas.every((a) => (mejores[a] ?? 0) >= minimo);

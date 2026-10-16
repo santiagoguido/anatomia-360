@@ -8,6 +8,8 @@ import { crearRonda } from './ui/pantallas/ronda.js';
 import { crearResultado } from './ui/pantallas/resultado.js';
 import { crearSalon } from './ui/pantallas/salon.js';
 import { crearControl } from './ui/pantallas/control.js';
+import { crearClinica } from './ui/pantallas/clinica.js';
+import { crearExpedientes } from './ui/pantallas/expedientes.js';
 
 const PANTALLAS = {
   portada: crearPortada,
@@ -19,6 +21,8 @@ const PANTALLAS = {
   resultado: crearResultado,
   salon: crearSalon,
   control: crearControl,
+  clinica: crearClinica,
+  expedientes: crearExpedientes,
 };
 
 /**
@@ -33,7 +37,7 @@ export function crearApp({ raiz, api, almacen, iniciarJuego, configurado = true 
 
   /**
    * Punto de enganche de las puertas del campus. Devuelve true si el lugar ya lleva a algún lado.
-   * Hoy: las 6 aulas → ronda, Salón de la Fama y Control Escolar. La Clínica llega en la Sesión 6.
+   * Hoy: las 6 aulas → ronda, Salón de la Fama, Control Escolar y la Clínica (Sesión 6).
    */
   function entrarALugar(lugar) {
     if (lugar.tipo === 'aula') {
@@ -46,6 +50,10 @@ export function crearApp({ raiz, api, almacen, iniciarJuego, configurado = true 
     }
     if (lugar.tipo === 'control') {
       irA('control');
+      return true;
+    }
+    if (lugar.tipo === 'clinica') {
+      irA('clinica');
       return true;
     }
     return false;

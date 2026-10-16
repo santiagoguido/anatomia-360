@@ -8,6 +8,16 @@ import { SALON } from '../../src/game/ronda/reglas.js';
 export const DIA_MS = 86400000;
 export const ms = (iso) => Date.parse(iso);
 
+/** Los casos clínicos reales, todos «aprobado» para poder armar guardias (como `cargarBancos` con las preguntas). */
+export function cargarCasos({ aprobar = true } = {}) {
+  const casos = [];
+  for (const n of [1, 2]) {
+    const semana = JSON.parse(readFileSync(new URL(`../../contenido/casos/semana-${n}.json`, import.meta.url), 'utf8'));
+    for (const c of semana.casos) casos.push({ ...c, estado: aprobar ? 'aprobado' : 'borrador' });
+  }
+  return casos;
+}
+
 const iso = (serial) => new Date(serial * DIA_MS).toISOString().slice(0, 10);
 
 /** Los 6 bancos reales, con todas las preguntas "aprobadas" (y las P13 con imagen lista) para poder armar rondas. */
@@ -38,6 +48,9 @@ export function crearDatosFalsos({ ahora, jugadores = ['a0123456x'] } = {}) {
     rondas: [],
     activas: new Map(), // id → fila
     semanal: new Map(), // `${semana}:${matricula}` → puntaje
+    guardias: [], // guardias terminadas (Sesión 6)
+    expedientes: new Map(), // `${matricula}:${caso}` → { caso_id, puntos, resuelto_en }
+    guardiasActivas: new Map(), // id → fila
   };
   for (const m of jugadores) {
     tabla.jugadores.set(m, { matricula: m, nombre: 'Ana Prueba', record_total: 0, racha_dias: 0, ultimo_dia_jugado: null, insignias: [] });
@@ -54,6 +67,8 @@ export function crearDatosFalsos({ ahora, jugadores = ['a0123456x'] } = {}) {
     if (!j) return null;
     return {
       ...j,
+      mejor_guardia: tabla.guardias.filter((g) => g.matricula === m).reduce((x, g) => Math.max(x, g.puntaje), 0),
+      expedientes: [...tabla.expedientes.values()].filter((e) => e.matricula === m).length,
       progreso: [...tabla.progreso].filter(([k]) => k.startsWith(`${m}:`)).map(([k, p]) => ({
         aula: Number(k.split(':')[1]), ultimo_puntaje: p.ultimo, record: p.record, rondas_jugadas: p.rondas,
       })),
@@ -133,5 +148,67 @@ export function crearDatosFalsos({ ahora, jugadores = ['a0123456x'] } = {}) {
       }
       return { jugador: jugadorJson(a.matricula), cuenta_salon: cuenta };
     },
+
+    // ---- Clínica (Sesión 6): imitan las funciones de la sección 9 de supabase/schema.sql ----
+    contextoClinica: async (m) => {
+      const j = tabla.jugadores.get(m);
+      const guardias = tabla.guardias.filter((g) => g.matricula === m);
+      return {
+        ...hoyCdmx(),
+        racha_dias: j.racha_dias,
+        ultimo_dia_jugado: j.ultimo_dia_jugado,
+        insignias: [...j.insignias],
+        mejor_guardia: guardias.reduce((x, g) => Math.max(x, g.puntaje), 0),
+        guardias_terminadas: guardias.length,
+        archivados: [...tabla.expedientes.values()].filter((e) => e.matricula === m).map((e) => e.caso_id).sort(),
+      };
+    },
+    crearGuardiaActiva: async (f) => {
+      for (const [id, r] of tabla.guardiasActivas) if (r.matricula === f.matricula) tabla.guardiasActivas.delete(id);
+      tabla.guardiasActivas.set(f.id, { ...structuredClone(f), actual: 0, version: 0, terminada: false, resumen: null });
+    },
+    leerGuardiaActiva: async (id) => {
+      const r = tabla.guardiasActivas.get(id);
+      return r ? structuredClone(r) : null;
+    },
+    actualizarGuardia: async (id, version, casos, actual) => {
+      const r = tabla.guardiasActivas.get(id);
+      if (!r || r.terminada || r.version !== version) return false;
+      r.casos = structuredClone(casos);
+      r.actual = actual;
+      r.version += 1;
+      return true;
+    },
+    guardarGuardiaTerminada: async (a) => {
+      const activa = tabla.guardiasActivas.get(a.activaId);
+      if (!activa || activa.terminada || activa.matricula !== a.matricula) {
+        throw Object.assign(new Error('guardia_no_encontrada'), { codigo: 'conflicto' });
+      }
+      const cuenta = a.semana >= SALON.primerLunes && a.semana <= SALON.ultimoLunes;
+      activa.terminada = true;
+      activa.resumen = { ...structuredClone(a.resumen), salon: { cuenta, semana: a.semana } };
+      tabla.guardias.push({ matricula: a.matricula, puntaje: a.puntaje, semana: a.semana, casos: a.casos });
+      for (const e of a.expedientes) {
+        const k = `${a.matricula}:${e.caso_id}`;
+        const previo = tabla.expedientes.get(k);
+        tabla.expedientes.set(k, { matricula: a.matricula, caso_id: e.caso_id, puntos: Math.max(previo?.puntos ?? 0, e.puntos), resuelto_en: previo?.resuelto_en ?? new Date(ahora()).toISOString() });
+      }
+      const j = tabla.jugadores.get(a.matricula);
+      const mejor = tabla.guardias.filter((g) => g.matricula === a.matricula).reduce((x, g) => Math.max(x, g.puntaje), 0);
+      j.record_total = [...tabla.progreso].filter(([k]) => k.startsWith(`${a.matricula}:`)).reduce((t, [, x]) => t + x.record, 0) + mejor;
+      j.racha_dias = a.rachaDias;
+      j.ultimo_dia_jugado = a.hoy;
+      j.insignias = [...new Set([...j.insignias, ...a.insignias])];
+      if (cuenta) {
+        const porAula = new Map();
+        for (const r of tabla.rondas.filter((x) => x.matricula === a.matricula && x.semana === a.semana)) {
+          porAula.set(r.aula, Math.max(porAula.get(r.aula) ?? 0, r.puntaje));
+        }
+        const delaSemana = tabla.guardias.filter((g) => g.matricula === a.matricula && g.semana === a.semana).reduce((x, g) => Math.max(x, g.puntaje), 0);
+        tabla.semanal.set(`${a.semana}:${a.matricula}`, [...porAula.values()].reduce((t, n) => t + n, 0) + delaSemana);
+      }
+      return { jugador: jugadorJson(a.matricula), cuenta_salon: cuenta };
+    },
+    expedientesDe: async (m) => [...tabla.expedientes.values()].filter((e) => e.matricula === m),
   };
 }

@@ -25,4 +25,9 @@ export const CODIGOS_RONDA = [
   'fuera_de_orden',
   'respuesta_prematura',
   'conflicto',
+  // Clínica (Sesión 6)
+  'casos_insuficientes',
+  'guardia_no_encontrada',
+  'guardia_terminada',
+  'guardia_expirada',
 ];

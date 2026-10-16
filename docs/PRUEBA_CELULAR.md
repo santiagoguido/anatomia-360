@@ -47,7 +47,7 @@ Antes de avisarle al grupo, recorre esta lista **en un celular de verdad** (idea
 - [ ] Las 6 aulas aparecen (las que no has jugado, marcadas "Sin rondas todavía").
 - [ ] Los 12 temas con su barra y su nivel (Dominado / Va bien / A repasar).
 - [ ] "Conviene repasar" aparece cuando un tema tiene 5 o más respuestas y menos de 80% de aciertos.
-- [ ] Las 12 insignias, con las ganadas arriba.
+- [ ] Las 14 insignias (incluye Residente de guardia y Ojo clínico), con las ganadas arriba.
 
 ## 6. Conexión inestable
 - [ ] Activa modo avión en la pantalla de la ronda y contesta una pregunta: debe reintentar o mostrar un mensaje claro, sin quedarse en blanco.
@@ -55,3 +55,15 @@ Antes de avisarle al grupo, recorre esta lista **en un celular de verdad** (idea
 
 ## 7. Qué anotar si algo falla
 Modelo y versión del sistema, navegador, pantalla donde ocurrió, qué tocaste y qué esperabas ver. Una captura ayuda mucho.
+
+## La Clínica (Sesión 6)
+- [ ] Campus → acércate a la Clínica: la tarjeta muestra «Mejor guardia» y «Expedientes» (— y 0 al inicio) y el botón responde.
+- [ ] La sala de guardia muestra a la Dra. Zamudio y las reglas; los botones caben sin recorte en pantalla chica.
+- [ ] Iniciar guardia: aparece «Paciente 1 de 5». Con 0 o 1 exploraciones no hay preguntas; con 2 aparecen A–D.
+- [ ] Los 6 botones de exploración se pueden tocar con el pulgar; el hallazgo aparece debajo y el contador sube.
+- [ ] Un fallo deja el segundo intento y NO marca la correcta; dos fallos la revelan y aparece «Continuar».
+- [ ] «Pista (−50)» muestra el texto una sola vez y desaparece el botón.
+- [ ] El desenlace muestra el esquema SVG con lo resaltado en turquesa, la leyenda en texto, la explicación y la cita.
+- [ ] Salir a mitad de guardia pide confirmación y anula.
+- [ ] Al terminar la guardia: puntaje (máx. 3,500), mejor guardia, insignias y el récord total del campus sube.
+- [ ] Expedientes lista los casos resueltos; al abrir uno se ve su esquema y su explicación.

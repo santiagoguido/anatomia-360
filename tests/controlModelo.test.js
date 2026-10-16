@@ -63,11 +63,11 @@ test('tarjetas por aula: siempre 6; las no jugadas salen marcadas; la mejor cali
   assert.deepEqual(t.slice(1).map((x) => x.jugada), [false, false, false, false, false]);
 });
 
-test('insignias: se muestran las 12 del catálogo, las ganadas primero', () => {
+test('insignias: se muestran las 14 del catálogo, las ganadas primero', () => {
   const lista = insigniasConEstado(['rayo', 'primer-dia']);
-  assert.equal(lista.length, 12);
+  assert.equal(lista.length, 14);
   assert.deepEqual(lista.slice(0, 2).map((i) => i.id), ['primer-dia', 'rayo']);
   assert.ok(lista.slice(2).every((i) => !i.ganada));
-  assert.equal(textoInsignias(lista), '2 de 12 ganadas');
+  assert.equal(textoInsignias(lista), '2 de 14 ganadas');
   assert.equal(insigniasConEstado(undefined).filter((i) => i.ganada).length, 0);
 });

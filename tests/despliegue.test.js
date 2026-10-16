@@ -97,7 +97,7 @@ test('supabase/functions/_shared está al día con src/ y contenido/ (si falla: 
 });
 
 test('lo que se copia a la función solo usa imports relativos (corre en Deno sin instalar nada)', () => {
-  const copiados = todos.filter((r) => /^src\/(game\/ronda|servidor)\/.+\.js$/.test(r));
+  const copiados = todos.filter((r) => /^src\/(game\/ronda|game\/clinica|servidor)\/.+\.js$/.test(r));
   assert.ok(copiados.length >= 8);
   for (const r of copiados) {
     const imports = [...readFileSync(join(RAIZ, r), 'utf8').matchAll(/^\s*import\s[^'"]*['"]([^'"]+)['"]/gm)].map((m) => m[1]);
@@ -122,8 +122,30 @@ const archivosDeNetlify = ['netlify.toml', '.env.example', '.env', '.env.product
 test('el código del juego no importa ni nombra el banco, la carpeta del servidor ni claves secretas', () => {
   for (const r of archivosDelJuego) {
     const texto = readFileSync(join(RAIZ, r), 'utf8');
-    assert.ok(!/contenido\/preguntas|_shared|\bservidor\//.test(texto.replace(/\/\/.*$/gm, '')), `${r} referencia contenido o servidor`);
+    assert.ok(!/contenido\/(preguntas|casos)|_shared|\bservidor\//.test(texto.replace(/\/\/.*$/gm, '')), `${r} referencia contenido o servidor`);
     assert.ok(!/service_role|SERVICE_ROLE|SECRET_KEYS|sb_secret_/.test(texto), `${r} nombra una clave secreta`);
+  }
+});
+
+test('los casos de la función no llevan notas internas ni el archivo digital del libro, y sí llevan las respuestas', () => {
+  const dir = join(RAIZ, 'supabase/functions/_shared/casos');
+  const archivos = readdirSync(dir).filter((f) => /^semana-\d+\.js$/.test(f));
+  assert.ok(archivos.length >= 2);
+  for (const f of archivos) {
+    const texto = readFileSync(join(dir, f), 'utf8');
+    assert.ok(!texto.includes('nota_revision'), f);
+    assert.ok(!/booksmedicos|\.pdf/i.test(texto), f);
+    assert.ok(texto.includes('"correcta"') && texto.includes('"pista"'), 'la función SÍ necesita la correcta y la pista');
+  }
+  assert.ok(readFileSync(join(dir, 'todos.js'), 'utf8').includes('semana-2.js'));
+});
+
+test('el juego no importa la selección, la puntuación ni el servidor de la Clínica (las respuestas viven solo en la función)', () => {
+  const cliente = todos.filter((r) => /^src\/(ui|api)\/.+\.js$/.test(r) || r === 'src/app.js' || r === 'src/main.js');
+  assert.ok(cliente.length > 10);
+  for (const r of cliente) {
+    const texto = readFileSync(join(RAIZ, r), 'utf8');
+    assert.ok(!/game\/clinica\/(seleccion|puntuacion|insignias)|servidor\/clinica/.test(texto), `${r} importa lógica del servidor`);
   }
 });
 

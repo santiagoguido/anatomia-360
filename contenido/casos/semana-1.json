@@ -1,0 +1,894 @@
+{
+  "version": 1,
+  "semana": 1,
+  "titulo": "Casos de la semana 1",
+  "generado": "2026-10-15",
+  "fuente": {
+    "terminologia": "Se usa la terminología de Moore en español (p. ej. «región cervical lateral», «lámina prevertebral»).",
+    "referencias": {
+      "moore2017": {
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer.",
+        "autores": [
+          "Keith L. Moore",
+          "Arthur F. Dalley II",
+          "Anne M. R. Agur"
+        ],
+        "titulo": "Anatomía con orientación clínica",
+        "edicion": "8.ª ed.",
+        "editorial": "Wolters Kluwer",
+        "ciudad": "Barcelona",
+        "anio": 2017,
+        "isbn": "978-84-17033-63-7"
+      }
+    }
+  },
+  "exploraciones": [
+    {
+      "id": "inspeccion",
+      "nombre": "Inspección y palpación"
+    },
+    {
+      "id": "fuerza",
+      "nombre": "Fuerza muscular"
+    },
+    {
+      "id": "sensibilidad",
+      "nombre": "Sensibilidad"
+    },
+    {
+      "id": "pulsos",
+      "nombre": "Pulsos y vasos"
+    },
+    {
+      "id": "reflejos",
+      "nombre": "Reflejos y maniobras"
+    },
+    {
+      "id": "arcos",
+      "nombre": "Arcos de movimiento"
+    }
+  ],
+  "casos": [
+    {
+      "id": "c1-01",
+      "semana": 1,
+      "titulo": "Lactante con la cabeza ladeada",
+      "temas": [
+        "musculos-triangulos"
+      ],
+      "dificultad": 1,
+      "paciente": {
+        "nombre": "Mateo",
+        "edad": "4 meses",
+        "ocupacion": "Lactante",
+        "sexo": "masculino"
+      },
+      "presentacion": [
+        "Residente, te presento a Mateo, de 4 meses.",
+        "Su mamá dice que desde las primeras semanas mantiene la cabeza ladeada. El parto fue difícil y hubo que jalar la cabeza del bebé.",
+        "Quiere saber por qué no mira por igual hacia los dos lados."
+      ],
+      "motivo": "Cabeza ladeada desde el nacimiento",
+      "exploraciones": {
+        "inspeccion": {
+          "util": true,
+          "hallazgo": "La cabeza está inclinada hacia la derecha y el mentón gira hacia la izquierda. En el tercio inferior del lado derecho del cuello se palpa una masa firme e indolora."
+        },
+        "fuerza": {
+          "util": true,
+          "hallazgo": "Al intentar girarle la cabeza con una resistencia suave, un cordón tenso se marca desde el esternón y la clavícula derechos hasta detrás de la oreja."
+        },
+        "sensibilidad": {
+          "util": true,
+          "hallazgo": "Retira por igual los dos brazos al estímulo y reacciona igual en ambos lados del cuello. No hay déficit sensitivo, así que no parece una lesión del plexo braquial."
+        },
+        "pulsos": {
+          "util": false,
+          "hallazgo": "Pulsos carotídeos y braquiales simétricos y presentes. No orienta."
+        },
+        "reflejos": {
+          "util": false,
+          "hallazgo": "Reflejos de succión y de búsqueda presentes y simétricos. No explican la postura."
+        },
+        "arcos": {
+          "util": true,
+          "hallazgo": "Al moverle la cabeza con suavidad, la inclinación hacia la izquierda y el giro del mentón hacia la derecha están limitados. Hacia el otro lado el movimiento es completo."
+        }
+      },
+      "pasos": [
+        {
+          "tipo": "funcion",
+          "pregunta": "La cabeza queda inclinada a la derecha y el mentón mira a la izquierda. ¿Qué movimientos le cuestan a Mateo?",
+          "opciones": [
+            "Flexionar el cuello llevando el mentón hacia el pecho",
+            "Inclinar la cabeza a la izquierda y girar el mentón a la derecha",
+            "Elevar los hombros contra resistencia",
+            "Extender la cabeza para elevar el mentón"
+          ],
+          "correcta": 1,
+          "pista": "Fíjate en lo que hace la contracción de un solo músculo: la cabeza se va hacia su lado y la cara hacia el lado contrario."
+        },
+        {
+          "tipo": "estructura",
+          "pregunta": "¿Qué músculo está acortado y fibroso?",
+          "opciones": [
+            "Esternocleidomastoideo derecho",
+            "Esternocleidomastoideo izquierdo",
+            "Trapecio derecho",
+            "Escaleno anterior derecho"
+          ],
+          "correcta": 0,
+          "pista": "El músculo acortado inclina la cabeza hacia su propio lado. Revisa de qué lado cae la cabeza."
+        },
+        {
+          "tipo": "nivel",
+          "pregunta": "Para devolver la movilidad sin dañar el nervio que inerva al músculo, ¿dónde se libera quirúrgicamente?",
+          "opciones": [
+            "En su inserción superior, en el proceso mastoides, junto a la línea nucal",
+            "A la mitad de su vientre, a la altura del punto nervioso del cuello",
+            "En sus inserciones inferiores (manubrio y clavícula), por debajo del nervio accesorio",
+            "En su borde posterior, sobre el triángulo occipital y el nervio accesorio"
+          ],
+          "correcta": 2,
+          "pista": "El nervio accesorio (NC XI) llega al músculo por su cara profunda, en la parte alta. La liberación se hace lejos de él."
+        }
+      ],
+      "desenlace": {
+        "texto": "Muy bien. Mateo tiene tortícolis congénito: el esternocleidomastoideo derecho se fibrosó y se acortó.",
+        "explicacion": "Cuando un esternocleidomastoideo se contrae, o se acorta, inclina la cabeza hacia su mismo lado y gira la cara hacia el lado contrario. En el tortícolis un tumor fibroso o un hematoma tras un parto difícil acorta el músculo y puede atrapar un ramo del nervio accesorio (NC XI). Si hace falta operar, se libera el músculo de sus inserciones inferiores, en el manubrio y la clavícula, por debajo del nivel del NC XI.",
+        "esquema": {
+          "base": "cuello-lateral",
+          "resaltar": [
+            "ecm",
+            "nc-xi"
+          ],
+          "pie": "Esternocleidomastoideo (ECM) y nervio accesorio (NC XI), vista lateral derecha."
+        }
+      },
+      "referencia": {
+        "capitulo": "9. Cuello",
+        "seccion": "Estructuras superficiales del cuello: regiones cervicales",
+        "pagina": "1773–1774, 1801",
+        "fuente": "moore2017",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Estructuras superficiales del cuello: regiones cervicales», pp. 1773–1774, 1801."
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "c1-02",
+      "semana": 1,
+      "titulo": "El hombro caído después de una biopsia",
+      "temas": [
+        "musculos-triangulos"
+      ],
+      "dificultad": 2,
+      "paciente": {
+        "nombre": "Laura",
+        "edad": "34 años",
+        "ocupacion": "Maestra de primaria",
+        "sexo": "femenino"
+      },
+      "presentacion": [
+        "Residente, ella es Laura, maestra de primaria, de 34 años.",
+        "Hace tres semanas le extirparon un ganglio de la parte lateral izquierda del cuello para una biopsia.",
+        "Desde entonces le cuesta peinarse y siente el hombro izquierdo «caído»."
+      ],
+      "motivo": "Dificultad para elevar el hombro y el brazo izquierdos",
+      "exploraciones": {
+        "inspeccion": {
+          "util": true,
+          "hallazgo": "El hombro izquierdo está más bajo que el derecho y el contorno entre la nuca y el hombro se ve aplanado. Hay una cicatriz de unos 3 cm sobre el borde posterior del esternocleidomastoideo izquierdo."
+        },
+        "fuerza": {
+          "util": true,
+          "hallazgo": "Al encoger los hombros contra resistencia, el izquierdo apenas sube. Al girar la cabeza hacia la derecha contra resistencia, el esternocleidomastoideo izquierdo responde con fuerza normal."
+        },
+        "sensibilidad": {
+          "util": true,
+          "hallazgo": "La piel del cuello, del hombro y del brazo siente igual en ambos lados. No hay hormigueo."
+        },
+        "pulsos": {
+          "util": false,
+          "hallazgo": "Pulsos carotídeo, braquial y radial normales y simétricos."
+        },
+        "reflejos": {
+          "util": false,
+          "hallazgo": "Reflejos bicipital y tricipital normales y simétricos."
+        },
+        "arcos": {
+          "util": true,
+          "hallazgo": "Eleva el brazo izquierdo hasta la horizontal, pero no puede subirlo más arriba. Con el derecho llega sin problema."
+        }
+      },
+      "pasos": [
+        {
+          "tipo": "funcion",
+          "pregunta": "¿Qué función motora perdió Laura?",
+          "opciones": [
+            "Elevar y retraer el hombro, y subir el brazo por encima del plano horizontal",
+            "Rotar lateralmente el húmero para iniciar la abducción del brazo",
+            "Flexionar el antebrazo sobre el brazo y supinarlo con fuerza",
+            "Girar la cabeza contra resistencia hacia el lado opuesto al afectado"
+          ],
+          "correcta": 0,
+          "pista": "El esternocleidomastoideo conserva su fuerza. Piensa en el otro músculo que comparte nervio con él."
+        },
+        {
+          "tipo": "estructura",
+          "pregunta": "¿Qué nervio se lesionó durante la biopsia?",
+          "opciones": [
+            "Nervio supraescapular",
+            "Nervio accesorio (NC XI)",
+            "Nervio dorsal de la escápula",
+            "Nervio transverso del cuello"
+          ],
+          "correcta": 1,
+          "pista": "Es un nervio craneal que inerva al esternocleidomastoideo y al trapecio, pero ya había dado la rama al primero."
+        },
+        {
+          "tipo": "nivel",
+          "pregunta": "¿Por qué ese nervio es vulnerable en una cirugía del lado del cuello?",
+          "opciones": [
+            "Cruza el triángulo omoclavicular, profundo a la lámina prevertebral",
+            "Va dentro de la vaina carotídea, posterior a la arteria",
+            "Cruza el triángulo occipital, superficial a la lámina prevertebral",
+            "Cruza el triángulo submandibular, sobre el milohioideo"
+          ],
+          "correcta": 2,
+          "pista": "Es el único nervio motor que queda superficial a la fascia que forma el suelo de la región cervical lateral."
+        }
+      ],
+      "desenlace": {
+        "texto": "Así es. Laura sufrió una lesión del nervio accesorio, el que más se daña de forma yatrogénica en el cuello.",
+        "explicacion": "El nervio accesorio (NC XI) inerva al esternocleidomastoideo y al trapecio. Cruza la región cervical lateral, en el triángulo occipital, superficial a la lámina prevertebral. Si se lesiona ahí, el esternocleidomastoideo ya recibió su rama y conserva la fuerza, pero el trapecio se debilita y se atrofia: el hombro cae y cuesta elevar el brazo por encima de la horizontal.",
+        "esquema": {
+          "base": "cuello-lateral",
+          "resaltar": [
+            "nc-xi",
+            "trapecio",
+            "triangulo-occipital"
+          ],
+          "pie": "Trayecto del nervio accesorio (NC XI) por el triángulo occipital hacia el trapecio."
+        }
+      },
+      "referencia": {
+        "capitulo": "9. Cuello",
+        "seccion": "Estructuras superficiales del cuello: regiones cervicales",
+        "pagina": "1781, 1800, 1803–1804",
+        "fuente": "moore2017",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Estructuras superficiales del cuello: regiones cervicales», pp. 1781, 1800, 1803–1804."
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "c1-03",
+      "semana": 1,
+      "titulo": "Falta el aire después de la anestesia del cuello",
+      "temas": [
+        "musculos-triangulos"
+      ],
+      "dificultad": 2,
+      "paciente": {
+        "nombre": "Roberto",
+        "edad": "68 años",
+        "ocupacion": "Jubilado, con enfermedad pulmonar",
+        "sexo": "masculino"
+      },
+      "presentacion": [
+        "Residente, él es don Roberto, de 68 años, con enfermedad pulmonar.",
+        "Para operarle una lesión del cuello le hicieron un bloqueo del plexo cervical: inyectaron anestésico a lo largo del borde posterior del esternocleidomastoideo, derecho.",
+        "La cirugía no empezó porque ahora respira con dificultad."
+      ],
+      "motivo": "Falta de aire tras un bloqueo anestésico en el cuello",
+      "exploraciones": {
+        "inspeccion": {
+          "util": true,
+          "hallazgo": "Respira rápido y superficial. Al inspirar, la base del hemitórax derecho se expande mucho menos que la izquierda."
+        },
+        "fuerza": {
+          "util": true,
+          "hallazgo": "Al pedirle que inspire profundo, la capacidad baja y el lado derecho casi no se mueve. Encoge los dos hombros con fuerza normal."
+        },
+        "sensibilidad": {
+          "util": true,
+          "hallazgo": "Hay anestesia de la piel del cuello, de la oreja y de la parte alta del hombro del lado derecho, justo la zona que se quería operar."
+        },
+        "pulsos": {
+          "util": false,
+          "hallazgo": "Pulsos normales y simétricos. No explican la falta de aire."
+        },
+        "reflejos": {
+          "util": false,
+          "hallazgo": "Reflejos del brazo normales y simétricos."
+        },
+        "arcos": {
+          "util": true,
+          "hallazgo": "Gira, inclina y flexiona el cuello con normalidad. El bloqueo no afectó los músculos del cuello."
+        }
+      },
+      "pasos": [
+        {
+          "tipo": "funcion",
+          "pregunta": "¿Qué función quedó comprometida con el bloqueo?",
+          "opciones": [
+            "La abducción de los pliegues vocales",
+            "La elevación y la retracción del hombro",
+            "La contracción del hemidiafragma derecho",
+            "La rotación de la cabeza hacia el lado opuesto"
+          ],
+          "correcta": 2,
+          "pista": "Los músculos del cuello y del hombro funcionan. Lo que falla es el músculo principal de la inspiración, de un solo lado."
+        },
+        {
+          "tipo": "estructura",
+          "pregunta": "Además de los ramos cutáneos, ¿qué nervio quedó incluido en el bloqueo?",
+          "opciones": [
+            "Nervio frénico",
+            "Nervio vago",
+            "Nervio accesorio",
+            "Nervio supraescapular"
+          ],
+          "correcta": 0,
+          "pista": "Es el único nervio motor del diafragma y nace sobre todo de C4, con aportes de C3 y C5."
+        },
+        {
+          "tipo": "nivel",
+          "pregunta": "¿Dónde discurre ese nervio en el cuello, muy cerca del sitio del bloqueo?",
+          "opciones": [
+            "Dentro de la vaina carotídea, posterior a la arteria carótida",
+            "Sobre la cara anterior del escaleno anterior, profundo a la lámina prevertebral",
+            "Entre los escalenos anterior y medio, junto a las raíces del plexo braquial",
+            "Superficial al platisma, sobre el vientre inferior del omohioideo"
+          ],
+          "correcta": 1,
+          "pista": "Desciende oblicuo sobre un músculo que forma el límite anterior de las raíces del plexo braquial."
+        }
+      ],
+      "desenlace": {
+        "texto": "Correcto. El anestésico alcanzó al nervio frénico y paralizó la mitad del diafragma. Por eso este bloqueo no se hace en pacientes con enfermedad pulmonar o cardíaca.",
+        "explicacion": "Los ramos cutáneos del plexo cervical emergen hacia la mitad del borde posterior del esternocleidomastoideo, en el punto nervioso del cuello. Ahí se inyecta el anestésico. Los nervios frénicos, que se forman principalmente de C4 y descienden sobre el escaleno anterior, quedan incluidos en el bloqueo y paralizan un hemidiafragma, que es su único nervio motor.",
+        "esquema": {
+          "base": "cuello-lateral",
+          "resaltar": [
+            "punto-nervioso",
+            "frenico"
+          ],
+          "pie": "Punto nervioso del cuello y trayecto del nervio frénico sobre el escaleno anterior."
+        }
+      },
+      "referencia": {
+        "capitulo": "9. Cuello",
+        "seccion": "Estructuras superficiales del cuello: regiones cervicales",
+        "pagina": "1783, 1804",
+        "fuente": "moore2017",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Estructuras superficiales del cuello: regiones cervicales», pp. 1783, 1804."
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "c1-04",
+      "semana": 1,
+      "titulo": "Una cortada en el cuello que «se oye»",
+      "temas": [
+        "musculos-triangulos"
+      ],
+      "dificultad": 3,
+      "paciente": {
+        "nombre": "Carlos",
+        "edad": "22 años",
+        "ocupacion": "Trabajador de la construcción",
+        "sexo": "masculino"
+      },
+      "presentacion": [
+        "Residente, llega Carlos, de 22 años, obrero de la construcción.",
+        "Se cortó con un vidrio roto en el lado derecho del cuello. La herida casi no sangra, pero está muy asustado.",
+        "Quien lo trajo dice que se escucha entrar aire en la herida cada vez que respira."
+      ],
+      "motivo": "Herida cortante lateral del cuello, falta de aire",
+      "exploraciones": {
+        "inspeccion": {
+          "util": true,
+          "hallazgo": "Herida cortante sobre el borde posterior del esternocleidomastoideo derecho. Casi no sangra, se oye entrar aire al inspirar y los labios están azulados (cianosis)."
+        },
+        "fuerza": {
+          "util": true,
+          "hallazgo": "Gira la cabeza y eleva el hombro con fuerza normal. Los músculos y el nervio accesorio están indemnes."
+        },
+        "sensibilidad": {
+          "util": true,
+          "hallazgo": "Siente el tacto en el cuello y el hombro derechos. No hay déficit sensitivo ni motor del brazo."
+        },
+        "pulsos": {
+          "util": true,
+          "hallazgo": "Pulso rápido y débil. El pulso carotídeo se palpa bien y la herida no sangra a chorro: no es una hemorragia arterial."
+        },
+        "reflejos": {
+          "util": false,
+          "hallazgo": "Reflejos osteotendinosos normales. Está ansioso, pero responde y obedece órdenes."
+        },
+        "arcos": {
+          "util": false,
+          "hallazgo": "Mueve el cuello y los brazos sin limitación, aunque con miedo."
+        }
+      },
+      "pasos": [
+        {
+          "tipo": "funcion",
+          "pregunta": "La herida casi no sangra, pero entra aire. ¿Qué mecanismo explica el ruido y la cianosis?",
+          "opciones": [
+            "Un neumotórax abierto, porque la herida llega hasta la pleura y el pulmón",
+            "La presión negativa dentro del tórax aspira aire hacia una vena que no se colapsa",
+            "Una hemorragia arterial que comprime la tráquea y obstruye la vía aérea",
+            "Una parálisis del nervio frénico que impide al diafragma contraerse"
+          ],
+          "correcta": 1,
+          "pista": "Con cada inspiración, la presión dentro del tórax es negativa y «jala» hacia el corazón derecho. Piensa en qué vaso queda abierto."
+        },
+        {
+          "tipo": "estructura",
+          "pregunta": "¿Qué vaso se seccionó?",
+          "opciones": [
+            "Vena yugular interna",
+            "Vena subclavia",
+            "Vena yugular externa",
+            "Vena yugular anterior"
+          ],
+          "correcta": 2,
+          "pista": "Es una vena superficial: empieza cerca del ángulo de la mandíbula y cruza el esternocleidomastoideo, profunda al platisma."
+        },
+        {
+          "tipo": "nivel",
+          "pregunta": "¿Por qué la luz de esa vena se mantiene abierta en ese sitio?",
+          "opciones": [
+            "Perfora el techo de la región cervical lateral y la lámina superficial de la fascia la mantiene abierta",
+            "Va rodeada por la vaina carotídea, cuya pared rígida la mantiene siempre abierta",
+            "Atraviesa el músculo trapecio, cuyas fibras la mantienen abierta al contraerse",
+            "Cruza el espacio retrofaríngeo, un espacio virtual que nunca se colapsa"
+          ],
+          "correcta": 0,
+          "pista": "Fíjate en la fascia que forma el techo de esta región y que rodea todo el cuello bajo la piel."
+        }
+      ],
+      "desenlace": {
+        "texto": "Excelente. Es una embolia gaseosa venosa por sección de la vena yugular externa. Se controla con presión firme sobre la vena hasta poder suturarla.",
+        "explicacion": "La vena yugular externa perfora la lámina superficial de la fascia cervical profunda a la altura del borde posterior del esternocleidomastoideo. Si se secciona ahí, la fascia mantiene su luz abierta y la presión intratorácica negativa succiona aire. Eso produce un ruido de estertor, cianosis y disnea; el corazón derecho se llena de espuma. Una presión firme sobre la vena frena el sangrado y la entrada de aire.",
+        "esquema": {
+          "base": "cuello-axial",
+          "resaltar": [
+            "lamina-superficial",
+            "vye"
+          ],
+          "pie": "Lámina superficial de la fascia cervical profunda y vena yugular externa (corte transversal del cuello, esquema)."
+        }
+      },
+      "referencia": {
+        "capitulo": "9. Cuello",
+        "seccion": "Estructuras superficiales del cuello: regiones cervicales",
+        "pagina": "1780–1781, 1803",
+        "fuente": "moore2017",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Estructuras superficiales del cuello: regiones cervicales», pp. 1780–1781, 1803."
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "c1-05",
+      "semana": 1,
+      "titulo": "Dolor al tragar tras una agresión",
+      "temas": [
+        "musculos-triangulos"
+      ],
+      "dificultad": 2,
+      "paciente": {
+        "nombre": "Ana",
+        "edad": "29 años",
+        "ocupacion": "Comerciante",
+        "sexo": "femenino"
+      },
+      "presentacion": [
+        "Residente, ella es Ana, de 29 años, comerciante. Llegó a urgencias tras una agresión.",
+        "Le comprimieron la garganta con las manos. Dice que le duele mucho al tragar y que siente la garganta «trabada»."
+      ],
+      "motivo": "Dolor al tragar después de una compresión del cuello",
+      "exploraciones": {
+        "inspeccion": {
+          "util": true,
+          "hallazgo": "Hay equimosis en la parte anterior y lateral del cuello. A la palpación, dolor y crepitación sobre un hueso en forma de U, por encima del cartílago tiroides."
+        },
+        "fuerza": {
+          "util": false,
+          "hallazgo": "Fuerza de hombros y de cuello normal. La lengua y el paladar se mueven bien."
+        },
+        "sensibilidad": {
+          "util": false,
+          "hallazgo": "Sensibilidad de la piel del cuello conservada. No orienta."
+        },
+        "pulsos": {
+          "util": true,
+          "hallazgo": "Pulsos carotídeos presentes y simétricos, sin soplos ni hematoma pulsátil. No hay una lesión arterial grave."
+        },
+        "reflejos": {
+          "util": true,
+          "hallazgo": "Al darle un sorbo de agua tose con fuerza: el reflejo de cierre laríngeo funciona, pero parte del líquido llega a la entrada de la laringe."
+        },
+        "arcos": {
+          "util": true,
+          "hallazgo": "Al pedirle que trague, el hioides y la laringe casi no ascienden. Tose y escupe la saliva."
+        }
+      },
+      "pasos": [
+        {
+          "tipo": "funcion",
+          "pregunta": "¿Qué función está perdida en Ana?",
+          "opciones": [
+            "Elevar el hioides y la laringe al deglutir, para separar los tractos alimentario y respiratorio",
+            "Elevar los hombros contra resistencia, con ayuda del trapecio y del elevador",
+            "Abrir la hendidura glótica en la inspiración profunda con el cricoaritenoideo posterior",
+            "Girar la cabeza hacia el lado opuesto con el esternocleidomastoideo"
+          ],
+          "correcta": 0,
+          "pista": "Al tragar, el hioides y la laringe suben. Si no suben, el alimento y el aire se «mezclan»."
+        },
+        {
+          "tipo": "estructura",
+          "pregunta": "¿Qué estructura está fracturada?",
+          "opciones": [
+            "Cartílago cricoides, en su arco anterior",
+            "Cartílago tiroides, en su prominencia laríngea",
+            "Hueso hioides, con el cuerpo hundido hacia el tiroides",
+            "Epiglotis, en su pecíolo y su borde libre"
+          ],
+          "correcta": 2,
+          "pista": "Es el único hueso del cuello aislado del resto del esqueleto: una U suspendida entre la mandíbula y el manubrio."
+        },
+        {
+          "tipo": "nivel",
+          "pregunta": "¿A qué nivel vertebral se encuentra ese hueso?",
+          "opciones": [
+            "A nivel de C4, en el borde superior del cartílago tiroides",
+            "A nivel de C3, en el ángulo entre la mandíbula y el cartílago tiroides",
+            "A nivel de C6, sobre el arco del cricoides",
+            "A nivel de T1, en la incisura yugular"
+          ],
+          "correcta": 1,
+          "pista": "Está por encima del cartílago tiroides, justo debajo del mentón."
+        }
+      ],
+      "desenlace": {
+        "texto": "Bien. Ana tiene una fractura del hioides. Hay que vigilarla porque puede aspirar alimento y desarrollar una neumonía.",
+        "explicacion": "El hioides sostiene a la lengua y a la faringe y permite elevar la laringe en la deglución. La compresión manual de la garganta puede fracturarlo y deprimir su cuerpo contra el cartílago tiroides. Sin poder elevarlo ni llevarlo hacia delante bajo la lengua, cuesta deglutir y separar los tractos alimentario y respiratorio, lo que puede causar neumonía por aspiración. El hioides se sitúa a nivel de C3.",
+        "esquema": {
+          "base": "cuello-anterior",
+          "resaltar": [
+            "hioides"
+          ],
+          "pie": "Hueso hioides sobre el cartílago tiroides, vista anterior."
+        }
+      },
+      "referencia": {
+        "capitulo": "9. Cuello",
+        "seccion": "Huesos del cuello",
+        "pagina": "1763, 1790, 1853",
+        "fuente": "moore2017",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Huesos del cuello», pp. 1763, 1790, 1853."
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "c1-06",
+      "semana": 1,
+      "titulo": "La niña que no quiere tragar",
+      "temas": [
+        "faringe-esofago"
+      ],
+      "dificultad": 2,
+      "paciente": {
+        "nombre": "Sofía",
+        "edad": "5 años",
+        "ocupacion": "Preescolar",
+        "sexo": "femenino"
+      },
+      "presentacion": [
+        "Residente, te presento a Sofía, de 5 años.",
+        "Lleva días con dolor de garganta y fiebre. Ahora no quiere tragar ni su saliva y habla con una voz «apagada».",
+        "La mamá dice que no deja que le muevan el cuello."
+      ],
+      "motivo": "Fiebre, dolor de garganta y dificultad para tragar",
+      "exploraciones": {
+        "inspeccion": {
+          "util": true,
+          "hallazgo": "Tiene fiebre y babea. Al abrir la boca, la pared posterior de la faringe se ve abombada hacia delante."
+        },
+        "fuerza": {
+          "util": true,
+          "hallazgo": "Eleva el paladar blando y mueve la lengua con normalidad. No hay parálisis de nervios craneales."
+        },
+        "sensibilidad": {
+          "util": false,
+          "hallazgo": "Siente el tacto en la cara y en el cuello. No orienta."
+        },
+        "pulsos": {
+          "util": true,
+          "hallazgo": "Ganglios cervicales profundos aumentados y dolorosos a lo largo de la vena yugular interna. Pulso rápido por la fiebre."
+        },
+        "reflejos": {
+          "util": false,
+          "hallazgo": "Reflejos osteotendinosos normales y simétricos."
+        },
+        "arcos": {
+          "util": true,
+          "hallazgo": "Mantiene el cuello rígido y llora cuando se intenta flexionarlo o extenderlo."
+        }
+      },
+      "pasos": [
+        {
+          "tipo": "funcion",
+          "pregunta": "¿Qué funciones están alteradas por este problema?",
+          "opciones": [
+            "La tos y el cierre de la glotis",
+            "La respiración nasal y el olfato",
+            "La deglución y el habla",
+            "La elevación del paladar blando"
+          ],
+          "correcta": 2,
+          "pista": "Fíjate en lo que no puede hacer con su saliva y en cómo suena su voz."
+        },
+        {
+          "tipo": "estructura",
+          "pregunta": "¿Qué espacio está ocupado por pus?",
+          "opciones": [
+            "Espacio supraesternal",
+            "Espacio retrofaríngeo",
+            "Vaina carotídea",
+            "Fosa tonsilar"
+          ],
+          "correcta": 1,
+          "pista": "Es el mayor espacio interfascial del cuello, un espacio virtual de tejido laxo detrás de la faringe."
+        },
+        {
+          "tipo": "nivel",
+          "pregunta": "¿Entre qué estructuras queda ese espacio y hacia dónde puede extenderse la infección?",
+          "opciones": [
+            "Entre la fascia bucofaríngea y la lámina prevertebral; puede bajar hacia el mediastino superior",
+            "Entre la lámina superficial y la pretraqueal; puede subir hasta la base del cráneo",
+            "Dentro de la vaina carotídea; puede llegar al espacio supraesternal",
+            "Entre el platisma y la piel; se queda en el cuello"
+          ],
+          "correcta": 0,
+          "pista": "Está cerrado arriba por la base del cráneo y se abre inferiormente."
+        }
+      ],
+      "desenlace": {
+        "texto": "Muy bien. Sofía tiene un absceso retrofaríngeo, y por eso hay que tratarla pronto.",
+        "explicacion": "El pus puede perforar la lámina prevertebral y entrar al espacio retrofaríngeo, formando un abultamiento en la faringe que dificulta la deglución (disfagia) y el habla (disartria). Este espacio se sitúa entre la fascia bucofaríngea y la lámina prevertebral, está cerrado arriba por la base del cráneo y se abre inferiormente al mediastino superior, por donde la infección puede descender.",
+        "esquema": {
+          "base": "cuello-axial",
+          "resaltar": [
+            "espacio-retrofaringeo",
+            "lamina-prevertebral"
+          ],
+          "pie": "Espacio retrofaríngeo entre la fascia bucofaríngea y la lámina prevertebral (esquema)."
+        }
+      },
+      "referencia": {
+        "capitulo": "9. Cuello",
+        "seccion": "Fascia cervical",
+        "pagina": "1769–1770",
+        "fuente": "moore2017",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Fascia cervical», pp. 1769–1770."
+      },
+      "estado": "borrador"
+    },
+    {
+      "id": "c1-07",
+      "semana": 1,
+      "titulo": "El abuelo que regurgita comida",
+      "temas": [
+        "faringe-esofago"
+      ],
+      "dificultad": 3,
+      "paciente": {
+        "nombre": "Anselmo",
+        "edad": "72 años",
+        "ocupacion": "Campesino jubilado",
+        "sexo": "masculino"
+      },
+      "presentacion": [
+        "Residente, es don Anselmo, de 72 años, campesino jubilado.",
+        "Desde hace meses, al comer, siente que la comida «se queda arriba, en la garganta». Horas después regurgita alimento sin digerir.",
+        "También tiene mal aliento y ha bajado de peso."
+      ],
+      "motivo": "Dificultad para tragar y regurgitación de alimento",
+      "exploraciones": {
+        "inspeccion": {
+          "util": true,
+          "hallazgo": "Delgado. Hay una pequeña tumefacción blanda en el lado izquierdo del cuello, que gorgotea al palparla."
+        },
+        "fuerza": {
+          "util": true,
+          "hallazgo": "La lengua y el paladar se mueven con fuerza normal. La fase voluntaria de la deglución, que lleva el bolo a la bucofaringe, es normal."
+        },
+        "sensibilidad": {
+          "util": false,
+          "hallazgo": "Sensibilidad de la cara y del cuello normal. No orienta."
+        },
+        "pulsos": {
+          "util": false,
+          "hallazgo": "Pulsos carotídeos normales y simétricos. No hay masa pulsátil."
+        },
+        "reflejos": {
+          "util": true,
+          "hallazgo": "El reflejo nauseoso está conservado: los nervios glosofaríngeo y vago que forman el plexo faríngeo funcionan."
+        },
+        "arcos": {
+          "util": true,
+          "hallazgo": "La laringe asciende bien al deglutir. El problema aparece después: el bolo parece «detenerse» justo antes de entrar al esófago."
+        }
+      },
+      "pasos": [
+        {
+          "tipo": "funcion",
+          "pregunta": "¿Qué fase de la deglución está alterada?",
+          "opciones": [
+            "La fase 1: el bolo no es impulsado por la lengua hacia la bucofaringe",
+            "La fase 3: la peristalsis no pasa el bolo de la faringe al esófago",
+            "La fase 2: el paladar blando no se eleva para sellar la nasofaringe",
+            "El cierre refleja de la entrada laríngea que protege la vía aérea"
+          ],
+          "correcta": 1,
+          "pista": "La fase voluntaria y la elevación de la laringe están bien. Falla el paso final, de arriba abajo."
+        },
+        {
+          "tipo": "estructura",
+          "pregunta": "¿Dónde se forma la bolsa que atrapa el alimento?",
+          "opciones": [
+            "En la pared posterior de la faringe, por encima del cricofaríngeo (esfínter esofágico superior)",
+            "En la pared posterior del esófago torácico, a nivel de la bifurcación traqueal",
+            "En el receso piriforme, a un lado de la entrada de la laringe y su pliegue",
+            "En la fosa tonsilar, entre los arcos palatogloso y palatofaríngeo"
+          ],
+          "correcta": 0,
+          "pista": "Piensa en la unión donde la faringe se vuelve esófago, que es la parte más estrecha y menos distensible del tubo digestivo."
+        },
+        {
+          "tipo": "nivel",
+          "pregunta": "¿A qué nivel vertebral se encuentra esa unión?",
+          "opciones": [
+            "C3, a la altura del hioides",
+            "C4, en el borde superior del cartílago tiroides",
+            "C6, en el borde inferior del cartílago cricoides",
+            "T1, en la abertura superior del tórax"
+          ],
+          "correcta": 2,
+          "pista": "El cricoides es un punto de referencia clave: marca la unión de la faringe con el esófago y de la laringe con la tráquea."
+        }
+      ],
+      "desenlace": {
+        "texto": "Bien razonado. Es un divertículo faringoesofágico, el divertículo de Zenker, justo sobre el esfínter esofágico superior.",
+        "explicacion": "La unión faringoesofágica, a nivel de C6, es la parte más estrecha del tubo digestivo; el esfínter esofágico superior es la porción cricofaríngea del constrictor inferior. Entre las fibras de los constrictores quedan hendiduras en la pared posterior de la faringe, y por una zona débil sobre el cricofaríngeo puede abombarse la mucosa. Ahí se acumula el alimento, que se regurgita horas después.",
+        "esquema": {
+          "base": "faringe-posterior",
+          "resaltar": [
+            "cricofaringeo",
+            "zona-zenker"
+          ],
+          "pie": "Pared posterior de la faringe: zona débil sobre el cricofaríngeo (esquema, vista posterior)."
+        }
+      },
+      "referencia": {
+        "capitulo": "9. Cuello",
+        "seccion": "Faringe y esófago",
+        "pagina": "1848–1850, 1852",
+        "fuente": "moore2017",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Faringe y esófago», pp. 1848–1850, 1852."
+      },
+      "nota_revision": "Moore no describe el divertículo faringoesofágico (de Zenker) en este rango; el cuadro clínico es conocimiento clínico general. Sí describe las hendiduras entre constrictores (p. 1850), el cricofaríngeo como esfínter esofágico superior y la unión faringoesofágica como la porción más estrecha (pp. 1848, 1852), y la fase 3 de la deglución (p. 1845). Confirmar que entra en el departamental.",
+      "estado": "borrador"
+    },
+    {
+      "id": "c1-08",
+      "semana": 1,
+      "titulo": "La espina de pescado",
+      "temas": [
+        "faringe-esofago"
+      ],
+      "dificultad": 3,
+      "paciente": {
+        "nombre": "Rosa",
+        "edad": "45 años",
+        "ocupacion": "Cocinera",
+        "sexo": "femenino"
+      },
+      "presentacion": [
+        "Residente, ella es Rosa, de 45 años, cocinera.",
+        "Hace unas horas se atoró con una espina de pescado y se la sacaron en un consultorio. Sigue sintiendo una molestia al tragar, de un solo lado.",
+        "Dice que ahora casi no tose cuando se le «va» un sorbo de agua."
+      ],
+      "motivo": "Molestia al tragar y poca tos tras extraer una espina",
+      "exploraciones": {
+        "inspeccion": {
+          "util": true,
+          "hallazgo": "En la laringoscopia hay una pequeña erosión de la mucosa en una depresión a la derecha de la entrada de la laringe, junto al pliegue aritenoepiglótico."
+        },
+        "fuerza": {
+          "util": false,
+          "hallazgo": "Fuerza de cuello y hombros normal. Lengua y paladar normales."
+        },
+        "sensibilidad": {
+          "util": true,
+          "hallazgo": "Al tocar con un hisopo la mucosa del vestíbulo laríngeo derecho no hay reflejo de tos. Del lado izquierdo, sí."
+        },
+        "pulsos": {
+          "util": false,
+          "hallazgo": "Pulsos carotídeos normales. No hay hematoma ni masa en el cuello."
+        },
+        "reflejos": {
+          "util": true,
+          "hallazgo": "Al beber agua, el cierre refleja de la entrada de la laringe es menos eficaz del lado derecho y tose menos."
+        },
+        "arcos": {
+          "util": true,
+          "hallazgo": "Los dos pliegues vocales se aducen y se abducen con normalidad, y la voz es clara."
+        }
+      },
+      "pasos": [
+        {
+          "tipo": "funcion",
+          "pregunta": "¿Qué función está perdida del lado derecho?",
+          "opciones": [
+            "La sensibilidad de la mucosa laríngea que desencadena el cierre y la tos",
+            "La abducción de los pliegues vocales por el cricoaritenoideo posterior",
+            "La tensión de los pliegues vocales para elevar el tono de la voz",
+            "La elevación de la laringe durante la deglución con los suprahioideos"
+          ],
+          "correcta": 0,
+          "pista": "Los pliegues vocales se mueven bien y la voz es normal. Lo que falla es lo que «siente» la mucosa."
+        },
+        {
+          "tipo": "estructura",
+          "pregunta": "¿Qué nervio se dañó?",
+          "opciones": [
+            "Nervio laríngeo recurrente",
+            "Ramo externo del nervio laríngeo superior",
+            "Ramo interno del nervio laríngeo superior (NC X)",
+            "Nervio glosofaríngeo"
+          ],
+          "correcta": 2,
+          "pista": "Atraviesa la membrana tirohioidea con la arteria laríngea superior y es sensitivo para el vestíbulo laríngeo."
+        },
+        {
+          "tipo": "nivel",
+          "pregunta": "¿Dónde está la lesión?",
+          "opciones": [
+            "En la fosa tonsilar, entre los arcos palatinos",
+            "En el receso piriforme de la laringofaringe, lateral al pliegue aritenoepiglótico",
+            "En el receso faríngeo, posterior al rodete tubárico",
+            "En el ventrículo laríngeo, entre los pliegues vestibular y vocal"
+          ],
+          "correcta": 1,
+          "pista": "Es una pequeña depresión a cada lado de la entrada de la laringe, limitada lateralmente por el cartílago tiroides y la membrana tirohioidea."
+        }
+      ],
+      "desenlace": {
+        "texto": "Muy bien. La espina lesionó el ramo interno del nervio laríngeo superior en el receso piriforme.",
+        "explicacion": "El receso piriforme es una depresión de la laringofaringe a cada lado de la entrada de la laringe, separada de ella por el pliegue aritenoepiglótico. Ramos de los nervios laríngeo superior y laríngeo recurrente quedan profundos a su mucosa y pueden dañarse con un cuerpo extraño. El ramo interno aporta sensibilidad al vestíbulo laríngeo; si se pierde, se debilita el cierre refleja de la laringe y aumenta el riesgo de aspiración.",
+        "esquema": {
+          "base": "faringe-abierta",
+          "resaltar": [
+            "receso-piriforme",
+            "entrada-laringe"
+          ],
+          "pie": "Receso piriforme a un lado de la entrada de la laringe (esquema, pared anterior de la faringe vista desde atrás)."
+        }
+      },
+      "referencia": {
+        "capitulo": "9. Cuello",
+        "seccion": "Faringe y esófago",
+        "pagina": "1839, 1848",
+        "fuente": "moore2017",
+        "cita": "Moore, K. L., Dalley, A. F., II y Agur, A. M. R. (2017). Anatomía con orientación clínica (8.ª ed.). Wolters Kluwer. Cap. 9, «Faringe y esófago», pp. 1839, 1848."
+      },
+      "nota_revision": "Moore menciona que ramos del laríngeo superior y del laríngeo recurrente quedan profundos a la mucosa del receso piriforme y pueden dañarse con un cuerpo extraño (p. 1848); la pérdida del reflejo tusígeno por lesión del ramo interno, sensitivo del vestíbulo (p. 1839), es una deducción clínica. Confirmar el enfoque.",
+      "estado": "borrador"
+    }
+  ]
+}

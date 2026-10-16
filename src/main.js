@@ -6,6 +6,7 @@ import '@fontsource/press-start-2p/latin-400.css';
 import './styles/main.css';
 import './styles/ronda.css';
 import './styles/paneles.css';
+import './styles/clinica.css';
 
 import { crearApp } from './app.js';
 import { api, configurado } from './api/supabase.js';

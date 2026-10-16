@@ -1,0 +1,303 @@
+/* ==========================================================================
+   Anatomía 360 · La Clínica (Sesión 6)
+   Reutiliza el lenguaje de la ronda (opciones, cabecera, chips) y de la retroalimentación (revisión, insignias).
+   ========================================================================== */
+
+.clinica__caja {
+  padding-bottom: 8px;
+}
+
+/* ---- La doctora y el paciente ------------------------------------------------ */
+
+.clinica__doctora {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: var(--panel);
+  border: 2px solid var(--trazo-fuerte);
+  box-shadow: 4px 4px 0 var(--fondo-hondo);
+}
+
+.clinica__doctora .avatar {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 72px;
+  image-rendering: pixelated;
+}
+
+.clinica__doctora--corta .avatar {
+  width: 36px;
+  height: 54px;
+}
+
+.clinica__dialogo {
+  min-width: 0;
+}
+
+.clinica__dialogo p {
+  margin: 0 0 6px;
+}
+
+.clinica__nombre {
+  color: var(--dorado);
+}
+
+.clinica__reglas {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--texto-suave);
+}
+
+.clinica__reglas li {
+  margin-bottom: 4px;
+}
+
+.clinica__paciente {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clinica__ficha {
+  margin: 0;
+  color: var(--dorado-claro);
+}
+
+.clinica__motivo {
+  margin: 0;
+  padding: 8px 12px;
+  border-left: 4px solid var(--turquesa);
+  background: var(--panel-activo);
+}
+
+/* ---- Exploración ------------------------------------------------------------ */
+
+.clinica__subtitulo {
+  margin: 0;
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: 0.68rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.clinica__exploracion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.clinica__ayuda {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.clinica__ayuda--sinbono {
+  color: var(--error);
+}
+
+.clinica__botones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.clinica__explorar {
+  appearance: none;
+  min-height: 48px;
+  padding: 8px 10px;
+  background: var(--panel);
+  color: var(--texto);
+  border: 2px solid var(--trazo-fuerte);
+  font: inherit;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--fondo-hondo);
+}
+
+.clinica__explorar:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--fondo-hondo);
+}
+
+.clinica__explorar--hecha {
+  background: var(--panel-activo);
+  border-color: var(--turquesa);
+}
+
+.clinica__explorar:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.clinica__hallazgos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.clinica__hallazgos li {
+  padding: 8px 10px;
+  background: var(--fondo-hondo);
+  border-left: 4px solid var(--turquesa-vivo);
+}
+
+.clinica__aviso {
+  margin: 0;
+  padding: 10px 12px;
+  border: 2px dashed var(--trazo-fuerte);
+  color: var(--dorado-claro);
+}
+
+/* ---- Razonamiento -------------------------------------------------------------- */
+
+.clinica__paso {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clinica__etiqueta {
+  margin: 0;
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: 0.6rem;
+  line-height: 1.6;
+}
+
+.clinica__pista {
+  margin: 0;
+  padding: 8px 12px;
+  border-left: 4px solid var(--dorado);
+  background: var(--fondo-hondo);
+}
+
+/* ---- Desenlace ------------------------------------------------------------------- */
+
+.clinica__desenlace {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.clinica__titulo-caso {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--texto);
+}
+
+.clinica__puntos-caso {
+  margin: 0;
+  color: var(--dorado-claro);
+}
+
+.clinica__puntos-caso strong {
+  color: var(--turquesa-vivo);
+  font-size: 1.3rem;
+}
+
+.clinica__ojo {
+  margin: 0;
+  color: var(--dorado);
+  font-family: var(--fuente-titulo);
+  font-size: 0.65rem;
+}
+
+.clinica__esquema {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.esquema {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  align-self: center;
+  border: 2px solid var(--trazo-fuerte);
+  background: #081321;
+}
+
+.esq__forma--resaltada {
+  animation: esq-latido 1.6s steps(2, end) infinite;
+}
+
+@keyframes esq-latido {
+  50% {
+    opacity: 0.75;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .esq__forma--resaltada {
+    animation: none;
+  }
+}
+
+.clinica__esquema figcaption {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.clinica__leyenda {
+  margin: 4px 0 0;
+  padding-left: 18px;
+  color: var(--turquesa-vivo);
+}
+
+.clinica__pasos-resumen {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.clinica__pasos-resumen li {
+  padding: 8px 10px;
+  background: var(--fondo-hondo);
+  border-left: 4px solid var(--trazo-fuerte);
+}
+
+.clinica__paso-bien {
+  border-left-color: var(--turquesa-vivo) !important;
+}
+
+.clinica__paso-mal {
+  border-left-color: var(--error) !important;
+}
+
+.clinica__pasos-resumen li span {
+  color: var(--texto-suave);
+}
+
+.clinica__tag {
+  display: inline-block;
+  margin: 0 4px 0 2px;
+  padding: 0 6px;
+  border: 1px solid var(--trazo-fuerte);
+  color: var(--texto-suave);
+  font-size: 0.78rem;
+}
+
+.clinica__tag--util {
+  border-color: var(--turquesa-vivo);
+  color: var(--turquesa-vivo);
+}
+
+.clinica__tag--no {
+  border-color: var(--trazo);
+}
+
+@media (max-width: 520px) {
+  .clinica__botones {
+    grid-template-columns: 1fr 1fr;
+  }
+}

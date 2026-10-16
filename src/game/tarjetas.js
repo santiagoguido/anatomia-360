@@ -40,9 +40,11 @@ function modeloAula(lugar, { aulas, jugador, ahoraMs }) {
   };
 }
 
-function modeloClinica(lugar, { aulas, ahoraMs }) {
+function modeloClinica(lugar, { aulas, jugador, ahoraMs }) {
   const abiertas = aulasAbiertas(aulas, ahoraMs);
   const chips = abiertas.flatMap((a) => CAMPUS.temasCortos[a.numero] ?? []);
+  const mejor = Number(jugador?.mejor_guardia) || 0;
+  const expedientes = Number(jugador?.expedientes) || 0;
   return {
     id: lugar.id,
     tipo: 'clinica',
@@ -52,8 +54,8 @@ function modeloClinica(lugar, { aulas, ahoraMs }) {
     lineas: [T.clinicaSemanas(abiertas.length)],
     chips,
     metricas: [
-      { etiqueta: T.mejorGuardia, valor: T.sinPuntaje },
-      { etiqueta: T.expedientes, valor: T.sinPuntaje },
+      { etiqueta: T.mejorGuardia, valor: mejor > 0 ? numero(mejor) : T.sinPuntaje },
+      { etiqueta: T.expedientes, valor: String(expedientes) },
     ],
     boton: { texto: T.clinicaBoton, habilitado: abiertas.length > 0 },
   };

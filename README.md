@@ -1,11 +1,11 @@
-# Anatomía 360 · Sesiones 2 a 5: campus, rondas, Salón de la Fama y Control Escolar
+# Anatomía 360 · Sesiones 2 a 6: campus, rondas, Salón de la Fama, Control Escolar y Clínica
 
 Juego web pixel art (Phaser 3 + Supabase + Netlify) para Anatomía de 1.er semestre, UMSNH.
 Esta sesión agrega el **campus**: mapa de 3 × 3 pantallas con avatar, joystick, sprint, colisiones,
 minimapa, tarjetas al acercarse a una puerta y aulas que se abren por fecha.
 **Sesión 4:** las puertas de las 6 aulas ya llevan a la ronda (25 preguntas, 42 s cada una), con calificación
 en una Edge Function de Supabase, retroalimentación, récord, racha de días e insignias. **Sesión 5:** el Salón de la Fama (Top 10 semanal) y Control Escolar (tu expediente) ya funcionan.
-La Clínica llega en la Sesión 6.
+**Sesión 6:** la Clínica (guardias de 5 casos clínicos).
 
 **Si ya hiciste las Sesiones 1–3, para la Sesión 4 SÍ tienes que tocar Supabase:** vuelve a ejecutar
 `supabase/schema.sql` completo (es seguro, no borra jugadores) y despliega la función (ver "Motor de rondas").
@@ -224,6 +224,65 @@ nada) y sube los archivos a GitHub para que Netlify publique. **No hay que redes
 - Un tema se recomienda para repasar con 5 o más respuestas y menos de 80% de aciertos (`src/ui/control/modelo.js`).
 - No hay PIN: igual que al recuperar tu sesión, quien conozca una matrícula puede pedir sus resultados por la API. En pantalla cada alumno ve solo lo suyo.
 - Lista de revisión para probar en celular: `docs/PRUEBA_CELULAR.md`.
+
+## La Clínica (Sesión 6)
+
+**Para publicarla (sin Terminal):** 1) pega `supabase/schema.sql` COMPLETO en SQL Editor → Run (agrega 3 tablas y 6 funciones; no borra
+jugadores); 2) sube a GitHub los archivos de la sesión; el workflow despliega la función `rondas`; Netlify publica el juego.
+**Los casos salen en `"borrador"`: la Clínica no sirve ninguno hasta que los apruebes** (ver "Aprobar casos").
+
+### Cómo se juega
+Una **guardia** son 5 pacientes. La Dra. Zamudio (Médico Adscrito) presenta cada caso; el alumno explora al paciente (6 exploraciones
+posibles, solo 4 aportan) y razona en 3 pasos encadenados: **función** perdida → **estructura** lesionada → **nivel o sitio**. Cada paso
+tiene 2 intentos y una pista opcional. Al terminar el caso llegan el desenlace, un esquema SVG propio y la cita de Moore; si se resolvió, se
+archiva como **expediente**. Hay que explorar **al menos 2 veces** para que aparezca la primera pregunta (así no explorar nada no es la mejor
+jugada).
+
+| Concepto | Puntos |
+|---|---|
+| Paso acertado al primer intento | 200 |
+| Paso acertado al segundo intento | 100 |
+| Paso fallado dos veces | 0 (el servidor revela la respuesta; el caso queda sin resolver) |
+| Caso resuelto (3 pasos acertados) con 3 exploraciones o menos | +100 |
+| Cada pista | −50 (el total de un caso nunca baja de 0) |
+| **Máximo de un caso** | **700** |
+| **Máximo de una guardia** | **3,500** (5 × 700) |
+
+- **Récord total** = suma del récord de las 6 aulas (máx. 4,900 cada una) + la **mejor guardia** (máx. 3,500) = **32,900**.
+- **Puntaje semanal** (Salón de la Fama) = mejor ronda de cada aula de la semana + mejor guardia de la semana. La semana 0 (antes del 19 oct)
+  guarda récord personal pero no suma al Salón, igual que las rondas.
+- Solo salen casos **aprobados** cuyos temas están en **aulas ya abiertas** (reloj de la base). Un caso que combina aulas (p. ej. `c2-07`: aulas 1 y 2)
+  espera a que se abran todas. En cada guardia salen primero los casos que el alumno aún no resolvió.
+- Insignias: **Residente de guardia** (5 guardias terminadas) y **Ojo clínico** (resolver un caso sin pistas y con 3 exploraciones o menos).
+- Salir a mitad de guardia la anula; una guardia sin terminar caduca a las 2 horas.
+
+### Dónde vive cada cosa
+| | |
+|---|---|
+| `contenido/casos/semana-N.json` | **Fuente de verdad** de los casos (8 por semana). Ver `contenido/README.md` |
+| `src/game/clinica/` | reglas, puntuación, selección e insignias (puros, con pruebas; se copian a la función) |
+| `src/servidor/clinica.js` | lógica de la guardia en la función. **Misma función `rondas`**, acciones nuevas: `guardia_iniciar`, `guardia_explorar`, `guardia_pista`, `guardia_responder`, `guardia_siguiente`, `expedientes` |
+| `supabase/schema.sql` (sección 9) | `guardias`, `expedientes`, `guardias_activas`, `contexto_clinica`, `guardar_guardia_terminada`… (y cambios a `_jugador_json`, `recalcular_puntaje_semanal` y `guardar_ronda_terminada`) |
+| `src/ui/clinica/esquemas.js` | los 7 esquemas anatómicos (SVG propios) y qué estructuras resalta cada caso |
+| `src/ui/pantallas/clinica.js`, `expedientes.js` | pantallas de la guardia, el resumen y los expedientes |
+
+Las respuestas, las pistas y el desenlace **solo viajan cuando ya toca verlos**: el navegador recibe la pregunta hasta que explora lo mínimo, la pista
+cuando la pide y el desenlace cuando termina el caso. `npm test` comprueba que ninguna respuesta esté en el código del juego.
+
+### Aprobar casos
+1. En GitHub, abre `contenido/casos/semana-1.json`, revisa cada caso (y su `nota_revision`, si la tiene) y cambia `"estado": "borrador"` por `"estado": "aprobado"`.
+2. Una guardia necesita **al menos 5 casos aprobados** en las aulas abiertas; si hay menos, el juego dice que aún no hay casos listos.
+3. Si tu workflow no se dispara con cambios en `contenido/casos/`, lánzalo a mano (Actions → *Preparar y desplegar función rondas* → Run workflow).
+   Tras aprobar: `npm run funcion:preparar` regenera `supabase/functions/_shared/casos/` (el workflow lo hace por ti).
+
+### Probar la Clínica antes de aprobar (proyecto de pruebas)
+Con el interruptor `A360_MODO_PRUEBAS` (ver "Probar las Aulas 2–6…") la función sirve casos en `borrador` y trata todas las aulas como abiertas.
+**Nunca en producción.** Se usa en el proyecto de pruebas, igual que con las rondas.
+
+### Después de publicar: comprobar
+- SQL Editor: `select count(*) from public.guardias;` debe responder 0 (la tabla existe). `select numero, abierta from public.estado_aulas();` sigue igual.
+- Juego: campus → Clínica → *Iniciar guardia*. Con casos en borrador debe decir que aún no hay casos listos.
+- Tras aprobar al menos 5 casos de la semana 1: juega una guardia y revisa el resumen, **Expedientes** y que el **récord total** del HUD suba.
 
 ## Estructura
 `src/ui/pantallas/` pantallas · `src/ui/campus/` joystick, botón correr, minimapa y tarjeta ·

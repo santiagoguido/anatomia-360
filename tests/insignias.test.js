@@ -74,6 +74,6 @@ test('las insignias que dependen de aulas aún cerradas no se ganan sin rondas e
 });
 
 test('todas las insignias del catálogo tienen nombre y descripción', () => {
-  assert.equal(Object.keys(INSIGNIAS).length, 12);
+  assert.equal(Object.keys(INSIGNIAS).length, 14);
   for (const [id, i] of Object.entries(INSIGNIAS)) assert.ok(i.nombre && i.descripcion, id);
 });
