@@ -1,6 +1,6 @@
 import { h } from '../../utils/dom.js';
 import { AVISO_MATRICULA, ERRORES } from '../../textos.js';
-import { crearBoton, crearCreditos, crearFondoCampus, crearIcono } from '../componentes.js';
+import { crearBoton, crearFondoCampus, crearIcono } from '../componentes.js';
 
 export function crearPortada(ctx) {
   const el = h(
@@ -44,7 +44,6 @@ export function crearPortada(ctx) {
         h('p', { class: 'tarjeta__nota' }, AVISO_MATRICULA.calendario),
       ),
     ),
-    crearCreditos(),
   );
   return { el };
 }
